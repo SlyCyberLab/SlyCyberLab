@@ -2,7 +2,7 @@
   
 # 👋 Hi, I'm Emsly Severe
 
-### 🛡️ Systems Support | 🐧 Linux | ☁️ Cloud Security | 🔵 Blue Team Ops
+<p><strong>🛡️ Systems Support | 🐧 Linux | ☁️ Cloud Security | 🔵 Blue Team Ops</strong></p>
 <!--
 [![Portfolio](https://img.shields.io/badge/Portfolio-slycyber.com-blue?style=for-the-badge&logo=firefox&logoColor=white)](https://slycyber.com)
 [![Email](https://img.shields.io/badge/Email-slycyber7@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:slycyber7@gmail.com)
@@ -14,47 +14,37 @@
 
 ## 🚀 About Me
 
-> **Professional with hands-on experience in technical support, sysadmin roles, and security-first thinking, now expanding into cybersecurity and cloud infrastructure.**
-<!-- 
-I'm a hands-on IT professional with a strong track record supporting users, managing systems, and automating tasks in fast-paced environments. I specialize in Linux administration, network troubleshooting, and security-first thinking.-->
+> **Turning 5+ years of frontline IT support into cybersecurity expertise through hands-on labs and real-world problem solving.**
 
 Currently building on a foundation of real-world experience to transition into more advanced roles in **cybersecurity**, **cloud operations**, and **infrastructure hardening**.
 
-### 🎯 What Sets Me Apart
-- 🧰 **Diverse Experience**: Worked across helpdesk, desktop support, and junior sysadmin roles
-- 💡 **Problem Solver**: Known for calm troubleshooting, efficient workflows, and CLI mastery
-- 🤝 **Global Communicator**: Multilingual (EN, FR, ES, HT) with strong cross-functional skills
-- 🔄 **Continuous Learner**: Always expanding knowledge through hands-on labs and certifications
+### At a Glance
+🎯 **Focus Areas:** Security Operations, Linux Administration, Cloud Infrastructure  
+⚡ **Strengths:** Incident Response, Automation, Cross-Platform Integration  
+🔧 **Currently:** RHCSA Certification Track, Azure Cloud Labs  
+
+### 💪 What Sets Me Apart
+- 🧰 **Diverse Experience**: 5+ years across helpdesk, desktop support, and junior sysadmin roles
+- 💡 **Problem Solver**: Consistently resolved 90%+ of tickets on first contact
+- 🤝 **Global Communicator**: Multilingual (English, Spanish, French, Creole) supporting diverse user bases
+- 🔄 **Continuous Learner**: Building advanced skills through hands-on labs and industry certifications
 
 ---
 
-## 🛠️ Technology Arsenal
+## 🛠️ Technology Stack
 
-### **Core Technologies**
 <div align="center">
 
-![Linux](https://img.shields.io/badge/-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=000)
-![Bash](https://img.shields.io/badge/-Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=fff)
-![PowerShell](https://img.shields.io/badge/-PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=fff)
-![Red Hat](https://img.shields.io/badge/-Red%20Hat-EE0000?style=for-the-badge&logo=redhat&logoColor=fff)
-
-</div>
-
-### **Security & Monitoring**
-<div align="center">
-
-![Splunk](https://img.shields.io/badge/-Splunk-000000?style=for-the-badge&logo=splunk&logoColor=fff)
-![OPNsense](https://img.shields.io/badge/-OPNsense-D94F00?style=for-the-badge&logo=opnsense&logoColor=fff)
-![Active Directory](https://img.shields.io/badge/-Active%20Directory-003366?style=for-the-badge&logo=microsoft&logoColor=fff)
-
-</div>
-
-### **Cloud & Infrastructure**
-<div align="center">
-
-![Azure](https://img.shields.io/badge/-Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=fff)
-![Networking](https://img.shields.io/badge/-Networking-00A8E8?style=for-the-badge&logo=cisco&logoColor=fff)
-![VMware](https://img.shields.io/badge/-VMware-607078?style=for-the-badge&logo=vmware&logoColor=fff)
+![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=000)
+![Bash](https://img.shields.io/badge/-Bash-4EAA25?logo=gnubash&logoColor=fff)
+![PowerShell](https://img.shields.io/badge/-PowerShell-5391FE?logo=powershell&logoColor=fff)
+![Red Hat](https://img.shields.io/badge/-Red%20Hat-EE0000?logo=redhat&logoColor=fff)
+![Splunk](https://img.shields.io/badge/-Splunk-000000?logo=splunk&logoColor=fff)
+![OPNsense](https://img.shields.io/badge/-OPNsense-D94F00?logo=opnsense&logoColor=fff)
+![Active Directory](https://img.shields.io/badge/-Active%20Directory-003366?logo=microsoft&logoColor=fff)
+![Azure](https://img.shields.io/badge/-Azure-0078D4?logo=microsoftazure&logoColor=fff)
+![Networking](https://img.shields.io/badge/-Networking-00A8E8?logo=cisco&logoColor=fff)
+![VMware](https://img.shields.io/badge/-VMware-607078?logo=vmware&logoColor=fff)
 
 </div>
 
@@ -108,7 +98,9 @@ Wrote Bash scripts for scheduled backups, firewall updates, and service checks o
 </tr>
 </table>
 
+
 ### 🚧 **Currently Building**
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)  
 **RHCSA Automation Toolkit** - Building automation scripts aligned with RHCSA tasks for training and real-world scenarios.
 
 <div align="center">
@@ -121,18 +113,13 @@ Wrote Bash scripts for scheduled backups, firewall updates, and service checks o
 
 ## 📚 Learning Journey
 
-### 🎯 **Currently Exploring**
-```
-🧪 RHCSA (RHEL 9.5)          
-☁️ Azure Cloud Operations   
-🔐 Security Automation        
-🏗️ Infrastructure as Code   
-```
+### 🎯 **Current Focus Areas**
+• **RHCSA (RHEL 9.5)** - LVM, user/group management, SELinux, and system boot processes  
+• **Azure Cloud Operations** - Azure CLI, IAM roles, and cloud policy management  
+• **Security Automation** - Building detection scripts and incident response workflows  
+• **Infrastructure as Code** - Terraform basics and configuration management  
 
-**Focus Areas:**
-- LVM, user/group management, SELinux, and system boot processes
-- Home labs around firewalls, syslog, Active Directory, and cloud policy management  
-- Cloud tools like Azure CLI, IAM roles, and Terraform basics
+**Active Labs:** Firewall configurations, syslog analysis, Active Directory hardening
 
 ---
 
@@ -149,7 +136,7 @@ Wrote Bash scripts for scheduled backups, firewall updates, and service checks o
 </div>
 
 ---
-
+<!--
 ## 📊 GitHub Stats
 
 <div align="center">
@@ -162,7 +149,7 @@ Wrote Bash scripts for scheduled backups, firewall updates, and service checks o
 
 ---
 
-<!-- ## 🌐 Let's Connect!
+ ## 🌐 Let's Connect!
 
 <div align="center">
 
