@@ -113,7 +113,7 @@ Wrote Bash scripts for scheduled backups, firewall updates, and service checks o
 
 <div align="center">
 
-📁 **[View All Projects →](https://github.com/SlyCyberLab)**
+📁 **[View All Projects →](https://github.com/SlyCyberLab?tab=repositories)**
 
 </div>
 
