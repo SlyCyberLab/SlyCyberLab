@@ -66,8 +66,12 @@ Currently building on a foundation of real-world experience to transition into m
 <tr>
 <td width="50%">
   
-### **Data Structures and Algorithms Practice (AlgoExpert)**
-  - [Praciting DS & Algos in Python](https://github.com/joshmadakor1/Algorithms-Practice)
+### 🏢 [**Active Directory Home Lab Environment**](https://github.com/SlyCyberLab/Active-Directory-HomeLab)
+A comprehensive virtualized Windows Server environment demonstrating enterprise-level Active Directory, DHCP, and NAT configuration skills.
+
+![Windows Server](https://img.shields.io/badge/Windows%20Server-2025-blue)
+![VMware](https://img.shields.io/badge/VMware-Workstation-orange)
+![PowerShell](https://img.shields.io/badge/PowerShell-Automation-purple)
 <!--
 ### 🔐 **Firewall Home Lab w/ OPNsense**
 Built a segmented network using OPNsense to simulate perimeter security and internal VLAN policies.
