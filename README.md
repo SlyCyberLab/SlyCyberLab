@@ -62,19 +62,17 @@ A comprehensive virtualized Windows Server environment demonstrating enterprise-
 ![Windows Server](https://img.shields.io/badge/Windows%20Server-2025-blue)
 ![VMware](https://img.shields.io/badge/VMware-Workstation-orange)
 ![PowerShell](https://img.shields.io/badge/PowerShell-Automation-purple)
-<!--
-### 🔐 **Firewall Home Lab w/ OPNsense**
-Built a segmented network using OPNsense to simulate perimeter security and internal VLAN policies.
 
-**Tech Stack:** `OPNsense` `VLANs` `Firewall Rules` `Network Segmentation`
--->
 </td>
 <td width="50%">
 
-### 🧠 **Active Directory + Linux Integration**
-Integrated RHEL clients into Windows Server 2022 domain using Kerberos, SSSD, and DNS troubleshooting.
+### 🛡️ Azure SOC Lab - Cloud Security Operations Center
+A comprehensive cloud-based Security Operations Center demonstrating real-world threat detection, log analysis, and incident response using Microsoft Azure services.**
 
-**Tech Stack:** `RHEL 9.5` `Windows Server 2022` `Kerberos` `SSSD`
+![Azure](https://img.shields.io/badge/Microsoft-Azure-0078d4)
+![Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-198754)
+![Security](https://img.shields.io/badge/Security-SOC-d63384)
+
 
 </td>
 </tr>
