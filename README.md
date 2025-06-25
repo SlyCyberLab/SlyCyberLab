@@ -3,11 +3,11 @@
 # 👋 Hi, I'm Emsly Severe
 
 <p><strong>🛡️ Systems Support | 🐧 Linux | ☁️ Cloud Security | 🔵 Blue Team Ops</strong></p>
-<!--
-[![Portfolio](https://img.shields.io/badge/Portfolio-slycyber.com-blue?style=for-the-badge&logo=firefox&logoColor=white)](https://slycyber.com)
+
+<!-- [![Portfolio](https://img.shields.io/badge/Portfolio-slycyber.com-blue?style=for-the-badge&logo=firefox&logoColor=white)](https://slycyber.com) -->
 [![Email](https://img.shields.io/badge/Email-slycyber7@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:slycyber7@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/slycyber)
--->
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emsly-s-482794196/)
+
 </div>
 
 ---
@@ -67,7 +67,7 @@ A comprehensive virtualized Windows Server environment demonstrating enterprise-
 <td width="50%">
 
 ### 🛡️ Azure SOC Lab - Cloud Security Operations Center
-A comprehensive cloud-based Security Operations Center demonstrating real-world threat detection, log analysis, and incident response using Microsoft Azure services.**
+A comprehensive cloud-based Security Operations Center demonstrating real-world threat detection, log analysis, and incident response using Microsoft Azure services.
 
 ![Azure](https://img.shields.io/badge/Microsoft-Azure-0078d4)
 ![Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-198754)
