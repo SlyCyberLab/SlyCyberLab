@@ -66,7 +66,7 @@ A comprehensive virtualized Windows Server environment demonstrating enterprise-
 </td>
 <td width="50%">
 
-### 🛡️ Azure SOC Lab - Cloud Security Operations Center
+### 🛡️ [**Azure SOC Lab - Cloud Security Operations Center**](https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab)
 A comprehensive cloud-based Security Operations Center demonstrating real-world threat detection, log analysis, and incident response using Microsoft Azure services.
 
 ![Azure](https://img.shields.io/badge/Microsoft-Azure-0078d4)
