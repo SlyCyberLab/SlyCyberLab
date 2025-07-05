@@ -80,7 +80,7 @@ A comprehensive cloud-based Security Operations Center demonstrating real-world 
 <td width="50%">
 
 ### 🛡️ [**Vulnerability Management Lab**](https://github.com/SlyCyberLab/Vulnerability-Management-Lab)
-Comprehensive vulnerability assessment and remediation using Tenable Nessus Professional in Azure environment**
+Comprehensive vulnerability assessment and remediation using Tenable Nessus Professional in Azure environment.
 
 ![Lab Status](https://img.shields.io/badge/Lab%20Status-Complete-brightgreen)
 ![Azure](https://img.shields.io/badge/Azure-Virtual%20Machine-blue)
