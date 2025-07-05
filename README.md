@@ -91,10 +91,14 @@ Comprehensive vulnerability assessment and remediation using Tenable Nessus Prof
 </td>
 <td width="50%">
 
-### 🛠️ **Linux Automation Toolkit**
-Wrote Bash scripts for scheduled backups, firewall updates, and service checks on Ubuntu and RHEL nodes.
+### 🛡️ [**Sysadmin Automation Pack (RHEL 9.5)**](https://github.com/SlyCyberLab/sysadmin-automation-pack)
 
-**Tech Stack:** `Bash` `Cron` `System Administration` `Automation`
+A lightweight set of Bash scripts to automate system hardening, monitoring, and package auditing on Red Hat Enterprise Linux 9.5. Built for hands-on learners and junior sysadmins looking to level up their Linux administration and scripting skills.**
+
+![RHEL](https://img.shields.io/badge/Red%20Hat-RHEL%209.5-EE0000)
+![Bash](https://img.shields.io/badge/Language-Bash-4EAA25)
+![Security](https://img.shields.io/badge/Focus-Security%20Hardening-d63384)
+![Automation](https://img.shields.io/badge/Type-Automation-blue)
 
 </td>
 </tr>
