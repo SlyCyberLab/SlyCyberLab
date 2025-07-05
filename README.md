@@ -14,7 +14,7 @@
 
 ## 🚀 About Me
 
-> **Cybersecurity-focused professional leveraging 5+ years of IT support experience to build expertise in security operations, threat detection, and infrastructure hardening through hands-on labs and real-world implementations.**
+> **Turning 5+ years of frontline IT support into cybersecurity expertise through hands-on labs and real-world problem solving.**
 
 Currently building on a foundation of real-world experience to transition into more advanced roles in **cybersecurity**, **cloud operations**, and **infrastructure hardening**.
 
