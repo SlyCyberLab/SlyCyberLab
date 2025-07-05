@@ -1,6 +1,6 @@
 <div align="center">
   
-# 👋 Hi, I'm Emsly Severe
+# 👋 Hi, I'm Emsly S.
 
 <p><strong>🛡️ Systems Support | 🐧 Linux | ☁️ Cloud Security | 🔵 Blue Team Ops</strong></p>
 
