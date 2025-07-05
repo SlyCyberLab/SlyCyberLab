@@ -79,10 +79,14 @@ A comprehensive cloud-based Security Operations Center demonstrating real-world 
 <tr>
 <td width="50%">
 
-### 🔎 **Splunk Security Dashboards**
-Parsed and visualized log events to identify brute force attacks, abnormal login times, and endpoint anomalies.
+### 🛡️ [**Vulnerability Management Lab**](https://github.com/SlyCyberLab/Vulnerability-Management-Lab)
+Comprehensive vulnerability assessment and remediation using Tenable Nessus Professional in Azure environment**
 
-**Tech Stack:** `Splunk` `SPL` `Security Monitoring` `Log Analysis`
+![Lab Status](https://img.shields.io/badge/Lab%20Status-Complete-brightgreen)
+![Azure](https://img.shields.io/badge/Azure-Virtual%20Machine-blue)
+![Nessus](https://img.shields.io/badge/Nessus-Professional-red)
+![MySQL](https://img.shields.io/badge/MySQL-Community%20Server-orange)
+
 
 </td>
 <td width="50%">
