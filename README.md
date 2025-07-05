@@ -14,20 +14,21 @@
 
 ## 🚀 About Me
 
-> **Turning 5+ years of frontline IT support into cybersecurity expertise through hands-on labs and real-world problem solving.**
+> **Cybersecurity-focused professional leveraging 5+ years of IT support experience to build expertise in security operations, threat detection, and infrastructure hardening through hands-on labs and real-world implementations.**
 
 Currently building on a foundation of real-world experience to transition into more advanced roles in **cybersecurity**, **cloud operations**, and **infrastructure hardening**.
 
 ### At a Glance
-🎯 **Focus Areas:** Security Operations, Linux Administration, Cloud Infrastructure  
-⚡ **Strengths:** Incident Response, Automation, Cross-Platform Integration  
-🔧 **Currently:** RHCSA Certification Track, Azure Cloud Labs  
+🎯 **Target Roles:** SOC Analyst, Security Operations, Cloud Security Engineer  
+⚡ **Core Strengths:** Incident Response, Linux Administration, Security Automation  
+🔧 **Active Focus:** RHCSA Certification, Azure Security Operations, Threat Detection  
 
 ### 💪 What Sets Me Apart
-- 🧰 **Diverse Experience**: 5+ years across helpdesk, desktop support, and junior sysadmin roles
-- 💡 **Problem Solver**: Consistently resolved 90%+ of tickets on first contact
+- 🛡️ **Security-First Mindset**: Developed through hands-on threat detection labs and real-world incident response
+- 🧰 **Practical Experience**: 5+ years resolving security-related incidents and system vulnerabilities
+- 💡 **Problem Solver**: Consistently resolved 90%+ of tickets on first contact, including security escalations
 - 🤝 **Global Communicator**: Multilingual (English, Spanish, French, Creole) supporting diverse user bases
-- 🔄 **Continuous Learner**: Building advanced skills through hands-on labs and industry certifications
+- 🔄 **Continuous Innovation**: Building advanced cybersecurity skills through comprehensive lab environments
 
 ---
 
@@ -41,9 +42,9 @@ Currently building on a foundation of real-world experience to transition into m
 ![Red Hat](https://img.shields.io/badge/-Red%20Hat-EE0000?logo=redhat&logoColor=fff)
 ![Splunk](https://img.shields.io/badge/-Splunk-000000?logo=splunk&logoColor=fff)
 ![OPNsense](https://img.shields.io/badge/-OPNsense-D94F00?logo=opnsense&logoColor=fff)
-![Active Directory](https://img.shields.io/badge/-Active%20Directory-003366?logo=microsoft&logoColor=fff)
+![Active Directory](https://img.shields.io/badge/-Active%20Directory-0078D4?logo=microsoft&logoColor=fff)
 ![Azure](https://img.shields.io/badge/-Azure-0078D4?logo=microsoftazure&logoColor=fff)
-![Networking](https://img.shields.io/badge/-Networking-00A8E8?logo=cisco&logoColor=fff)
+![Networking](https://img.shields.io/badge/-Networking-1BA0D7?logo=cisco&logoColor=fff)
 ![VMware](https://img.shields.io/badge/-VMware-607078?logo=vmware&logoColor=fff)
 
 </div>
@@ -57,22 +58,21 @@ Currently building on a foundation of real-world experience to transition into m
 <td width="50%">
   
 ### 🏢 [**Active Directory Home Lab Environment**](https://github.com/SlyCyberLab/Active-Directory-HomeLab)
-A comprehensive virtualized Windows Server environment demonstrating enterprise-level Active Directory, DHCP, and NAT configuration skills.
+Comprehensive virtualized Windows Server environment demonstrating enterprise-level Active Directory, DHCP, and NAT configuration with automated user provisioning and security hardening.
 
-![Windows Server](https://img.shields.io/badge/Windows%20Server-2025-blue)
-![VMware](https://img.shields.io/badge/VMware-Workstation-orange)
-![PowerShell](https://img.shields.io/badge/PowerShell-Automation-purple)
+![Windows Server](https://img.shields.io/badge/Windows%20Server-2025-0078D4)
+![VMware](https://img.shields.io/badge/VMware-Workstation-607078)
+![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE)
 
 </td>
 <td width="50%">
 
 ### 🛡️ [**Azure SOC Lab - Cloud Security Operations Center**](https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab)
-A comprehensive cloud-based Security Operations Center demonstrating real-world threat detection, log analysis, and incident response using Microsoft Azure services.
+Cloud-based Security Operations Center demonstrating real-world threat detection, log analysis, and incident response using Microsoft Azure services with 6,000+ captured attack attempts.
 
-![Azure](https://img.shields.io/badge/Microsoft-Azure-0078d4)
-![Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-198754)
-![Security](https://img.shields.io/badge/Security-SOC-d63384)
-
+![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4)
+![Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-0078D4)
+![Security](https://img.shields.io/badge/Security-SOC-EE0000)
 
 </td>
 </tr>
@@ -80,33 +80,30 @@ A comprehensive cloud-based Security Operations Center demonstrating real-world 
 <td width="50%">
 
 ### 🛡️ [**Vulnerability Management Lab**](https://github.com/SlyCyberLab/Vulnerability-Management-Lab)
-Comprehensive vulnerability assessment and remediation using Tenable Nessus Professional in Azure environment.
+Comprehensive vulnerability assessment and remediation using Tenable Nessus Professional in Azure environment with automated scanning and reporting workflows.
 
-![Lab Status](https://img.shields.io/badge/Lab%20Status-Complete-brightgreen)
-![Azure](https://img.shields.io/badge/Azure-Virtual%20Machine-blue)
-![Nessus](https://img.shields.io/badge/Nessus-Professional-red)
-![MySQL](https://img.shields.io/badge/MySQL-Community%20Server-orange)
-
+![Lab Status](https://img.shields.io/badge/Lab%20Status-Complete-28A745)
+![Azure](https://img.shields.io/badge/Azure-Virtual%20Machine-0078D4)
+![Nessus](https://img.shields.io/badge/Nessus-Professional-EE0000)
+![MySQL](https://img.shields.io/badge/MySQL-Community%20Server-4479A1)
 
 </td>
 <td width="50%">
 
-### 🛡️ [**Sysadmin Automation Pack (RHEL 9.5)**](https://github.com/SlyCyberLab/sysadmin-automation-pack)
-
-A lightweight set of Bash scripts to automate system hardening, monitoring, and package auditing on Red Hat Enterprise Linux 9.5. Built for hands-on learners and junior sysadmins looking to level up their Linux administration and scripting skills.**
+### 🐧 [**Sysadmin Automation Pack (RHEL 9.5)**](https://github.com/SlyCyberLab/sysadmin-automation-pack)
+Lightweight Bash scripts for automated system hardening, monitoring, and package auditing on Red Hat Enterprise Linux 9.5, designed for hands-on learning and production deployment.
 
 ![RHEL](https://img.shields.io/badge/Red%20Hat-RHEL%209.5-EE0000)
 ![Bash](https://img.shields.io/badge/Language-Bash-4EAA25)
-![Security](https://img.shields.io/badge/Focus-Security%20Hardening-d63384)
-![Automation](https://img.shields.io/badge/Type-Automation-blue)
+![Security](https://img.shields.io/badge/Focus-Security%20Hardening-EE0000)
+![Automation](https://img.shields.io/badge/Type-Automation-0078D4)
 
 </td>
 </tr>
 </table>
 
-
 ### 🚧 **Currently Building**
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)  
+![Status](https://img.shields.io/badge/Status-In%20Progress-FFC107)  
 **RHCSA Automation Toolkit** - Building automation scripts aligned with RHCSA tasks for training and real-world scenarios.
 
 <div align="center">
@@ -123,7 +120,6 @@ A lightweight set of Bash scripts to automate system hardening, monitoring, and 
 • **RHCSA (RHEL 9.5)** - LVM, user/group management, SELinux, and system boot processes  
 • **Azure Cloud Operations** - Azure CLI, IAM roles, and cloud policy management  
 • **Security Automation** - Building detection scripts and incident response workflows  
-• **Infrastructure as Code** - Terraform basics and configuration management  
 
 **Active Labs:** Firewall configurations, syslog analysis, Active Directory hardening
 
