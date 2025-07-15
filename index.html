@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SlyCyberLab - Emsly S. | Elite Cybersecurity Professional</title>
+    <title>SlyCyberLab - Emsly S. | Cybersecurity Professional</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;600;800&display=swap');
         
@@ -361,6 +361,7 @@
             position: relative;
             transition: all 0.4s ease;
             overflow: hidden;
+            cursor: pointer;
         }
         
         .project-card::before {
@@ -541,6 +542,144 @@
             }
         }
         
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        .modal-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            margin: 5% auto;
+            padding: 3rem;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from { opacity: 0; transform: translateY(-50px) scale(0.9); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        
+        .close {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            font-size: 2rem;
+            color: var(--text-dim);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close:hover {
+            color: var(--accent);
+        }
+        
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .modal-icon {
+            font-size: 3rem;
+        }
+        
+        .modal-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+        }
+        
+        .modal-description {
+            color: var(--text-dim);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .modal-features {
+            margin-bottom: 2rem;
+        }
+        
+        .modal-features h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .modal-features ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .modal-features li {
+            padding: 0.5rem 0;
+            color: var(--text-dim);
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .modal-features li::before {
+            content: '▶';
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+        }
+        
+        .modal-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+        
+        .modal-tech-tag {
+            padding: 0.6rem 1.2rem;
+            background: rgba(0, 255, 136, 0.2);
+            border: 1px solid var(--primary);
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .modal-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .modal-link {
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: var(--bg-dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+        }
+        
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -572,10 +711,155 @@
             
             <div class="role-badges">
                 <span class="role-badge">🛡️ Security Operations</span>
-                <span class="role-badge">🐧 Linux Expert</span>
+                <span class="role-badge">🐧 Linux Administration</span>
                 <span class="role-badge">☁️ Cloud Security</span>
                 <span class="role-badge">🔵 Blue Team</span>
             </div>
+
+    <!-- Project Modals -->
+    <div id="adlab" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('adlab')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon">🏢</div>
+                <div class="modal-title">Active Directory Enterprise Lab</div>
+            </div>
+            <div class="modal-description">
+                A comprehensive virtualized Windows Server environment showcasing enterprise-level Active Directory implementation with advanced security configurations. This lab demonstrates real-world IT infrastructure management with automated user provisioning, Group Policy management, and security hardening protocols.
+            </div>
+            <div class="modal-features">
+                <h4>🎯 Key Features</h4>
+                <ul>
+                    <li>Complete domain controller setup with DNS and DHCP services</li>
+                    <li>Automated user account creation with PowerShell scripting</li>
+                    <li>Group Policy Objects (GPO) implementation for security enforcement</li>
+                    <li>Network Address Translation (NAT) configuration</li>
+                    <li>Security hardening based on enterprise best practices</li>
+                    <li>Multi-client environment simulation</li>
+                </ul>
+            </div>
+            <div class="modal-tech">
+                <span class="modal-tech-tag">Windows Server 2025</span>
+                <span class="modal-tech-tag">VMware Workstation</span>
+                <span class="modal-tech-tag">PowerShell Automation</span>
+                <span class="modal-tech-tag">Active Directory</span>
+                <span class="modal-tech-tag">DNS/DHCP</span>
+                <span class="modal-tech-tag">Group Policy</span>
+            </div>
+            <div class="modal-links">
+                <a href="https://github.com/SlyCyberLab/Active-Directory-HomeLab" class="modal-link" target="_blank">View on GitHub</a>
+                <a href="#" class="modal-link secondary" onclick="closeModal('adlab')">Close</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="azuresoc" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('azuresoc')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon">🛡️</div>
+                <div class="modal-title">Azure SOC Operations Center</div>
+            </div>
+            <div class="modal-description">
+                A cloud-native Security Operations Center built on Microsoft Azure, demonstrating advanced threat detection, incident response, and security analytics capabilities. This project showcases real-world SOC operations using industry-standard tools and methodologies.
+            </div>
+            <div class="modal-features">
+                <h4>🎯 Key Features</h4>
+                <ul>
+                    <li>Microsoft Sentinel SIEM deployment and configuration</li>
+                    <li>Custom KQL queries for threat hunting and detection</li>
+                    <li>Automated incident response workflows</li>
+                    <li>Live attack simulation and analysis</li>
+                    <li>Security metrics dashboard and reporting</li>
+                    <li>Integration with Azure security services</li>
+                </ul>
+            </div>
+            <div class="modal-tech">
+                <span class="modal-tech-tag">Microsoft Azure</span>
+                <span class="modal-tech-tag">Azure Sentinel</span>
+                <span class="modal-tech-tag">KQL (Kusto Query Language)</span>
+                <span class="modal-tech-tag">Log Analytics</span>
+                <span class="modal-tech-tag">Azure Monitor</span>
+                <span class="modal-tech-tag">SIEM</span>
+            </div>
+            <div class="modal-links">
+                <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" class="modal-link" target="_blank">View on GitHub</a>
+                <a href="#" class="modal-link secondary" onclick="closeModal('azuresoc')">Close</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="vuln" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('vuln')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon">🔍</div>
+                <div class="modal-title">Vulnerability Management Platform</div>
+            </div>
+            <div class="modal-description">
+                An enterprise-grade vulnerability assessment and remediation platform utilizing Tenable Nessus Professional. This project demonstrates comprehensive vulnerability management lifecycle from discovery to remediation, with automated scanning and detailed compliance reporting.
+            </div>
+            <div class="modal-features">
+                <h4>🎯 Key Features</h4>
+                <ul>
+                    <li>Tenable Nessus Professional deployment on Azure</li>
+                    <li>Automated vulnerability scanning schedules</li>
+                    <li>CVSS risk scoring and prioritization</li>
+                    <li>Compliance framework mapping (NIST, CIS)</li>
+                    <li>Custom reporting and analytics dashboard</li>
+                    <li>Remediation tracking and validation</li>
+                </ul>
+            </div>
+            <div class="modal-tech">
+                <span class="modal-tech-tag">Tenable Nessus Professional</span>
+                <span class="modal-tech-tag">Azure Virtual Machines</span>
+                <span class="modal-tech-tag">MySQL Database</span>
+                <span class="modal-tech-tag">CVSS Framework</span>
+                <span class="modal-tech-tag">Compliance Reporting</span>
+                <span class="modal-tech-tag">Risk Assessment</span>
+            </div>
+            <div class="modal-links">
+                <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" class="modal-link" target="_blank">View on GitHub</a>
+                <a href="#" class="modal-link secondary" onclick="closeModal('vuln')">Close</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="rhel" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('rhel')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon">🐧</div>
+                <div class="modal-title">RHEL Automation Suite</div>
+            </div>
+            <div class="modal-description">
+                A comprehensive collection of production-ready Bash automation scripts designed for Red Hat Enterprise Linux 9.5. This suite focuses on system hardening, security monitoring, and compliance auditing with CIS benchmark integration for enterprise environments.
+            </div>
+            <div class="modal-features">
+                <h4>🎯 Key Features</h4>
+                <ul>
+                    <li>System hardening scripts with CIS benchmark compliance</li>
+                    <li>Automated security monitoring and alerting</li>
+                    <li>Package auditing and vulnerability tracking</li>
+                    <li>SELinux policy management and enforcement</li>
+                    <li>Log analysis and security event correlation</li>
+                    <li>RHCSA-aligned task automation</li>
+                </ul>
+            </div>
+            <div class="modal-tech">
+                <span class="modal-tech-tag">Red Hat Enterprise Linux 9.5</span>
+                <span class="modal-tech-tag">Bash Scripting</span>
+                <span class="modal-tech-tag">SELinux</span>
+                <span class="modal-tech-tag">CIS Controls</span>
+                <span class="modal-tech-tag">System Hardening</span>
+                <span class="modal-tech-tag">RHCSA</span>
+            </div>
+            <div class="modal-links">
+                <a href="https://github.com/SlyCyberLab/sysadmin-automation-pack" class="modal-link" target="_blank">View on GitHub</a>
+                <a href="#" class="modal-link secondary" onclick="closeModal('rhel')">Close</a>
+            </div>
+        </div>
+    </div>
             
             <div class="cta-buttons">
                 <a href="mailto:slycyber7@gmail.com" class="cta-btn cta-primary">Get In Touch</a>
@@ -646,7 +930,7 @@
             </div>
             
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" onclick="openModal('adlab')">
                     <div class="project-header">
                         <div class="project-icon">🏢</div>
                         <div class="project-title">Active Directory Enterprise Lab</div>
@@ -662,13 +946,13 @@
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" onclick="openModal('azuresoc')">
                     <div class="project-header">
                         <div class="project-icon">🛡️</div>
                         <div class="project-title">Azure SOC Operations Center</div>
                     </div>
                     <div class="project-description">
-                        Cloud-native Security Operations Center with real-time threat detection, advanced analytics, and automated incident response capturing 6,000+ live attack attempts.
+                        Cloud-native Security Operations Center with real-time threat detection, advanced analytics, and automated incident response capturing live attack attempts.
                     </div>
                     <div class="project-tech">
                         <span class="tech-tag">Microsoft Azure</span>
@@ -678,7 +962,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" onclick="openModal('vuln')">
                     <div class="project-header">
                         <div class="project-icon">🔍</div>
                         <div class="project-title">Vulnerability Management Platform</div>
@@ -694,7 +978,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" onclick="openModal('rhel')">
                     <div class="project-header">
                         <div class="project-icon">🐧</div>
                         <div class="project-title">RHEL Automation Suite</div>
@@ -746,9 +1030,9 @@
 
         <!-- Call to Action -->
         <div class="glass-card fade-in" style="text-align: center;">
-            <h2 style="margin-bottom: 2rem; font-size: 2.5rem;">Ready to Secure Your Future?</h2>
+            <h2 style="margin-bottom: 2rem; font-size: 2.5rem;">Open to New Opportunities</h2>
             <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 3rem;">
-                Let's discuss how my expertise in cybersecurity, cloud operations, and incident response can drive your organization's security objectives forward.
+                Currently seeking cybersecurity roles where I can apply my expertise in threat detection, cloud security, and system administration to drive meaningful results.
             </p>
             <div class="cta-buttons">
                 <a href="mailto:slycyber7@gmail.com" class="cta-btn cta-primary">Start the Conversation</a>
@@ -758,6 +1042,41 @@
     </div>
 
     <script>
+        // Modal Functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    if (modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+        });
+
         // Matrix Rain Effect
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
