@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SlyCyber - Emsly S. | Cybersecurity Professional</title>
+    <title>SlyCyberLab - Emsly S. | Cybersecurity Professional</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;600;800&display=swap');
         
@@ -492,6 +492,31 @@
         
         .terminal-line {
             margin: 0.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .terminal-line:hover {
+            background: rgba(0, 255, 136, 0.1);
+            padding-left: 1rem;
+            border-left: 2px solid var(--primary);
+            transform: translateX(10px);
+        }
+        
+        .terminal-line.typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid var(--primary);
+            animation: typing 2s steps(100, end), blink-cursor 1s infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-cursor {
+            0%, 50% { border-color: var(--primary); }
+            51%, 100% { border-color: transparent; }
         }
         
         .prompt {
@@ -540,6 +565,90 @@
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+        }
+        
+        /* Loading Screen */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .cyber-loader {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .cyber-circle {
+            position: absolute;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            animation: cyberSpin 2s linear infinite;
+        }
+        
+        .cyber-circle:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            border-top-color: var(--primary);
+            animation-duration: 1.5s;
+        }
+        
+        .cyber-circle:nth-child(2) {
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            border-right-color: var(--secondary);
+            animation-duration: 2s;
+            animation-direction: reverse;
+        }
+        
+        .cyber-circle:nth-child(3) {
+            width: 60%;
+            height: 60%;
+            top: 20%;
+            left: 20%;
+            border-bottom-color: var(--accent);
+            animation-duration: 1s;
+        }
+        
+        @keyframes cyberSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--primary);
+            text-align: center;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        .loading-dots::after {
+            content: '';
+            animation: dots 1.5s steps(4, end) infinite;
         }
         
         /* Modal Styles */
@@ -700,6 +809,19 @@
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="cyber-loader">
+            <div class="cyber-circle"></div>
+            <div class="cyber-circle"></div>
+            <div class="cyber-circle"></div>
+        </div>
+        <div class="loading-text">
+            <div>Initializing SlyCyberLab<span class="loading-dots"></span></div>
+            <div style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.7;">Loading security protocols...</div>
+        </div>
+    </div>
+
     <div class="bg-animation"></div>
     <canvas class="matrix" id="matrix"></canvas>
     
@@ -707,11 +829,11 @@
         <!-- Hero Section -->
         <div class="glass-card hero fade-in">
             <h1>SlyCyberLab</h1>
-            <div class="subtitle typing-effect">Elite Cybersecurity Professional</div>
+            <div class="subtitle typing-effect">Cybersecurity Professional</div>
             
             <div class="role-badges">
                 <span class="role-badge">🛡️ Security Operations</span>
-                <span class="role-badge">🐧 Linux Administration</span>
+                <span class="role-badge">🖥️ System Administration</span>
                 <span class="role-badge">☁️ Cloud Security</span>
                 <span class="role-badge">🔵 Blue Team</span>
             </div>
@@ -874,30 +996,30 @@
             </div>
             
             <div class="terminal">
-                <div class="terminal-line">
+                <div class="terminal-line terminal-cmd">
                     <span class="prompt">emsly@slycyberlab:~$</span> 
                     <span class="command">whoami</span>
                 </div>
-                <div class="terminal-line">Security professional transforming 5+ years of frontline IT experience into elite cybersecurity expertise</div>
-                <div class="terminal-line">
+                <div class="terminal-line terminal-output" data-text="Security professional transforming 5+ years of frontline IT experience into elite cybersecurity expertise">Security professional transforming 5+ years of frontline IT experience into elite cybersecurity expertise</div>
+                <div class="terminal-line terminal-cmd">
                     <span class="prompt">emsly@slycyberlab:~$</span> 
                     <span class="command">cat mission.txt</span>
                 </div>
-                <div class="terminal-line">Building next-generation security solutions through hands-on labs and real-world incident response</div>
-                <div class="terminal-line">
+                <div class="terminal-line terminal-output" data-text="Building next-generation security solutions through hands-on labs and real-world incident response">Building next-generation security solutions through hands-on labs and real-world incident response</div>
+                <div class="terminal-line terminal-cmd">
                     <span class="prompt">emsly@slycyberlab:~$</span> 
                     <span class="command">ls skills/</span>
                 </div>
-                <div class="terminal-line">incident-response/  threat-detection/  linux-hardening/  cloud-security/  automation/</div>
-                <div class="terminal-line">
+                <div class="terminal-line terminal-output" data-text="incident-response/  threat-detection/  linux-hardening/  cloud-security/  automation/">incident-response/  threat-detection/  linux-hardening/  cloud-security/  automation/</div>
+                <div class="terminal-line terminal-cmd">
                     <span class="prompt">emsly@slycyberlab:~$</span> 
                     <span class="command">cat focus.md</span>
                 </div>
-                <div class="terminal-line"># Current Objectives</div>
-                <div class="terminal-line">- SOC Analyst & Security Operations roles</div>
-                <div class="terminal-line">- RHCSA certification mastery</div>
-                <div class="terminal-line">- Advanced Azure security operations</div>
-                <div class="terminal-line">- Multilingual support capabilities (EN/ES/FR/Creole)</div>
+                <div class="terminal-line terminal-output" data-text="# Current Objectives"># Current Objectives</div>
+                <div class="terminal-line terminal-output" data-text="- SOC Analyst & Security Operations roles">- SOC Analyst & Security Operations roles</div>
+                <div class="terminal-line terminal-output" data-text="- RHCSA certification mastery">- RHCSA certification mastery</div>
+                <div class="terminal-line terminal-output" data-text="- Advanced Azure security operations">- Advanced Azure security operations</div>
+                <div class="terminal-line terminal-output" data-text="- Multilingual support capabilities (EN/ES/FR/Creole)">- Multilingual support capabilities (EN/ES/FR/Creole)</div>
             </div>
         </div>
 
@@ -1042,6 +1164,41 @@
     </div>
 
     <script>
+        // Loading Screen Animation
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const loader = document.getElementById('loader');
+                loader.classList.add('hidden');
+                setTimeout(() => loader.remove(), 500);
+                
+                // Start terminal typing animations
+                setTimeout(startTerminalAnimation, 800);
+            }, 2000);
+        });
+        
+        // Terminal Typing Animation
+        function startTerminalAnimation() {
+            const terminalOutputs = document.querySelectorAll('.terminal-output');
+            
+            terminalOutputs.forEach((output, index) => {
+                setTimeout(() => {
+                    const text = output.getAttribute('data-text');
+                    output.textContent = '';
+                    output.classList.add('typing');
+                    
+                    let i = 0;
+                    const typeInterval = setInterval(() => {
+                        output.textContent = text.substring(0, i + 1);
+                        i++;
+                        if (i >= text.length) {
+                            clearInterval(typeInterval);
+                            output.classList.remove('typing');
+                        }
+                    }, 30);
+                }, index * 800);
+            });
+        }
+
         // Modal Functions
         function openModal(modalId) {
             document.getElementById(modalId).style.display = 'block';
@@ -1135,7 +1292,7 @@
 
         // Typing Effect
         const subtitle = document.querySelector('.typing-effect');
-        const text = 'Elite Cybersecurity Professional';
+        const text = 'Cybersecurity Professional';
         let i = 0;
 
         function typeWriter() {
