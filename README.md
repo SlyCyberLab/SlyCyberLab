@@ -1,10 +1,9 @@
 <div align="center">
   
-# 👋 Hi, I'm Emsly S. 
+# 👋 Welcome!
 
-<p><strong>🛡️ Systems Support | 🐧 Linux | ☁️ Cloud Security | 🔵 Blue Team Ops</strong></p>
+<p><strong>🛡️ Junior Sysadmin | 🐧 Linux | ☁️ Cloud Security | 🔵 Blue Team Ops</strong></p>
 
-<!-- [![Portfolio](https://img.shields.io/badge/Portfolio-slycyber.com-blue?style=for-the-badge&logo=firefox&logoColor=white)](https://slycyber.com) -->
 [![Email](https://img.shields.io/badge/Email-slycyber7@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:slycyber7@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emsly-s-482794196/)
 
@@ -14,9 +13,12 @@
 
 ## 🚀 About Me
 
-> **Turning 5+ years of frontline IT support into cybersecurity expertise through hands-on labs and real-world problem solving.**
+> **Hi, I’m Emsly an IT pro with 4+ years of frontline support experience, now focused on cybersecurity and cloud security.**  
+> I thrive on solving real-world problems, building hands-on labs, and finding smarter ways to secure and automate infrastructure.
 
 Currently building on a foundation of real-world experience to transition into more advanced roles in **cybersecurity**, **cloud operations**, and **infrastructure hardening**.
+
+
 
 ### At a Glance
 🎯 **Target Roles:** SOC Analyst, Security Operations, Cloud Security Engineer  
@@ -104,7 +106,8 @@ Lightweight Bash scripts for automated system hardening, monitoring, and package
 
 ### 🚧 **Currently Building**
 ![Status](https://img.shields.io/badge/Status-In%20Progress-FFC107)  
-**RHCSA Automation Toolkit** - Building automation scripts aligned with RHCSA tasks for training and real-world scenarios.
+**AZ-500 Lab Environment** – Building a hands-on lab to simulate Azure identity protection, key vaults, and network security controls.
+
 
 <div align="center">
 
@@ -118,7 +121,7 @@ Lightweight Bash scripts for automated system hardening, monitoring, and package
 
 ### 🎯 **Current Focus Areas**
 • **Linux** - LVM, user/group management, SELinux, and system boot processes  
-• **Azure Cloud Operations** - Azure CLI, IAM roles, and cloud policy management  
+• **Azure Security & Cloud Operations** – Azure IAM, Defender for Cloud, Key Vault, and policy enforcement
 • **Security Automation** - Building detection scripts and incident response workflows  
 
 **Active Labs:** Firewall configurations, syslog analysis, Active Directory hardening
