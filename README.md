@@ -124,7 +124,6 @@ Lightweight Bash scripts for automated system hardening, monitoring, and package
 • **Azure Security & Cloud Operations** – Azure IAM, Defender for Cloud, Key Vault, and policy enforcement
 • **Security Automation** - Building detection scripts and incident response workflows  
 
-**Active Labs:** Firewall configurations, syslog analysis, Active Directory hardening
 
 ---
 
