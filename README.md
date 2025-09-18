@@ -21,7 +21,7 @@ Currently building on a foundation of real-world experience to transition into m
 ### At a Glance
 🎯 **Target Roles:** SOC Analyst, Security Operations, Cloud Security Engineer  
 ⚡ **Core Strengths:** Incident Response, Linux Administration, Security Automation  
-🔧 **Active Focus:** RHCSA Certification, Azure Security Operations, Threat Detection  
+
 
 ### 💪 What Sets Me Apart
 - 🛡️ **Security-First Mindset**: Developed through hands-on threat detection labs and real-world incident response
@@ -117,7 +117,7 @@ Lightweight Bash scripts for automated system hardening, monitoring, and package
 ## 📚 Learning Journey
 
 ### 🎯 **Current Focus Areas**
-• **RHCSA (RHEL 9.5)** - LVM, user/group management, SELinux, and system boot processes  
+• **Linux** - LVM, user/group management, SELinux, and system boot processes  
 • **Azure Cloud Operations** - Azure CLI, IAM roles, and cloud policy management  
 • **Security Automation** - Building detection scripts and incident response workflows  
 
@@ -132,10 +132,12 @@ Lightweight Bash scripts for automated system hardening, monitoring, and package
 ![CompTIA Security+](https://img.shields.io/badge/-Security%2B-FF0000?style=for-the-badge&logo=comptia&logoColor=white)
 ![CompTIA Network+](https://img.shields.io/badge/-Network%2B-007ACC?style=for-the-badge&logo=comptia&logoColor=white)
 ![Splunk](https://img.shields.io/badge/-Splunk%20Core%20Certified-000000?style=for-the-badge&logo=splunk&logoColor=white)
+[![Azure Fundamentals (AZ‑900)](https://img.shields.io/badge/-Azure%20Fundamentals%20(AZ--900)-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://learn.microsoft.com/certifications/exams/az-900)
 
-**🎯 In Progress:** RHCSA - Focusing on automation + hands-on labs
+**🎯 In Progress:** AZ-500 — Focused on securing Azure environments, identity & access, and threat protection.
 
 </div>
+
 
 ---
 <!--
