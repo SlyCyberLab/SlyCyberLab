@@ -16,8 +16,6 @@
 > **Hi, I’m Emsly an IT pro with 4+ years of frontline support experience, now focused on cybersecurity and cloud security.**  
 > I thrive on solving real-world problems, building hands-on labs, and finding smarter ways to secure and automate infrastructure.
 
-Currently building on a foundation of real-world experience to transition into more advanced roles in **cybersecurity**, **cloud operations**, and **infrastructure hardening**.
-
 
 
 ### At a Glance
