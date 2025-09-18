@@ -22,7 +22,7 @@ Currently building on a foundation of real-world experience to transition into m
 
 ### At a Glance
 🎯 **Target Roles:** SOC Analyst, Security Operations, Cloud Security Engineer  
-⚡ **Core Strengths:** Incident Response, Linux Administration, Security Automation  
+⚡ **Core Strengths:** Incident Response, Windows Administration, Security Automation  
 
 
 ### 💪 What Sets Me Apart
