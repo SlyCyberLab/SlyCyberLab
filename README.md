@@ -139,8 +139,6 @@ Firewall policy enforcement using pfSense, focusing on traffic control, security
 
 </div>
 
-
----
 <!--
 ## 📊 GitHub Stats
 
