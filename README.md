@@ -110,21 +110,22 @@ Firewall policy enforcement using pfSense, focusing on traffic control, security
 
 <div align="center">
 
-## 📁 **[View All Projects →](https://github.com/SlyCyberLab?tab=repositories)**
+# 📁 **[View All Projects →](https://github.com/SlyCyberLab?tab=repositories)**
 
 </div>
 
----
 <!--
+---
+
 ## 📚 Learning Journey
 
 ### 🎯 **Current Focus Areas**
 • **Linux** - LVM, user/group management, SELinux, and system boot processes  
 • **Azure Security & Cloud Operations** – Azure IAM, Defender for Cloud, Key Vault, and policy enforcement
 • **Security Automation** - Building detection scripts and incident response workflows  
--->
 
 ---
+-->
 
 ## 🏅 Certifications
 
