@@ -90,13 +90,14 @@ Comprehensive vulnerability assessment and remediation using Tenable Nessus Prof
 </td>
 <td width="50%">
 
-### 🐧 [**Sysadmin Automation Pack (RHEL 9.5)**](https://github.com/SlyCyberLab/sysadmin-automation-pack)
-Lightweight Bash scripts for automated system hardening, monitoring, and package auditing on Red Hat Enterprise Linux 9.5, designed for hands-on learning and production deployment.
+### 🛡️ [**pfSense Firewall Configuration Lab**](https://github.com/SlyCyberLab/pfSense-Firewall-Config/blob/main/README.md)
+Firewall policy enforcement using pfSense, focusing on traffic control, security hardening, and rule validation in a preconfigured multi-network lab environment.
 
-![RHEL](https://img.shields.io/badge/Red%20Hat-RHEL%209.5-EE0000)
-![Bash](https://img.shields.io/badge/Language-Bash-4EAA25)
-![Security](https://img.shields.io/badge/Focus-Security%20Hardening-EE0000)
-![Automation](https://img.shields.io/badge/Type-Automation-0078D4)
+![pfSense](https://img.shields.io/badge/pfSense-2.7.2-1f425f)
+![Firewall](https://img.shields.io/badge/Focus-Firewall%20Security-d63384)
+![Networking](https://img.shields.io/badge/Domain-Network%20Security-0A66C2)
+![Lab](https://img.shields.io/badge/Type-Hands--On%20Lab-2EA44F)
+
 
 </td>
 </tr>
