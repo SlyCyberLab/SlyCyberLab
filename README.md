@@ -25,7 +25,7 @@
 
 ### 💪 What Sets Me Apart
 - 🛡️ **Security-First Mindset**: Developed through hands-on threat detection labs and real-world incident response
-- 🧰 **Practical Experience**: 5+ years resolving security-related incidents and system vulnerabilities
+- 🧰 **Practical Experience**: Hands-on experience addressing vulnerabilities and incidents through labs, CTFs etc.
 - 💡 **Problem Solver**: Consistently resolved 90%+ of tickets on first contact, including security escalations
 - 🤝 **Global Communicator**: Multilingual (English, Spanish, French, Creole) supporting diverse user bases
 - 🔄 **Continuous Innovation**: Building advanced cybersecurity skills through comprehensive lab environments
