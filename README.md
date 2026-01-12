@@ -2,7 +2,7 @@
   
 # 👋 Welcome!
 
-<p><strong>🛡️ Junior Sysadmin | 🐧 Linux | ☁️ Cloud Security | 🔵 Blue Team Ops</strong></p>
+<p><strong>🛡️ Sysadmin | 🐧 Linux | ☁️ Cloud Security | 🔵 Blue Team Ops</strong></p>
 
 [![Email](https://img.shields.io/badge/Email-slycyber7@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:slycyber7@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emsly-s-482794196/)
