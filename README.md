@@ -102,11 +102,11 @@ Firewall policy enforcement using pfSense, focusing on traffic control, security
 </td>
 </tr>
 </table>
-
+<!--
 ### 🚧 **Currently Building**
 ![Status](https://img.shields.io/badge/Status-In%20Progress-FFC107)  
 **AZ-500 Lab Environment** – Building a hands-on lab to simulate Azure identity protection, key vaults, and network security controls.
-
+-->
 
 <div align="center">
 
