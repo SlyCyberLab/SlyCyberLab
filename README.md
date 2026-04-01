@@ -2,10 +2,11 @@
   
 # 👋 Welcome!
 
-<p><strong>🛡️ Sysadmin | 🐧 Linux | ☁️ Cloud Security | 🔵 Blue Team Ops</strong></p>
+<p><strong>🛡️ IT Administrator | 🐧 Linux | ☁️ Cloud Security | 🔵 Blue Team Ops</strong></p>
 
 [![Email](https://img.shields.io/badge/Email-slycyber7@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:slycyber7@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emsly-s-482794196/)
+[![Blog](https://img.shields.io/badge/Blog-blog.slytech.us-orange?style=for-the-badge&logo=jekyll&logoColor=white)](https://blog.slytech.us)
 
 </div>
 
@@ -13,22 +14,19 @@
 
 ## 🚀 About Me
 
-> **Hi, I’m Emsly an IT pro with 4+ years of frontline support experience, now focused on cybersecurity and cloud security.**  
-> I thrive on solving real-world problems, building hands-on labs, and finding smarter ways to secure and automate infrastructure.
-
-
+> **Hi, I'm Emsly, an IT professional with 4+ years of experience across IT support, infrastructure administration, and security operations, now focused full-time on detection engineering and cloud security.**  
+> I build hands-on security labs, automate detection workflows, and document everything publicly. Currently targeting SOC Analyst and Cloud Security roles.
 
 ### At a Glance
-🎯 **Target Roles:** SOC Analyst, Security Operations, Cloud Security Engineer  
-⚡ **Core Strengths:** Incident Response, Windows Administration, Security Automation  
-
+🎯 **Target Roles:** SOC Analyst, Detection Engineer, Cloud Security Engineer  
+⚡ **Core Strengths:** Threat Detection, Windows/AD Infrastructure, Security Automation, AI-Assisted Triage
 
 ### 💪 What Sets Me Apart
-- 🛡️ **Security-First Mindset**: Developed through hands-on threat detection labs and real-world incident response
-- 🧰 **Practical Experience**: Hands-on experience addressing vulnerabilities and incidents through labs, CTFs etc.
-- 💡 **Problem Solver**: Consistently resolved 90%+ of tickets on first contact, including security escalations
-- 🤝 **Global Communicator**: Multilingual (English, Spanish, French, Creole) supporting diverse user bases
-- 🔄 **Continuous Innovation**: Building advanced cybersecurity skills through comprehensive lab environments
+- 🛡️ **Detection Engineering:** Built custom SIEM detection rules in Splunk and Wazuh mapped to MITRE ATT&CK, with published lab documentation at blog.slytech.us
+- 🤖 **AI Integration:** Built a Python tool combining the Splunk REST API and Anthropic API for automated SOC triage with MITRE ATT&CK mapping
+- 🏗️ **Production Infrastructure:** 4+ years managing Windows Server, Active Directory, Microsoft 365, and network infrastructure in a live enterprise environment
+- 🌐 **Global Communicator:** Multilingual (English, Spanish, French) supporting diverse teams and clients
+- 📝 **Public Proof of Work:** Technical blog with 10+ published posts documenting real lab implementations, not just screenshots
 
 ---
 
@@ -39,13 +37,14 @@
 ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=000)
 ![Bash](https://img.shields.io/badge/-Bash-4EAA25?logo=gnubash&logoColor=fff)
 ![PowerShell](https://img.shields.io/badge/-PowerShell-5391FE?logo=powershell&logoColor=fff)
-![Red Hat](https://img.shields.io/badge/-Red%20Hat-EE0000?logo=redhat&logoColor=fff)
+![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=fff)
 ![Splunk](https://img.shields.io/badge/-Splunk-000000?logo=splunk&logoColor=fff)
-![OPNsense](https://img.shields.io/badge/-OPNsense-D94F00?logo=opnsense&logoColor=fff)
-![Active Directory](https://img.shields.io/badge/-Active%20Directory-0078D4?logo=microsoft&logoColor=fff)
+![Wazuh](https://img.shields.io/badge/-Wazuh-3AAAFF?logo=wazuh&logoColor=fff)
 ![Azure](https://img.shields.io/badge/-Azure-0078D4?logo=microsoftazure&logoColor=fff)
-![Networking](https://img.shields.io/badge/-Networking-1BA0D7?logo=cisco&logoColor=fff)
-![VMware](https://img.shields.io/badge/-VMware-607078?logo=vmware&logoColor=fff)
+![Active Directory](https://img.shields.io/badge/-Active%20Directory-0078D4?logo=microsoft&logoColor=fff)
+![pfSense](https://img.shields.io/badge/-pfSense-1f425f?logo=pfsense&logoColor=fff)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=fff)
+![Proxmox](https://img.shields.io/badge/-Proxmox-E57000?logo=proxmox&logoColor=fff)
 
 </div>
 
@@ -56,57 +55,73 @@
 <table>
 <tr>
 <td width="50%">
-  
-### 🏢 [**Active Directory Home Lab Environment**](https://github.com/SlyCyberLab/Active-Directory-HomeLab)
-Comprehensive virtualized Windows Server environment demonstrating enterprise-level Active Directory, DHCP, and NAT configuration with automated user provisioning and security hardening.
 
-![Windows Server](https://img.shields.io/badge/Windows%20Server-2025-0078D4)
-![VMware](https://img.shields.io/badge/VMware-Workstation-607078)
-![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE)
+### 🤖 [**Splunk AI Triage Lab**](https://github.com/SlyCyberLab/slytech-ai-labs)
+AI-assisted SOC triage tool combining the Splunk REST API and Anthropic API to analyze Windows Security events and generate MITRE ATT&CK mapped reports. Detected T1110.001 brute force, T1110.003 password spraying, and T1087 account enumeration automatically from real lab data.
+
+![Python](https://img.shields.io/badge/Python-3.10-3776AB)
+![Splunk](https://img.shields.io/badge/Splunk-REST%20API-000000)
+![Anthropic](https://img.shields.io/badge/Anthropic-Claude-D97757)
+![Blog](https://img.shields.io/badge/Blog-Published-orange)
 
 </td>
 <td width="50%">
+  
+### 🛡️ [**NIST CSF 2.0 / FISMA-Aligned SOC Lab**](https://blog.slytech.us)
+Full compliance lifecycle implementation across a multi-VLAN segmented enterprise lab. Covers GOVERN through RECOVER with pfSense, Wazuh SIEM, OpenSCAP remediation, GPO hardening, and simulated MITRE ATT&CK attacks. Documented as a 3-part technical blog series.
 
-### 🛡️ [**Azure SOC Lab - Cloud Security Operations Center**](https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab)
-Cloud-based Security Operations Center demonstrating real-world threat detection, log analysis, and incident response using Microsoft Azure services with 6,000+ captured attack attempts.
-
-![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4)
-![Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-0078D4)
-![Security](https://img.shields.io/badge/Security-SOC-EE0000)
+![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-3AAAFF)
+![NIST](https://img.shields.io/badge/NIST-CSF%202.0-darkgreen)
+![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-EE0000)
+![Blog](https://img.shields.io/badge/Blog-Published-orange)
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 🛡️ [**Vulnerability Management Lab**](https://github.com/SlyCyberLab/Vulnerability-Management-Lab)
-Comprehensive vulnerability assessment and remediation using Tenable Nessus Professional in Azure environment with automated scanning and reporting workflows.
+### 🛡️ [**Azure SOC Lab - Cloud Security Operations Center**](https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab)
+Cloud-based SOC environment with Microsoft Sentinel, custom KQL threat detection queries, and automated incident response playbooks. Honeypot captured 6,000+ live attack attempts mapped to MITRE ATT&CK.
 
-![Lab Status](https://img.shields.io/badge/Lab%20Status-Complete-28A745)
-![Azure](https://img.shields.io/badge/Azure-Virtual%20Machine-0078D4)
-![Nessus](https://img.shields.io/badge/Nessus-Professional-EE0000)
-![MySQL](https://img.shields.io/badge/MySQL-Community%20Server-4479A1)
+![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4)
+![Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-0078D4)
+![KQL](https://img.shields.io/badge/KQL-Threat%20Detection-EE0000)
 
 </td>
 <td width="50%">
 
-### 🛡️ [**pfSense Firewall Configuration Lab**](https://github.com/SlyCyberLab/pfSense-Firewall-Config/blob/main/README.md)
-Firewall policy enforcement using pfSense, focusing on traffic control, security hardening, and rule validation in a preconfigured multi-network lab environment.
+### 🔍 [**Vulnerability Management Platform**](https://github.com/SlyCyberLab/Vulnerability-Management-Lab)
+Enterprise-grade vulnerability scanning with Tenable Nessus Professional on Azure. Automated scan scheduling, CVSS-based prioritization, NIST and CIS framework mapping, and full remediation workflow documentation.
+
+![Nessus](https://img.shields.io/badge/Nessus-Professional-EE0000)
+![Azure](https://img.shields.io/badge/Azure-Virtual%20Machine-0078D4)
+![CVSS](https://img.shields.io/badge/CVSS-Risk%20Scoring-FFC107)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🏢 [**Active Directory Enterprise Lab**](https://github.com/SlyCyberLab/Active-Directory-HomeLab)
+Fully virtualized Windows Server environment with AD DS, DNS, DHCP, and multi-client OU structure. Automated user provisioning with PowerShell and GPO-based security enforcement aligned to CIS benchmarks.
+
+![Windows Server](https://img.shields.io/badge/Windows%20Server-2025-0078D4)
+![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE)
+![CIS](https://img.shields.io/badge/CIS-Benchmarks-darkgreen)
+
+</td>
+<td width="50%">
+
+### 🔥 [**pfSense Firewall Configuration Lab**](https://github.com/SlyCyberLab/pfSense-Firewall-Config)
+Multi-VLAN network segmentation with enforced firewall policies, traffic filtering, and access control rules across management, server, workstation, and DMZ zones. All rule logic validated through structured testing.
 
 ![pfSense](https://img.shields.io/badge/pfSense-2.7.2-1f425f)
-![Firewall](https://img.shields.io/badge/Focus-Firewall%20Security-d63384)
-![Networking](https://img.shields.io/badge/Domain-Network%20Security-0A66C2)
-![Lab](https://img.shields.io/badge/Type-Hands--On%20Lab-2EA44F)
-
+![VLAN](https://img.shields.io/badge/Focus-VLAN%20Segmentation-d63384)
+![Firewall](https://img.shields.io/badge/Domain-Network%20Security-0A66C2)
 
 </td>
 </tr>
 </table>
-<!--
-### 🚧 **Currently Building**
-![Status](https://img.shields.io/badge/Status-In%20Progress-FFC107)  
-**AZ-500 Lab Environment** – Building a hands-on lab to simulate Azure identity protection, key vaults, and network security controls.
--->
 
 <div align="center">
 
@@ -114,18 +129,7 @@ Firewall policy enforcement using pfSense, focusing on traffic control, security
 
 </div>
 
-<!--
 ---
-
-## 📚 Learning Journey
-
-### 🎯 **Current Focus Areas**
-• **Linux** - LVM, user/group management, SELinux, and system boot processes  
-• **Azure Security & Cloud Operations** – Azure IAM, Defender for Cloud, Key Vault, and policy enforcement
-• **Security Automation** - Building detection scripts and incident response workflows  
-
----
--->
 
 ## 🏅 Certifications
 
@@ -134,44 +138,26 @@ Firewall policy enforcement using pfSense, focusing on traffic control, security
 ![CompTIA Security+](https://img.shields.io/badge/-Security%2B-FF0000?style=for-the-badge&logo=comptia&logoColor=white)
 ![CompTIA Network+](https://img.shields.io/badge/-Network%2B-007ACC?style=for-the-badge&logo=comptia&logoColor=white)
 ![Splunk](https://img.shields.io/badge/-Splunk%20Core%20Certified-000000?style=for-the-badge&logo=splunk&logoColor=white)
-[![Azure Fundamentals (AZ‑900)](https://img.shields.io/badge/-Azure%20Fundamentals%20(AZ--900)-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://learn.microsoft.com/certifications/exams/az-900)
-
-**🎯 In Progress:** AZ-500 — Focused on securing Azure environments, identity & access, and threat protection.
-
-</div>
-
-<!--
-## 📊 GitHub Stats
-
-<div align="center">
-  
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SlyCyberLab&show_icons=true&theme=radical&count_private=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=SlyCyberLab&layout=compact&theme=radical)
+[![Azure Fundamentals](https://img.shields.io/badge/-Azure%20Fundamentals%20(AZ--900)-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://learn.microsoft.com/certifications/exams/az-900)
+[![Azure Administrator Associate](https://img.shields.io/badge/-Azure%20Administrator%20Associate%20(AZ--104)-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://learn.microsoft.com/certifications/exams/az-104)
 
 </div>
 
 ---
 
- ## 🌐 Let's Connect!
+## 📝 Latest Blog Posts
+
+All posts documented at **[blog.slytech.us](https://blog.slytech.us)**
+
+- 🤖 AI-Assisted SOC Triage on Top of Splunk Using the Anthropic API
+- 📊 Splunk SIEM Engineering Lab Series (3 parts)
+- 🛡️ NIST CSF 2.0 & FISMA-Aligned Compliance Lab Series (3 parts)
+
+---
 
 <div align="center">
 
-| Platform | Link | Purpose |
-|----------|------|---------|
-| 🌐 **Portfolio** | [slycyber.com](https://slycyber.com) | Projects & Case Studies |
-| 📧 **Email** | [slycyber7@gmail.com](mailto:slycyber7@gmail.com) | Professional Inquiries |
-| 💼 **LinkedIn** | [linkedin.com/in/slycyber](https://linkedin.com/in/slycyber) | Professional Network |
-| 📚 **Lab Repo** | [github.com/SlyCyberLab](https://github.com/SlyCyberLab) | Technical Projects |
-
-</div>
--->
-
-<div align="center">
-
-### 💫 *"Security through knowledge, growth through practice"*
-
-📌 **This profile is a living document** - regularly updated with new projects, skills, and insights from my cybersecurity journey.
+📌 **This profile is a living document**, updated regularly with new projects, labs, and published write-ups.
 
 **⭐ Follow along for updates!**
 
