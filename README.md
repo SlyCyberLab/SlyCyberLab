@@ -67,7 +67,7 @@ AI-assisted SOC triage tool combining the Splunk REST API and Anthropic API to a
 </td>
 <td width="50%">
   
-### 🛡️ [**NIST CSF 2.0 / FISMA-Aligned SOC Lab**](https://blog.slytech.us)
+### 🛡️ [**NIST CSF 2.0 / FISMA-Aligned SOC Lab**](https://blog.slytech.us/compliance-lab-1/)
 Full compliance lifecycle implementation across a multi-VLAN segmented enterprise lab. Covers GOVERN through RECOVER with pfSense, Wazuh SIEM, OpenSCAP remediation, GPO hardening, and simulated MITRE ATT&CK attacks. Documented as a 3-part technical blog series.
 
 ![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-3AAAFF)
