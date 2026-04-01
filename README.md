@@ -22,9 +22,9 @@
 ⚡ **Core Strengths:** Threat Detection, Windows/AD Infrastructure, Security Automation, AI-Assisted Triage
 
 ### 💪 What Sets Me Apart
-- 🛡️ **Detection Engineering:** Built custom SIEM detection rules in Splunk and Wazuh mapped to MITRE ATT&CK, with published lab documentation at blog.slytech.us
+- 🛡️ **Detection Engineering:** Built custom SIEM detection rules in Splunk and Wazuh mapped to MITRE ATT&CK, with published lab documentation at **[blog.slytech.us](https://blog.slytech.us)**
 - 🤖 **AI Integration:** Built a Python tool combining the Splunk REST API and Anthropic API for automated SOC triage with MITRE ATT&CK mapping
-- 🏗️ **Production Infrastructure:** 4+ years managing Windows Server, Active Directory, Microsoft 365, and network infrastructure in a live enterprise environment
+- 🏗️ **Production Infrastructure:** 4+ years administering Windows Server, Active Directory, Microsoft 365, and enterprise network infrastructure in production environments
 - 🌐 **Global Communicator:** Multilingual (English, Spanish, French) supporting diverse teams and clients
 - 📝 **Public Proof of Work:** Technical blog with 10+ published posts documenting real lab implementations, not just screenshots
 
