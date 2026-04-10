@@ -150,7 +150,8 @@ Multi-VLAN network segmentation with enforced firewall policies, traffic filteri
 
 All posts documented at **[blog.slytech.us](https://blog.slytech.us)**
 
-- 🤖 AI-Assisted SOC Triage on Top of Splunk Using the Anthropic API
+- 🔐 [Building an IAM Lab: Provisioning, Access Reviews, and GPO from Scratch](https://blog.slytech.us/iam-lab/)
+- 🤖 [AI-Assisted SOC Triage on Top of Splunk Using the Anthropic API](https://blog.slytech.us/splunk-ai-triage/)
 - 📊 Splunk SIEM Engineering Lab Series (3 parts)
 - 🛡️ NIST CSF 2.0 & FISMA-Aligned Compliance Lab Series (3 parts)
 
