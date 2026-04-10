@@ -14,21 +14,21 @@
 
 ## 🚀 About Me
 
-> **Hi, I'm Emsly, an IT professional with 4+ years of experience across IT support, infrastructure administration, and security operations, now focused full-time on detection engineering and cloud security.**  
-> I build hands-on security labs, automate detection workflows, and document everything publicly. Currently targeting SOC Analyst and Cloud Security roles.
+> **Hi, I'm Emsly, an IT professional with 4+ years of experience across infrastructure administration, security operations, and cloud environments.**  
+> I build hands-on labs, automate workflows, and document everything publicly. I enjoy solving real technical problems and building systems that are reliable, secure, and well-documented.
 
 ### At a Glance
-🎯 **Target Roles:** SOC Analyst, Detection Engineer, Cloud Security Engineer  
-⚡ **Core Strengths:** Threat Detection, Windows/AD Infrastructure, Security Automation, AI-Assisted Triage
+🎯 **Open To:** Infrastructure, Security, Cloud, and Identity roles  
+⚡ **Core Strengths:** Windows/AD Administration, Security Operations, Cloud Infrastructure, Automation
 
 ### 💪 What Sets Me Apart
-- 🛡️ **Detection Engineering:** Built custom SIEM detection rules in Splunk and Wazuh mapped to MITRE ATT&CK, with published lab documentation at **[blog.slytech.us](https://blog.slytech.us)**
-- 🤖 **AI Integration:** Built a Python tool combining the Splunk REST API and Anthropic API for automated SOC triage with MITRE ATT&CK mapping
-- 🏗️ **Production Infrastructure:** 4+ years administering Windows Server, Active Directory, Microsoft 365, and enterprise network infrastructure in production environments
-- 🌐 **Global Communicator:** Multilingual (English, Spanish, French) supporting diverse teams and clients
+- 🏗️ **Production Infrastructure:** 4+ years administering Windows Server, Active Directory, Entra ID, Microsoft 365, and enterprise network infrastructure, including identity lifecycle management and endpoint deployment at scale
+- 🛡️ **Security Operations:** Built custom SIEM detection rules in Splunk and Wazuh mapped to MITRE ATT&CK, with published lab documentation at **[blog.slytech.us](https://blog.slytech.us)**
+- 🤖 **AI Integration:** Built a Python tool combining the Splunk REST API and Anthropic API for automated security event triage with MITRE ATT&CK mapping
+- 🌐 **Global Communicator:** Multilingual (English, Spanish, French, Haitian Creole) supporting diverse teams and clients
 - 📝 **Public Proof of Work:** Technical blog with 10+ published posts documenting real lab implementations, not just screenshots
 
----
+  ---
 
 ## 🛠️ Technology Stack
 
@@ -102,12 +102,13 @@ Enterprise-grade vulnerability scanning with Tenable Nessus Professional on Azur
 <tr>
 <td width="50%">
 
-### 🏢 [**Active Directory Enterprise Lab**](https://github.com/SlyCyberLab/Active-Directory-HomeLab)
-Fully virtualized Windows Server environment with AD DS, DNS, DHCP, and multi-client OU structure. Automated user provisioning with PowerShell and GPO-based security enforcement aligned to CIS benchmarks.
+### 🔐 [**Identity and Access Management Lab**](https://blog.slytech.us/iam-lab/)
+End-to-end IAM implementation on Active Directory covering structured provisioning and deprovisioning workflows, least-privilege OU and group design, quarterly access review automation, and GPO-based access control scoped per department. All scenarios scripted in PowerShell with timestamped audit logs.
 
-![Windows Server](https://img.shields.io/badge/Windows%20Server-2025-0078D4)
 ![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE)
-![CIS](https://img.shields.io/badge/CIS-Benchmarks-darkgreen)
+![Active Directory](https://img.shields.io/badge/Active%20Directory-IAM-0078D4)
+![GPO](https://img.shields.io/badge/GPO-Access%20Control-darkgreen)
+![Blog](https://img.shields.io/badge/Blog-Published-orange)
 
 </td>
 <td width="50%">
