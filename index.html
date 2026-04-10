@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SlyTech - Emsly S. | Cybersecurity Professional</title>
+    <title>SlyTech - Emsly S. | IT & Security Professional</title>
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM5BKKZZN5"></script>
@@ -904,7 +904,7 @@
         <!-- Hero Section -->
         <div class="glass-card hero fade-in">
             <h1>Emsly S.</h1>
-            <div class="subtitle typing-effect">Cybersecurity Professional</div>
+            <div class="subtitle typing-effect">IT & Security Professional</div>
             
             <div class="role-badges">
                 <span class="role-badge">🖥️ System Administrator</span>
@@ -1093,8 +1093,8 @@
                     <span class="command">cat focus.md</span>
                 </div>
                 <div class="terminal-line terminal-output" data-text="# Current Objectives"># Current Objectives</div>
-                <div class="terminal-line terminal-output" data-text="- SOC Analyst, Detection Engineer, or Cloud Security Engineer roles">- SOC Analyst, Detection Engineer, or Cloud Security Engineer roles</div>
-                <div class="terminal-line terminal-output" data-text="- Multilingual: English, Spanish, French">- Multilingual: English, Spanish, French</div>
+                   <div class="terminal-line terminal-output" data-text="- Infrastructure, Cloud, Security, and Identity roles">- Infrastructure, Cloud, Security, and Identity roles</div>
+                   <div class="terminal-line terminal-output" data-text="- Multilingual: English, Spanish, French">- Multilingual: English, Spanish, French</div>
             </div>
         </div>
 
@@ -1133,23 +1133,21 @@
             </div>
             
             <div class="projects-grid">
-                <a href="https://github.com/SlyCyberLab/Active-Directory-HomeLab" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-icon">🏢</div>
-                            <div class="project-title">Active Directory Enterprise Lab</div>
-                        </div>
-                        <div class="project-description">
-                            Comprehensive virtualized Windows Server environment with enterprise-level Active Directory, automated user provisioning, and advanced security hardening protocols.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Windows Server 2025</span>
-                            <span class="tech-tag">VMware</span>
-                            <span class="tech-tag">PowerShell</span>
-                            <span class="tech-tag">GPO</span>
-                        </div>
+                 <div class="project-card" onclick="openModal('adlab')" style="cursor: pointer;">
+                    <div class="project-header">
+                        <div class="project-icon">🔐</div>
+                        <div class="project-title">Identity and Access Management Lab</div>
                     </div>
-                </a>
+                    <div class="project-description">
+                        End-to-end IAM implementation covering provisioning workflows, least-privilege group design, quarterly access review automation, and GPO-based access control. All scripted in PowerShell with audit logs.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Active Directory</span>
+                        <span class="tech-tag">PowerShell</span>
+                        <span class="tech-tag">Identity Lifecycle</span>
+                        <span class="tech-tag">GPO</span>
+                    </div>
+                </div>
                 
                 <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" target="_blank" style="text-decoration: none; color: inherit;">
                     <div class="project-card">
@@ -1316,7 +1314,7 @@
         <div class="glass-card fade-in" style="text-align: center;">
             <h2 style="margin-bottom: 2rem; font-size: 2.5rem;">Open to New Opportunities</h2>
             <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 3rem;">
-                Currently pursuing SOC Analyst, Detection Engineer, and Cloud Security Engineer roles. I build detection pipelines, document compliance frameworks, and ship the work publicly at <a href="https://blog.slytech.us" style="color: var(--primary);">blog.slytech.us</a>.
+                Open to infrastructure, security, cloud, and identity roles. I build production-grade labs, automate workflows, and document everything publicly at <a href="https://blog.slytech.us" style="color: var(--primary);">blog.slytech.us</a>.
             </p>
             <div class="cta-buttons">
                 <a href="mailto:slycyber7@gmail.com" class="cta-btn cta-primary">Start the Conversation</a>
@@ -1455,7 +1453,7 @@
 
         // Typing Effect
         const subtitle = document.querySelector('.typing-effect');
-        const text = 'Cybersecurity Professional';
+        const text = 'IT & Security Professional';
         let i = 0;
 
         function typeWriter() {
