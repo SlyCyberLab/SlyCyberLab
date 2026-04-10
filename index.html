@@ -29,13 +29,11 @@
             --glass-border: rgba(255, 255, 255, 0.1);
         }
         
-        /* Performance Optimizations */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-    
         
         body {
             font-family: 'Inter', sans-serif;
@@ -43,12 +41,10 @@
             color: var(--text-light);
             overflow-x: hidden;
             scroll-behavior: smooth;
-            will-change: scroll-position;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Optimized Background Animation */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -59,7 +55,6 @@
             background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e);
             background-size: 400% 400%;
             animation: gradientShift 20s ease infinite;
-            will-change: background-position;
             transform: translateZ(0);
         }
         
@@ -73,7 +68,6 @@
                 radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.08) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(255, 51, 102, 0.03) 0%, transparent 50%);
             animation: float 25s ease-in-out infinite;
-            will-change: transform;
             transform: translateZ(0);
         }
         
@@ -88,7 +82,6 @@
             66% { transform: translate(-20px, 20px) rotate(240deg); }
         }
         
-        /* Matrix Rain Effect */
         .matrix {
             position: fixed;
             top: 0;
@@ -100,14 +93,12 @@
             opacity: 0.1;
         }
         
-        /* Glassmorphism Container */
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
         }
         
-        /* Optimized Glassmorphism */
         .glass-card {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
@@ -121,7 +112,6 @@
                 0 8px 32px rgba(0, 0, 0, 0.3),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            will-change: transform;
             transform: translateZ(0);
         }
         
@@ -148,7 +138,6 @@
             50% { opacity: 1; transform: translateX(100%); }
         }
         
-        /* Hero Section */
         .hero {
             text-align: center;
             padding: 4rem 0;
@@ -165,7 +154,6 @@
             background-clip: text;
             animation: textShimmer 3s ease-in-out infinite;
             margin-bottom: 1rem;
-            text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
         }
         
         @keyframes textShimmer {
@@ -228,21 +216,6 @@
             box-shadow: 0 15px 35px rgba(0, 255, 136, 0.4);
         }
         
-        .role-badge::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.6s;
-        }
-        
-        .role-badge:hover::before {
-            left: 100%;
-        }
-        
         .cta-buttons {
             display: flex;
             justify-content: center;
@@ -279,22 +252,6 @@
             box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
         }
         
-        .cta-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .cta-btn:hover::before {
-            left: 100%;
-        }
-        
-        /* Section Headers */
         .section-header {
             display: flex;
             align-items: center;
@@ -303,7 +260,6 @@
             position: relative;
         }
         
-        /* Enhanced Typography */
         .section-header h2 {
             font-size: 3rem;
             font-weight: 800;
@@ -312,7 +268,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: textGradientFlow 4s ease-in-out infinite;
-            text-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
             letter-spacing: -0.02em;
         }
         
@@ -328,44 +283,6 @@
             background: linear-gradient(90deg, var(--primary), transparent);
         }
         
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .stat-card {
-            background: rgba(0, 255, 136, 0.05);
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.1);
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary);
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        .stat-label {
-            color: var(--text-dim);
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
-        }
-        
-        /* Tech Stack */
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -393,31 +310,12 @@
             box-shadow: 0 15px 40px rgba(0, 102, 255, 0.3);
         }
         
-        .tech-item::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--secondary), var(--primary));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-        }
-        
-        .tech-item:hover::after {
-            transform: scaleX(1);
-        }
-        
-        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 2rem;
         }
         
-        /* Optimized Project Cards */
         .project-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -429,24 +327,7 @@
             cursor: pointer;
             backdrop-filter: blur(15px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            will-change: transform;
             transform: translateZ(0);
-        }
-        
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 102, 255, 0.05));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .project-card:hover::before {
-            opacity: 1;
         }
         
         .project-card:hover {
@@ -500,7 +381,6 @@
             font-family: 'JetBrains Mono', monospace;
         }
         
-        /* Certifications */
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -513,13 +393,7 @@
             border-radius: 16px;
             padding: 2rem;
             text-align: center;
-            position: relative;
             transition: all 0.3s ease;
-        }
-        
-        .cert-card.in-progress {
-            border-color: rgba(255, 193, 7, 0.5);
-            background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
         }
         
         .cert-card:hover {
@@ -538,7 +412,6 @@
             font-size: 0.9rem;
         }
         
-        /* Terminal Effect */
         .terminal {
             background: #000;
             border-radius: 12px;
@@ -571,32 +444,9 @@
             transform: translateX(10px);
         }
         
-        .terminal-line.typing {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid var(--primary);
-            animation: typing 2s steps(100, end), blink-cursor 1s infinite;
-        }
+        .prompt { color: var(--primary); }
+        .command { color: var(--secondary); }
         
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        
-        @keyframes blink-cursor {
-            0%, 50% { border-color: var(--primary); }
-            51%, 100% { border-color: transparent; }
-        }
-        
-        .prompt {
-            color: var(--primary);
-        }
-        
-        .command {
-            color: var(--secondary);
-        }
-        
-        /* Staggered Animations */
         .fade-in {
             opacity: 0;
             transform: translateY(60px);
@@ -608,41 +458,14 @@
             transform: translateY(0);
         }
         
-        .fade-in:nth-child(1) { transition-delay: 0.1s; }
-        .fade-in:nth-child(2) { transition-delay: 0.2s; }
-        .fade-in:nth-child(3) { transition-delay: 0.3s; }
-        .fade-in:nth-child(4) { transition-delay: 0.4s; }
-        .fade-in:nth-child(5) { transition-delay: 0.5s; }
-        
-        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .glass-card {
-                padding: 2rem;
-            }
-            
-            .hero h1 {
-                font-size: 3rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .container { padding: 1rem; }
+            .glass-card { padding: 2rem; }
+            .hero h1 { font-size: 3rem; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .projects-grid { grid-template-columns: 1fr; }
         }
         
-        /* Loading Screen */
         .loader {
             position: fixed;
             top: 0;
@@ -677,31 +500,9 @@
             animation: cyberSpin 2s linear infinite;
         }
         
-        .cyber-circle:nth-child(1) {
-            width: 100%;
-            height: 100%;
-            border-top-color: var(--primary);
-            animation-duration: 1.5s;
-        }
-        
-        .cyber-circle:nth-child(2) {
-            width: 80%;
-            height: 80%;
-            top: 10%;
-            left: 10%;
-            border-right-color: var(--secondary);
-            animation-duration: 2s;
-            animation-direction: reverse;
-        }
-        
-        .cyber-circle:nth-child(3) {
-            width: 60%;
-            height: 60%;
-            top: 20%;
-            left: 20%;
-            border-bottom-color: var(--accent);
-            animation-duration: 1s;
-        }
+        .cyber-circle:nth-child(1) { width: 100%; height: 100%; border-top-color: var(--primary); animation-duration: 1.5s; }
+        .cyber-circle:nth-child(2) { width: 80%; height: 80%; top: 10%; left: 10%; border-right-color: var(--secondary); animation-duration: 2s; animation-direction: reverse; }
+        .cyber-circle:nth-child(3) { width: 60%; height: 60%; top: 20%; left: 20%; border-bottom-color: var(--accent); animation-duration: 1s; }
         
         @keyframes cyberSpin {
             0% { transform: rotate(0deg); }
@@ -720,12 +521,7 @@
             0%, 100% { opacity: 0.5; }
             50% { opacity: 1; }
         }
-        
-        .loading-dots::after {
-            content: '';
-            animation: dots 1.5s steps(4, end) infinite;
-        }
-        
+
         /* Modal Styles */
         .modal {
             display: none;
@@ -769,121 +565,30 @@
             transition: color 0.3s ease;
         }
         
-        .close:hover {
-            color: var(--accent);
-        }
+        .close:hover { color: var(--accent); }
         
-        .modal-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
+        .modal-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+        .modal-icon { font-size: 3rem; }
+        .modal-title { font-size: 2.5rem; font-weight: 700; color: var(--text-light); }
+        .modal-description { color: var(--text-dim); line-height: 1.8; font-size: 1.1rem; margin-bottom: 2rem; }
+        .modal-features { margin-bottom: 2rem; }
+        .modal-features h4 { color: var(--primary); margin-bottom: 1rem; font-size: 1.3rem; }
+        .modal-features ul { list-style: none; padding-left: 0; }
+        .modal-features li { padding: 0.5rem 0; color: var(--text-dim); position: relative; padding-left: 2rem; }
+        .modal-features li::before { content: '▶'; color: var(--primary); position: absolute; left: 0; }
+        .modal-tech { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2rem; }
+        .modal-tech-tag { padding: 0.6rem 1.2rem; background: rgba(0, 255, 136, 0.2); border: 1px solid var(--primary); border-radius: 25px; font-size: 0.9rem; color: var(--primary); font-family: 'JetBrains Mono', monospace; }
+        .modal-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .modal-link { padding: 1rem 2rem; background: linear-gradient(45deg, var(--primary), var(--secondary)); color: var(--bg-dark); text-decoration: none; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; }
+        .modal-link:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3); }
         
-        .modal-icon {
-            font-size: 3rem;
-        }
-        
-        .modal-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-light);
-        }
-        
-        .modal-description {
-            color: var(--text-dim);
-            line-height: 1.8;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .modal-features {
-            margin-bottom: 2rem;
-        }
-        
-        .modal-features h4 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        
-        .modal-features ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .modal-features li {
-            padding: 0.5rem 0;
-            color: var(--text-dim);
-            position: relative;
-            padding-left: 2rem;
-        }
-        
-        .modal-features li::before {
-            content: '▶';
-            color: var(--primary);
-            position: absolute;
-            left: 0;
-        }
-        
-        .modal-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-bottom: 2rem;
-        }
-        
-        .modal-tech-tag {
-            padding: 0.6rem 1.2rem;
-            background: rgba(0, 255, 136, 0.2);
-            border: 1px solid var(--primary);
-            border-radius: 25px;
-            font-size: 0.9rem;
-            color: var(--primary);
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        .modal-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .modal-link {
-            padding: 1rem 2rem;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: var(--bg-dark);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .modal-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: var(--bg-darker);
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(45deg, var(--secondary), var(--accent));
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-darker); }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 4px; }
     </style>
 </head>
 <body>
+
     <!-- Loading Screen -->
     <div class="loader" id="loader">
         <div class="cyber-loader">
@@ -899,8 +604,122 @@
 
     <div class="bg-animation"></div>
     <canvas class="matrix" id="matrix"></canvas>
-    
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- MODALS — outside all glass-cards           -->
+    <!-- ═══════════════════════════════════════════ -->
+
+    <div id="azuresoc" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('azuresoc')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon">🛡️</div>
+                <div class="modal-title">Azure SOC Operations Center</div>
+            </div>
+            <div class="modal-description">
+                A cloud-native Security Operations Center built on Microsoft Azure, demonstrating advanced threat detection, incident response, and security analytics capabilities.
+            </div>
+            <div class="modal-features">
+                <h4>🎯 Key Features</h4>
+                <ul>
+                    <li>Microsoft Sentinel SIEM deployment and configuration</li>
+                    <li>Custom KQL queries for threat hunting and detection</li>
+                    <li>Automated incident response workflows</li>
+                    <li>Live attack simulation and analysis — 6,000+ captured attempts</li>
+                    <li>Security metrics dashboard and reporting</li>
+                    <li>Integration with Azure Monitor and Log Analytics</li>
+                </ul>
+            </div>
+            <div class="modal-tech">
+                <span class="modal-tech-tag">Microsoft Azure</span>
+                <span class="modal-tech-tag">Azure Sentinel</span>
+                <span class="modal-tech-tag">KQL</span>
+                <span class="modal-tech-tag">Log Analytics</span>
+                <span class="modal-tech-tag">Azure Monitor</span>
+                <span class="modal-tech-tag">SIEM</span>
+            </div>
+            <div class="modal-links">
+                <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" class="modal-link" target="_blank">View on GitHub</a>
+                <a href="#" class="modal-link" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);" onclick="closeModal('azuresoc'); return false;">Close</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="vuln" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('vuln')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon">🔍</div>
+                <div class="modal-title">Vulnerability Management Platform</div>
+            </div>
+            <div class="modal-description">
+                Enterprise-grade vulnerability assessment and remediation platform using Tenable Nessus Professional, demonstrating the full vulnerability management lifecycle from discovery to remediation.
+            </div>
+            <div class="modal-features">
+                <h4>🎯 Key Features</h4>
+                <ul>
+                    <li>Tenable Nessus Professional deployed on Azure VM</li>
+                    <li>Automated vulnerability scanning with scheduling</li>
+                    <li>CVSS risk scoring and prioritization</li>
+                    <li>Compliance framework mapping to NIST and CIS</li>
+                    <li>Custom reporting dashboard and remediation workflow</li>
+                </ul>
+            </div>
+            <div class="modal-tech">
+                <span class="modal-tech-tag">Tenable Nessus Professional</span>
+                <span class="modal-tech-tag">Azure Virtual Machines</span>
+                <span class="modal-tech-tag">CVSS Framework</span>
+                <span class="modal-tech-tag">Compliance Reporting</span>
+                <span class="modal-tech-tag">Risk Assessment</span>
+            </div>
+            <div class="modal-links">
+                <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" class="modal-link" target="_blank">View on GitHub</a>
+                <a href="#" class="modal-link" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);" onclick="closeModal('vuln'); return false;">Close</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="pfsense" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('pfsense')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon">🔥</div>
+                <div class="modal-title">pfSense Firewall Configuration Lab</div>
+            </div>
+            <div class="modal-description">
+                Firewall policy enforcement using pfSense, focusing on traffic control, security hardening, and rule validation across a multi-VLAN network environment.
+            </div>
+            <div class="modal-features">
+                <h4>🎯 Key Features</h4>
+                <ul>
+                    <li>Multi-network VLAN segmentation and isolation</li>
+                    <li>Firewall rule creation and policy enforcement</li>
+                    <li>Traffic filtering and access control implementation</li>
+                    <li>Security hardening configurations and best practices</li>
+                    <li>Rule validation and testing procedures</li>
+                    <li>Network security monitoring and syslog forwarding</li>
+                </ul>
+            </div>
+            <div class="modal-tech">
+                <span class="modal-tech-tag">pfSense 2.7.2</span>
+                <span class="modal-tech-tag">VLAN Segmentation</span>
+                <span class="modal-tech-tag">Firewall Rules</span>
+                <span class="modal-tech-tag">Network Security</span>
+                <span class="modal-tech-tag">Syslog</span>
+            </div>
+            <div class="modal-links">
+                <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" class="modal-link" target="_blank">View on GitHub</a>
+                <a href="#" class="modal-link" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);" onclick="closeModal('pfsense'); return false;">Close</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- MAIN CONTENT                               -->
+    <!-- ═══════════════════════════════════════════ -->
+
     <div class="container">
+
         <!-- Hero Section -->
         <div class="glass-card hero fade-in">
             <h1>Emsly S.</h1>
@@ -910,155 +729,16 @@
                 <span class="role-badge">🖥️ System Administrator</span>
                 <span class="role-badge">🛡️ SOC Analyst</span>
                 <span class="role-badge">☁️ Cloud Security</span>
-                <span class="role-badge">🔵 Blue Team</span>
+                <span class="role-badge">🔐 Identity & Access</span>
             </div>
 
-        <!-- Project Modals -->
-        
-        <div id="iam-lab" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('iam-lab')">&times;</span>
-                <div class="modal-header">
-                    <div class="modal-icon">🔐</div>
-                    <div class="modal-title">Identity and Access Management Lab</div>
-                </div>
-                <div class="modal-description">
-                    An end-to-end IAM implementation on Active Directory covering the full identity lifecycle: structured provisioning and deprovisioning workflows, least-privilege OU and group design, quarterly access review automation, and GPO-based access control scoped per department. All scenarios are scripted in PowerShell with timestamped audit logs and manager-ready output.
-                </div>
-                <div class="modal-features">
-                    <h4>🎯 Key Features</h4>
-                    <ul>
-                        <li>Role group and resource group architecture enforcing least-privilege across departments</li>
-                        <li>Automated provisioning script with OU placement, group assignment, and audit logging</li>
-                        <li>Deprovisioning workflow with 30-day retention, account stamping, and access revocation</li>
-                        <li>Quarterly access review automation flagging stale, inactive, and orphaned accounts</li>
-                        <li>Department-scoped GPOs with drive mapping, Control Panel, and Command Prompt restrictions</li>
-                        <li>NTFS ACLs on department file shares backing GPO enforcement at the permission level</li>
-                    </ul>
-                </div>
-                <div class="modal-tech">
-                    <span class="modal-tech-tag">Active Directory</span>
-                    <span class="modal-tech-tag">PowerShell Automation</span>
-                    <span class="modal-tech-tag">Group Policy</span>
-                    <span class="modal-tech-tag">Windows Server 2025</span>
-                    <span class="modal-tech-tag">NTFS / File Permissions</span>
-                    <span class="modal-tech-tag">Identity Lifecycle</span>
-                </div>
-                <div class="modal-links">
-                    <a href="https://blog.slytech.us/iam-lab/" class="modal-link" target="_blank">Read the Write-Up</a>
-                    <a href="#" class="modal-link secondary" onclick="closeModal('iam-lab'); return false;">Close</a>
-                </div>
+            <div class="cta-buttons">
+                <a href="mailto:slycyber7@gmail.com" class="cta-btn cta-primary">Get In Touch</a>
+                <a href="https://www.linkedin.com/in/emsly-s/" class="cta-btn cta-secondary" target="_blank">LinkedIn Profile</a>
+                <a href="https://blog.slytech.us" class="cta-btn cta-secondary" target="_blank">SlyTech Blog</a>
             </div>
         </div>
-        
-        <div id="azuresoc" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('azuresoc')">&times;</span>
-                <div class="modal-header">
-                    <div class="modal-icon">🛡️</div>
-                    <div class="modal-title">Azure SOC Operations Center</div>
-                </div>
-                <div class="modal-description">
-                    A cloud-native Security Operations Center built on Microsoft Azure, demonstrating advanced threat detection, incident response, and security analytics capabilities. This project showcases real-world SOC operations using industry-standard tools and methodologies.
-                </div>
-                <div class="modal-features">
-                    <h4>🎯 Key Features</h4>
-                    <ul>
-                        <li>Microsoft Sentinel SIEM deployment and configuration</li>
-                        <li>Custom KQL queries for threat hunting and detection</li>
-                        <li>Automated incident response workflows</li>
-                        <li>Live attack simulation and analysis</li>
-                        <li>Security metrics dashboard and reporting</li>
-                        <li>Integration with Azure security services</li>
-                    </ul>
-                </div>
-                <div class="modal-tech">
-                    <span class="modal-tech-tag">Microsoft Azure</span>
-                    <span class="modal-tech-tag">Azure Sentinel</span>
-                    <span class="modal-tech-tag">KQL (Kusto Query Language)</span>
-                    <span class="modal-tech-tag">Log Analytics</span>
-                    <span class="modal-tech-tag">Azure Monitor</span>
-                    <span class="modal-tech-tag">SIEM</span>
-                </div>
-                <div class="modal-links">
-                    <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" class="modal-link" target="_blank">View on GitHub</a>
-                    <a href="#" class="modal-link secondary" onclick="closeModal('azuresoc'); return false;">Close</a>
-                </div>
-            </div>
-        </div>
-        
-        <div id="vuln" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('vuln')">&times;</span>
-                <div class="modal-header">
-                    <div class="modal-icon">🔍</div>
-                    <div class="modal-title">Vulnerability Management Platform</div>
-                </div>
-                <div class="modal-description">
-                    An enterprise-grade vulnerability assessment and remediation platform utilizing Tenable Nessus Professional. This project demonstrates comprehensive vulnerability management lifecycle from discovery to remediation, with automated scanning and detailed compliance reporting.
-                </div>
-                <div class="modal-features">
-                    <h4>🎯 Key Features</h4>
-                    <ul>
-                        <li>Tenable Nessus Professional deployment on Azure</li>
-                        <li>Automated vulnerability scanning schedules</li>
-                        <li>CVSS risk scoring and prioritization</li>
-                        <li>Compliance framework mapping (NIST, CIS)</li>
-                        <li>Custom reporting and analytics dashboard</li>
-                        <li>Remediation tracking and validation</li>
-                    </ul>
-                </div>
-                <div class="modal-tech">
-                    <span class="modal-tech-tag">Tenable Nessus Professional</span>
-                    <span class="modal-tech-tag">Azure Virtual Machines</span>
-                    <span class="modal-tech-tag">MySQL Database</span>
-                    <span class="modal-tech-tag">CVSS Framework</span>
-                    <span class="modal-tech-tag">Compliance Reporting</span>
-                    <span class="modal-tech-tag">Risk Assessment</span>
-                </div>
-                <div class="modal-links">
-                    <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" class="modal-link" target="_blank">View on GitHub</a>
-                    <a href="#" class="modal-link secondary" onclick="closeModal('vuln'); return false;">Close</a>
-                </div>
-            </div>
-        </div>
-        
-        <div id="pfsense" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('pfsense')">&times;</span>
-                <div class="modal-header">
-                    <div class="modal-icon">🔥</div>
-                    <div class="modal-title">pfSense Firewall Configuration Lab</div>
-                </div>
-                <div class="modal-description">
-                    Firewall policy enforcement using pfSense, focusing on traffic control, security hardening, and rule validation in a preconfigured multi-network lab environment. This hands-on lab demonstrates enterprise firewall management and network segmentation strategies.
-                </div>
-                <div class="modal-features">
-                    <h4>🎯 Key Features</h4>
-                    <ul>
-                        <li>Multi-network VLAN segmentation and isolation</li>
-                        <li>Firewall rule creation and policy enforcement</li>
-                        <li>Traffic filtering and access control implementation</li>
-                        <li>Security hardening configurations and best practices</li>
-                        <li>Rule validation and testing procedures</li>
-                        <li>Network security monitoring and logging</li>
-                    </ul>
-                </div>
-                <div class="modal-tech">
-                    <span class="modal-tech-tag">pfSense 2.7.2</span>
-                    <span class="modal-tech-tag">Firewall Security</span>
-                    <span class="modal-tech-tag">Network Segmentation</span>
-                    <span class="modal-tech-tag">Traffic Control</span>
-                    <span class="modal-tech-tag">Security Hardening</span>
-                    <span class="modal-tech-tag">Hands-On Lab</span>
-                </div>
-                <div class="modal-links">
-                    <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" class="modal-link" target="_blank">View on GitHub</a>
-                    <a href="#" class="modal-link secondary" onclick="closeModal('pfsense'); return false;">Close</a>
-                </div>
-            </div>
-        </div>
-        
+
         <!-- About -->
         <div class="glass-card fade-in">
             <div class="section-header">
@@ -1080,18 +760,18 @@
                     <span class="prompt">emsly@slytech:~$</span> 
                     <span class="command">ls skills/</span>
                 </div>
-                <div class="terminal-line terminal-output" data-text="incident-response/  detection-engineering/  siem-operations/  cloud-security/  compliance/">incident-response/  detection-engineering/  siem-operations/  cloud-security/  compliance/</div>
+                <div class="terminal-line terminal-output" data-text="incident-response/  detection-engineering/  siem-operations/  cloud-security/  compliance/  identity-access/">incident-response/  detection-engineering/  siem-operations/  cloud-security/  compliance/  identity-access/</div>
                 <div class="terminal-line terminal-cmd">
                     <span class="prompt">emsly@slytech:~$</span> 
                     <span class="command">cat focus.md</span>
                 </div>
                 <div class="terminal-line terminal-output" data-text="# Current Objectives"># Current Objectives</div>
-                   <div class="terminal-line terminal-output" data-text="- Infrastructure, Cloud, Security, and Identity roles">- Infrastructure, Cloud, Security, and Identity roles</div>
-                   <div class="terminal-line terminal-output" data-text="- Multilingual: English, Spanish, French">- Multilingual: English, Spanish, French</div>
+                <div class="terminal-line terminal-output" data-text="- Infrastructure, Cloud, Security, and Identity roles">- Infrastructure, Cloud, Security, and Identity roles</div>
+                <div class="terminal-line terminal-output" data-text="- Multilingual: English, Spanish, French">- Multilingual: English, Spanish, French</div>
             </div>
         </div>
 
- <!-- Tech Stack -->
+        <!-- Tech Stack -->
         <div class="glass-card fade-in">
             <div class="section-header">
                 <h2>🛠️ Arsenal</h2>
@@ -1107,6 +787,7 @@
                 <div class="tech-item">Azure</div>
                 <div class="tech-item">Proxmox</div>
                 <div class="tech-item">Active Directory</div>
+                <div class="tech-item">Entra ID</div>
                 <div class="tech-item">pfSense</div>
                 <div class="tech-item">Docker</div>
                 <div class="tech-item">Kali Linux</div>
@@ -1114,12 +795,36 @@
                 <div class="tech-item">Nessus</div>
                 <div class="tech-item">KQL</div>
                 <div class="tech-item">SIEM</div>
-                <div class="tech-item">Incident Response</div>
                 <div class="tech-item">Detection Engineering</div>
             </div>
         </div>
 
-        <!-- Projects -->  
+        <!-- Projects -->
+        <div class="glass-card fade-in">
+            <div class="section-header">
+                <h2>🚀 Featured Projects</h2>
+            </div>
+            
+            <div class="projects-grid">
+
+                <a href="https://blog.slytech.us/iam-lab/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">🔐</div>
+                            <div class="project-title">Identity and Access Management Lab</div>
+                        </div>
+                        <div class="project-description">
+                            End-to-end IAM implementation covering provisioning workflows, least-privilege group design, quarterly access review automation, and GPO-based access control. All scripted in PowerShell with audit logs.
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Active Directory</span>
+                            <span class="tech-tag">PowerShell</span>
+                            <span class="tech-tag">Identity Lifecycle</span>
+                            <span class="tech-tag">GPO</span>
+                        </div>
+                    </div>
+                </a>
+
                 <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" target="_blank" style="text-decoration: none; color: inherit;">
                     <div class="project-card">
                         <div class="project-header">
@@ -1127,7 +832,7 @@
                             <div class="project-title">Azure SOC Operations Center</div>
                         </div>
                         <div class="project-description">
-                            Cloud-native Security Operations Center with real-time threat detection, advanced analytics, and automated incident response capturing live attack attempts.
+                            Cloud-native Security Operations Center with real-time threat detection, advanced analytics, and automated incident response capturing 6,000+ live attack attempts.
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">Microsoft Azure</span>
@@ -1137,7 +842,7 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" target="_blank" style="text-decoration: none; color: inherit;">
                     <div class="project-card">
                         <div class="project-header">
@@ -1150,28 +855,29 @@
                         <div class="project-tech">
                             <span class="tech-tag">Nessus Professional</span>
                             <span class="tech-tag">Azure VM</span>
-                            <span class="tech-tag">MySQL</span>
                             <span class="tech-tag">CVSS</span>
+                            <span class="tech-tag">NIST / CIS</span>
                         </div>
                     </div>
                 </a>
-                
+
                 <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" target="_blank" style="text-decoration: none; color: inherit;">
                     <div class="project-card">
                         <div class="project-header">
-                            <div class="project-icon">🛡️</div>
+                            <div class="project-icon">🔥</div>
                             <div class="project-title">pfSense Firewall Configuration Lab</div>
                         </div>
                         <div class="project-description">
-                            Firewall policy enforcement using pfSense, focusing on traffic control, security hardening, and rule validation in a preconfigured multi-network lab environment.
+                            Multi-VLAN network segmentation with enforced firewall policies, traffic filtering, and access control rules across management, server, workstation, and DMZ zones.
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">pfSense 2.7.2</span>
-                            <span class="tech-tag">Firewall Security</span>
-                            <span class="tech-tag">Traffic Control</span>
+                            <span class="tech-tag">VLAN Segmentation</span>
+                            <span class="tech-tag">Firewall Rules</span>
                         </div>
                     </div>
                 </a>
+
                 <div class="project-card" onclick="window.open('https://blog.slytech.us/splunk-lab-1/', '_blank')" style="cursor: pointer;">
                     <div class="project-header">
                         <div class="project-icon">📊</div>
@@ -1235,18 +941,16 @@
                         <span class="tech-tag">SIEM</span>
                     </div>
                 </div>
-            </div> 
+
+            </div>
+
             <div style="text-align: center; margin-top: 3rem;">
                 <p style="color: var(--text-dim); margin-bottom: 1.5rem; font-size: 1rem;">
                     Most projects are fully documented with build notes, troubleshooting, and real lab data at blog.slytech.us
                 </p>
                 <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-                    <a href="https://github.com/SlyCyberLab?tab=repositories" class="cta-btn cta-secondary" target="_blank">
-                        GitHub Repos →
-                    </a>
-                    <a href="https://blog.slytech.us" class="cta-btn cta-primary" target="_blank">
-                        Blog Documentation →
-                    </a>
+                    <a href="https://github.com/SlyCyberLab?tab=repositories" class="cta-btn cta-secondary" target="_blank">GitHub Repos →</a>
+                    <a href="https://blog.slytech.us" class="cta-btn cta-primary" target="_blank">Blog Documentation →</a>
                 </div>
             </div>
         </div>
@@ -1281,7 +985,7 @@
             </div>
         </div>
 
-<!-- Call to Action -->
+        <!-- Call to Action -->
         <div class="glass-card fade-in" style="text-align: center;">
             <h2 style="margin-bottom: 2rem; font-size: 2.5rem;">Open to New Opportunities</h2>
             <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 3rem;">
@@ -1293,17 +997,16 @@
                 <a href="https://blog.slytech.us" class="cta-btn cta-secondary" target="_blank">Read the Blog</a>
             </div>
         </div>
-    </div>>
+
+    </div>
 
     <script>
-        // Loading Screen Animation
+        // Loading Screen
         window.addEventListener('load', function() {
             setTimeout(() => {
                 const loader = document.getElementById('loader');
                 loader.classList.add('hidden');
                 setTimeout(() => loader.remove(), 500);
-                
-                // Start terminal typing animations
                 setTimeout(startTerminalAnimation, 800);
             }, 2000);
         });
@@ -1311,21 +1014,15 @@
         // Terminal Typing Animation
         function startTerminalAnimation() {
             const terminalOutputs = document.querySelectorAll('.terminal-output');
-            
             terminalOutputs.forEach((output, index) => {
                 setTimeout(() => {
                     const text = output.getAttribute('data-text');
                     output.textContent = '';
-                    output.classList.add('typing');
-                    
                     let i = 0;
                     const typeInterval = setInterval(() => {
                         output.textContent = text.substring(0, i + 1);
                         i++;
-                        if (i >= text.length) {
-                            clearInterval(typeInterval);
-                            output.classList.remove('typing');
-                        }
+                        if (i >= text.length) clearInterval(typeInterval);
                     }, 30);
                 }, index * 800);
             });
@@ -1342,7 +1039,6 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside
         window.onclick = function(event) {
             const modals = document.querySelectorAll('.modal');
             modals.forEach(modal => {
@@ -1353,7 +1049,6 @@
             });
         }
 
-        // Close modal with Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 const modals = document.querySelectorAll('.modal');
@@ -1369,64 +1064,41 @@
         // Matrix Rain Effect
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
-
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
-        const matrixArray = matrix.split("");
-
+        const matrixChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}".split("");
         const fontSize = 10;
         const columns = canvas.width / fontSize;
-
-        const drops = [];
-        for(let x = 0; x < columns; x++) {
-            drops[x] = 1;
-        }
+        const drops = Array(Math.floor(columns)).fill(1);
 
         function draw() {
             ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
             ctx.fillStyle = '#00ff88';
             ctx.font = fontSize + 'px JetBrains Mono';
-
-            for(let i = 0; i < drops.length; i++) {
-                const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                
-                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
+            drops.forEach((drop, i) => {
+                const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+                ctx.fillText(text, i * fontSize, drop * fontSize);
+                if (drop * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
                 drops[i]++;
-            }
+            });
         }
-
         setInterval(draw, 35);
 
         // Scroll Animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
         // Typing Effect
         const subtitle = document.querySelector('.typing-effect');
         const text = 'IT & Security Professional';
         let i = 0;
-
         function typeWriter() {
             if (i < text.length) {
                 subtitle.textContent = text.substring(0, i + 1);
@@ -1434,7 +1106,6 @@
                 setTimeout(typeWriter, 100);
             }
         }
-
         setTimeout(typeWriter, 1000);
 
         // Resize Matrix
@@ -1446,7 +1117,8 @@
         // Parallax Effect
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const bg = document.querySelector('.bg-animation');
-            bg.style.transform = `translateY(${scrolled * 0.5}px)`;
+            document.querySelector('.bg-animation').style.transform = `translateY(${scrolled * 0.5}px)`;
         });
     </script>
+</body>
+</html>
