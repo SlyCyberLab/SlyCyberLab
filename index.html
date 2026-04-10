@@ -913,8 +913,9 @@
                 <span class="role-badge">🔵 Blue Team</span>
             </div>
 
-    <!-- Project Modals -->
-        <div id="adlab" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); backdrop-filter:blur(10px);">
+        <!-- Project Modals -->
+        
+        <div id="adlab" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('adlab')">&times;</span>
                 <div class="modal-header">
@@ -949,123 +950,115 @@
                 </div>
             </div>
         </div>
-
-    <div id="azuresoc" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('azuresoc')">&times;</span>
-            <div class="modal-header">
-                <div class="modal-icon">🛡️</div>
-                <div class="modal-title">Azure SOC Operations Center</div>
-            </div>
-            <div class="modal-description">
-                A cloud-native Security Operations Center built on Microsoft Azure, demonstrating advanced threat detection, incident response, and security analytics capabilities. This project showcases real-world SOC operations using industry-standard tools and methodologies.
-            </div>
-            <div class="modal-features">
-                <h4>🎯 Key Features</h4>
-                <ul>
-                    <li>Microsoft Sentinel SIEM deployment and configuration</li>
-                    <li>Custom KQL queries for threat hunting and detection</li>
-                    <li>Automated incident response workflows</li>
-                    <li>Live attack simulation and analysis</li>
-                    <li>Security metrics dashboard and reporting</li>
-                    <li>Integration with Azure security services</li>
-                </ul>
-            </div>
-            <div class="modal-tech">
-                <span class="modal-tech-tag">Microsoft Azure</span>
-                <span class="modal-tech-tag">Azure Sentinel</span>
-                <span class="modal-tech-tag">KQL (Kusto Query Language)</span>
-                <span class="modal-tech-tag">Log Analytics</span>
-                <span class="modal-tech-tag">Azure Monitor</span>
-                <span class="modal-tech-tag">SIEM</span>
-            </div>
-            <div class="modal-links">
-                <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" class="modal-link" target="_blank">View on GitHub</a>
-                <a href="#" class="modal-link secondary" onclick="closeModal('azuresoc')">Close</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="vuln" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('vuln')">&times;</span>
-            <div class="modal-header">
-                <div class="modal-icon">🔍</div>
-                <div class="modal-title">Vulnerability Management Platform</div>
-            </div>
-            <div class="modal-description">
-                An enterprise-grade vulnerability assessment and remediation platform utilizing Tenable Nessus Professional. This project demonstrates comprehensive vulnerability management lifecycle from discovery to remediation, with automated scanning and detailed compliance reporting.
-            </div>
-            <div class="modal-features">
-                <h4>🎯 Key Features</h4>
-                <ul>
-                    <li>Tenable Nessus Professional deployment on Azure</li>
-                    <li>Automated vulnerability scanning schedules</li>
-                    <li>CVSS risk scoring and prioritization</li>
-                    <li>Compliance framework mapping (NIST, CIS)</li>
-                    <li>Custom reporting and analytics dashboard</li>
-                    <li>Remediation tracking and validation</li>
-                </ul>
-            </div>
-            <div class="modal-tech">
-                <span class="modal-tech-tag">Tenable Nessus Professional</span>
-                <span class="modal-tech-tag">Azure Virtual Machines</span>
-                <span class="modal-tech-tag">MySQL Database</span>
-                <span class="modal-tech-tag">CVSS Framework</span>
-                <span class="modal-tech-tag">Compliance Reporting</span>
-                <span class="modal-tech-tag">Risk Assessment</span>
-            </div>
-            <div class="modal-links">
-                <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" class="modal-link" target="_blank">View on GitHub</a>
-                <a href="#" class="modal-link secondary" onclick="closeModal('vuln')">Close</a>
+        
+        <div id="azuresoc" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('azuresoc')">&times;</span>
+                <div class="modal-header">
+                    <div class="modal-icon">🛡️</div>
+                    <div class="modal-title">Azure SOC Operations Center</div>
+                </div>
+                <div class="modal-description">
+                    A cloud-native Security Operations Center built on Microsoft Azure, demonstrating advanced threat detection, incident response, and security analytics capabilities. This project showcases real-world SOC operations using industry-standard tools and methodologies.
+                </div>
+                <div class="modal-features">
+                    <h4>🎯 Key Features</h4>
+                    <ul>
+                        <li>Microsoft Sentinel SIEM deployment and configuration</li>
+                        <li>Custom KQL queries for threat hunting and detection</li>
+                        <li>Automated incident response workflows</li>
+                        <li>Live attack simulation and analysis</li>
+                        <li>Security metrics dashboard and reporting</li>
+                        <li>Integration with Azure security services</li>
+                    </ul>
+                </div>
+                <div class="modal-tech">
+                    <span class="modal-tech-tag">Microsoft Azure</span>
+                    <span class="modal-tech-tag">Azure Sentinel</span>
+                    <span class="modal-tech-tag">KQL (Kusto Query Language)</span>
+                    <span class="modal-tech-tag">Log Analytics</span>
+                    <span class="modal-tech-tag">Azure Monitor</span>
+                    <span class="modal-tech-tag">SIEM</span>
+                </div>
+                <div class="modal-links">
+                    <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" class="modal-link" target="_blank">View on GitHub</a>
+                    <a href="#" class="modal-link secondary" onclick="closeModal('azuresoc'); return false;">Close</a>
+                </div>
             </div>
         </div>
-    </div>
-
-<div id="pfsense" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('pfsense')">&times;</span>
-        <div class="modal-header">
-            <div class="modal-icon">🛡️</div>
-            <div class="modal-title">pfSense Firewall Configuration Lab</div>
-        </div>
-        <div class="modal-description">
-            Firewall policy enforcement using pfSense, focusing on traffic control, security hardening, and rule validation in a preconfigured multi-network lab environment. This hands-on lab demonstrates enterprise firewall management and network segmentation strategies.
-        </div>
-        <div class="modal-features">
-            <h4>🎯 Key Features</h4>
-            <ul>
-                <li>Multi-network VLAN segmentation and isolation</li>
-                <li>Firewall rule creation and policy enforcement</li>
-                <li>Traffic filtering and access control implementation</li>
-                <li>Security hardening configurations and best practices</li>
-                <li>Rule validation and testing procedures</li>
-                <li>Network security monitoring and logging</li>
-            </ul>
-        </div>
-        <div class="modal-tech">
-            <span class="modal-tech-tag">pfSense 2.7.2</span>
-            <span class="modal-tech-tag">Firewall Security</span>
-            <span class="modal-tech-tag">Network Segmentation</span>
-            <span class="modal-tech-tag">Traffic Control</span>
-            <span class="modal-tech-tag">Security Hardening</span>
-            <span class="modal-tech-tag">Hands-On Lab</span>
-        </div>
-        <div class="modal-links">
-            <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" class="modal-link" target="_blank">View on GitHub</a>
-            <a href="#" class="modal-link secondary" onclick="closeModal('pfsense')">Close</a>
-        </div>
-    </div>
-</div>
-            
-            <div class="cta-buttons">
-                <a href="mailto:slycyber7@gmail.com" class="cta-btn cta-primary">Get In Touch</a>
-                <a href="https://www.linkedin.com/in/emsly-s/" class="cta-btn cta-secondary" target="_blank">LinkedIn Profile</a>
-                <a href="https://blog.slytech.us" class="cta-btn cta-secondary" target="_blank">SlyTech Blog</a>
-
+        
+        <div id="vuln" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('vuln')">&times;</span>
+                <div class="modal-header">
+                    <div class="modal-icon">🔍</div>
+                    <div class="modal-title">Vulnerability Management Platform</div>
+                </div>
+                <div class="modal-description">
+                    An enterprise-grade vulnerability assessment and remediation platform utilizing Tenable Nessus Professional. This project demonstrates comprehensive vulnerability management lifecycle from discovery to remediation, with automated scanning and detailed compliance reporting.
+                </div>
+                <div class="modal-features">
+                    <h4>🎯 Key Features</h4>
+                    <ul>
+                        <li>Tenable Nessus Professional deployment on Azure</li>
+                        <li>Automated vulnerability scanning schedules</li>
+                        <li>CVSS risk scoring and prioritization</li>
+                        <li>Compliance framework mapping (NIST, CIS)</li>
+                        <li>Custom reporting and analytics dashboard</li>
+                        <li>Remediation tracking and validation</li>
+                    </ul>
+                </div>
+                <div class="modal-tech">
+                    <span class="modal-tech-tag">Tenable Nessus Professional</span>
+                    <span class="modal-tech-tag">Azure Virtual Machines</span>
+                    <span class="modal-tech-tag">MySQL Database</span>
+                    <span class="modal-tech-tag">CVSS Framework</span>
+                    <span class="modal-tech-tag">Compliance Reporting</span>
+                    <span class="modal-tech-tag">Risk Assessment</span>
+                </div>
+                <div class="modal-links">
+                    <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" class="modal-link" target="_blank">View on GitHub</a>
+                    <a href="#" class="modal-link secondary" onclick="closeModal('vuln'); return false;">Close</a>
+                </div>
             </div>
         </div>
-
+        
+        <div id="pfsense" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('pfsense')">&times;</span>
+                <div class="modal-header">
+                    <div class="modal-icon">🔥</div>
+                    <div class="modal-title">pfSense Firewall Configuration Lab</div>
+                </div>
+                <div class="modal-description">
+                    Firewall policy enforcement using pfSense, focusing on traffic control, security hardening, and rule validation in a preconfigured multi-network lab environment. This hands-on lab demonstrates enterprise firewall management and network segmentation strategies.
+                </div>
+                <div class="modal-features">
+                    <h4>🎯 Key Features</h4>
+                    <ul>
+                        <li>Multi-network VLAN segmentation and isolation</li>
+                        <li>Firewall rule creation and policy enforcement</li>
+                        <li>Traffic filtering and access control implementation</li>
+                        <li>Security hardening configurations and best practices</li>
+                        <li>Rule validation and testing procedures</li>
+                        <li>Network security monitoring and logging</li>
+                    </ul>
+                </div>
+                <div class="modal-tech">
+                    <span class="modal-tech-tag">pfSense 2.7.2</span>
+                    <span class="modal-tech-tag">Firewall Security</span>
+                    <span class="modal-tech-tag">Network Segmentation</span>
+                    <span class="modal-tech-tag">Traffic Control</span>
+                    <span class="modal-tech-tag">Security Hardening</span>
+                    <span class="modal-tech-tag">Hands-On Lab</span>
+                </div>
+                <div class="modal-links">
+                    <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" class="modal-link" target="_blank">View on GitHub</a>
+                    <a href="#" class="modal-link secondary" onclick="closeModal('pfsense'); return false;">Close</a>
+                </div>
+            </div>
+        </div>
+        
         <!-- About -->
         <div class="glass-card fade-in">
             <div class="section-header">
