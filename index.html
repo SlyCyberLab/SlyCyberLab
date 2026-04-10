@@ -914,41 +914,41 @@
             </div>
 
     <!-- Project Modals -->
-   <div id="adlab" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('adlab')">&times;</span>
-        <div class="modal-header">
-            <div class="modal-icon">🔐</div>
-            <div class="modal-title">Identity and Access Management Lab</div>
+        <div id="adlab" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); backdrop-filter:blur(10px);">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('adlab')">&times;</span>
+                <div class="modal-header">
+                    <div class="modal-icon">🔐</div>
+                    <div class="modal-title">Identity and Access Management Lab</div>
+                </div>
+                <div class="modal-description">
+                    An end-to-end IAM implementation on Active Directory covering the full identity lifecycle: structured provisioning and deprovisioning workflows, least-privilege OU and group design, quarterly access review automation, and GPO-based access control scoped per department. All scenarios are scripted in PowerShell with timestamped audit logs and manager-ready output.
+                </div>
+                <div class="modal-features">
+                    <h4>🎯 Key Features</h4>
+                    <ul>
+                        <li>Role group and resource group architecture enforcing least-privilege across departments</li>
+                        <li>Automated provisioning script with OU placement, group assignment, and audit logging</li>
+                        <li>Deprovisioning workflow with 30-day retention, account stamping, and access revocation</li>
+                        <li>Quarterly access review automation flagging stale, inactive, and orphaned accounts</li>
+                        <li>Department-scoped GPOs with drive mapping, Control Panel, and Command Prompt restrictions</li>
+                        <li>NTFS ACLs on department file shares backing GPO enforcement at the permission level</li>
+                    </ul>
+                </div>
+                <div class="modal-tech">
+                    <span class="modal-tech-tag">Active Directory</span>
+                    <span class="modal-tech-tag">PowerShell Automation</span>
+                    <span class="modal-tech-tag">Group Policy</span>
+                    <span class="modal-tech-tag">Windows Server 2025</span>
+                    <span class="modal-tech-tag">NTFS / File Permissions</span>
+                    <span class="modal-tech-tag">Identity Lifecycle</span>
+                </div>
+                <div class="modal-links">
+                    <a href="https://blog.slytech.us/iam-lab/" class="modal-link" target="_blank">Read the Write-Up</a>
+                    <a href="#" class="modal-link secondary" onclick="closeModal('adlab'); return false;">Close</a>
+                </div>
+            </div>
         </div>
-        <div class="modal-description">
-            An end-to-end IAM implementation on Active Directory covering the full identity lifecycle: structured provisioning and deprovisioning workflows, least-privilege OU and group design, quarterly access review automation, and GPO-based access control scoped per department. All scenarios are scripted in PowerShell with timestamped audit logs and manager-ready output.
-        </div>
-        <div class="modal-features">
-            <h4>🎯 Key Features</h4>
-            <ul>
-                <li>Role group and resource group architecture enforcing least-privilege across departments</li>
-                <li>Automated provisioning script with OU placement, group assignment, and audit logging</li>
-                <li>Deprovisioning workflow with 30-day retention, account stamping, and access revocation</li>
-                <li>Quarterly access review automation flagging stale, inactive, and orphaned accounts</li>
-                <li>Department-scoped GPOs with drive mapping, Control Panel, and Command Prompt restrictions</li>
-                <li>NTFS ACLs on department file shares backing GPO enforcement at the permission level</li>
-            </ul>
-        </div>
-        <div class="modal-tech">
-            <span class="modal-tech-tag">Active Directory</span>
-            <span class="modal-tech-tag">PowerShell Automation</span>
-            <span class="modal-tech-tag">Group Policy</span>
-            <span class="modal-tech-tag">Windows Server 2025</span>
-            <span class="modal-tech-tag">NTFS / File Permissions</span>
-            <span class="modal-tech-tag">Identity Lifecycle</span>
-        </div>
-        <div class="modal-links">
-            <a href="https://blog.slytech.us/iam-lab/" class="modal-link" target="_blank">Read the Write-Up</a>
-            <a href="#" class="modal-link secondary" onclick="closeModal('adlab')">Close</a>
-        </div>
-    </div>
-</div>
 
     <div id="azuresoc" class="modal">
         <div class="modal-content">
