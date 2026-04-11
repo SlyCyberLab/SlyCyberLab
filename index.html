@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SlyTech - Emsly S. | IT & Security Professional</title>
-    
-    <!-- Google tag (gtag.js) -->
+
+    <!-- IMPROVEMENT 6: SEO + Open Graph -->
+    <title>Emsly S. | IT & Security Professional — slytech.us</title>
+    <meta name="description" content="IT Administrator and security practitioner with 4+ years in infrastructure, compliance, and detection engineering. Published labs and write-ups at blog.slytech.us.">
+    <meta name="author" content="Emsly Severe">
+    <meta property="og:title" content="Emsly S. | IT & Security Professional">
+    <meta property="og:description" content="IT Administrator building toward cloud, identity, and security engineering roles. 8 published labs, 10+ blog posts, open to new opportunities.">
+    <meta property="og:url" content="https://slytech.us">
+    <meta property="og:type" content="website">
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM5BKKZZN5"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,10 +21,11 @@
       gtag('js', new Date());
       gtag('config', 'G-BM5BKKZZN5');
     </script>
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;600;800&display=swap');
-        
+
+        /* ── CSS VARIABLES ── */
         :root {
             --primary: #00ff88;
             --secondary: #0066ff;
@@ -28,13 +37,11 @@
             --glass-bg: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(255, 255, 255, 0.1);
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+
+        /* ── RESET ── */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* ── BASE ── */
         body {
             font-family: 'Inter', sans-serif;
             background: var(--bg-dark);
@@ -44,106 +51,130 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        
+
+        /* ── BACKGROUND ── */
         .bg-animation {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             z-index: -1;
             background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e);
             background-size: 400% 400%;
             animation: gradientShift 20s ease infinite;
             transform: translateZ(0);
         }
-        
+
         .bg-animation::before {
             content: '';
             position: absolute;
-            width: 200%;
-            height: 200%;
-            background: 
+            width: 200%; height: 200%;
+            background:
                 radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.08) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.08) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(255, 51, 102, 0.03) 0%, transparent 50%);
             animation: float 25s ease-in-out infinite;
-            transform: translateZ(0);
         }
-        
+
         @keyframes gradientShift {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }
-        
+
         @keyframes float {
             0%, 100% { transform: translate(-50px, -50px) rotate(0deg); }
             33% { transform: translate(30px, -30px) rotate(120deg); }
             66% { transform: translate(-20px, 20px) rotate(240deg); }
         }
-        
+
         .matrix {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             pointer-events: none;
             z-index: -1;
             opacity: 0.1;
         }
-        
+
+        /* ── IMPROVEMENT 9: STICKY NAV ── */
+        .site-nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 200;
+            display: flex;
+            justify-content: center;
+            gap: 0.25rem;
+            padding: 0.6rem 1rem;
+            background: rgba(10, 10, 10, 0.9);
+            border-bottom: 1px solid var(--glass-border);
+            backdrop-filter: blur(12px);
+        }
+
+        .site-nav a {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            padding: 0.35rem 0.85rem;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .site-nav a:hover, .site-nav a:focus {
+            color: var(--primary);
+            background: rgba(0, 255, 136, 0.08);
+            outline: none;
+        }
+
+        /* ── LAYOUT ── */
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
+            padding-top: 3.5rem; /* offset for fixed nav */
         }
-        
+
+        /* ── IMPROVEMENT 3: glass-card without backdrop-filter blur ── */
+        /* blur on every card causes GPU composite layers and scroll jank  */
+        /* removed: backdrop-filter: blur(20px) */
         .glass-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
             border-radius: 24px;
             padding: 3rem;
             margin-bottom: 2rem;
             position: relative;
             overflow: hidden;
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            transform: translateZ(0);
         }
-        
+
         .glass-card:hover {
-            transform: translateY(-4px) translateZ(0);
-            box-shadow: 
-                0 16px 48px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+            box-shadow:
+                0 16px 48px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12);
         }
-        
+
         .glass-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--primary), transparent);
             animation: borderScan 3s ease-in-out infinite;
         }
-        
+
         @keyframes borderScan {
             0%, 100% { opacity: 0; transform: translateX(-100%); }
             50% { opacity: 1; transform: translateX(100%); }
         }
-        
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-            position: relative;
-        }
-        
+
+        /* ── HERO ── */
+        .hero { text-align: center; padding: 3rem 0; position: relative; }
+
         .hero h1 {
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 800;
@@ -155,36 +186,33 @@
             animation: textShimmer 3s ease-in-out infinite;
             margin-bottom: 1rem;
         }
-        
+
         @keyframes textShimmer {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }
-        
+
         .hero .subtitle {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
             color: var(--primary);
             margin-bottom: 2rem;
             opacity: 0;
             animation: fadeInUp 1s ease 0.5s forwards;
         }
-        
-        .typing-effect::after {
-            content: '|';
-            animation: blink 1s infinite;
-        }
-        
+
+        .typing-effect::after { content: '|'; animation: blink 1s infinite; }
+
         @keyframes blink {
             0%, 50% { opacity: 1; }
             51%, 100% { opacity: 0; }
         }
-        
+
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
+
         .role-badges {
             display: flex;
             justify-content: center;
@@ -192,76 +220,66 @@
             flex-wrap: wrap;
             margin-bottom: 3rem;
         }
-        
+
         .role-badge {
-            padding: 0.8rem 1.5rem;
+            padding: 0.7rem 1.3rem;
             background: rgba(0, 255, 136, 0.1);
             border: 1px solid var(--primary);
             border-radius: 50px;
             color: var(--primary);
             font-family: 'JetBrains Mono', monospace;
             font-weight: 600;
-            font-size: 0.9rem;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.1);
+            font-size: 0.85rem;
+            transition: all 0.3s;
         }
-        
+
         .role-badge:hover {
             background: var(--primary);
             color: var(--bg-dark);
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(0, 255, 136, 0.4);
+            transform: translateY(-2px);
         }
-        
+
         .cta-buttons {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
-        
+
         .cta-btn {
-            padding: 1.2rem 2.5rem;
+            padding: 1rem 2.2rem;
             border: none;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
-            font-size: 1.1rem;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            font-size: 1rem;
+            transition: all 0.3s;
             cursor: pointer;
         }
-        
+
         .cta-primary {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: var(--bg-dark);
         }
-        
+
         .cta-secondary {
             background: transparent;
             color: var(--text-light);
             border: 2px solid var(--secondary);
         }
-        
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
-        }
-        
+
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 255, 136, 0.3); }
+
+        /* ── SECTION HEADERS ── */
         .section-header {
             display: flex;
             align-items: center;
             gap: 1rem;
-            margin-bottom: 3rem;
-            position: relative;
+            margin-bottom: 2.5rem;
         }
-        
+
         .section-header h2 {
-            font-size: 3rem;
+            font-size: clamp(1.8rem, 3vw, 3rem);
             font-weight: 800;
             background: linear-gradient(135deg, var(--text-light), var(--primary), var(--secondary));
             background-size: 200% 200%;
@@ -269,352 +287,415 @@
             -webkit-text-fill-color: transparent;
             animation: textGradientFlow 4s ease-in-out infinite;
             letter-spacing: -0.02em;
+            white-space: nowrap;
         }
-        
+
         @keyframes textGradientFlow {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }
-        
+
         .section-header::after {
             content: '';
             flex: 1;
             height: 1px;
             background: linear-gradient(90deg, var(--primary), transparent);
         }
-        
+
+        /* ── IMPROVEMENT 5: PROJECT CARDS WITH THUMBNAILS ── */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0, 255, 136, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* thumbnail */
+        .card-thumb {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #0d0d1a;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .card-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.82;
+            transition: opacity 0.25s, transform 0.35s;
+            display: block;
+        }
+
+        .project-card:hover .card-thumb img {
+            opacity: 1;
+            transform: scale(1.04);
+        }
+
+        /* emoji fallback when no screenshot yet */
+        .card-thumb-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            background: linear-gradient(135deg, #0d0d1a, #111128);
+            opacity: 0.75;
+        }
+
+        .card-thumb-badge {
+            position: absolute;
+            top: 0.6rem;
+            right: 0.6rem;
+            background: rgba(0, 0, 0, 0.75);
+            border: 1px solid var(--glass-border);
+            border-radius: 4px;
+            padding: 0.2rem 0.55rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.58rem;
+            color: var(--primary);
+            letter-spacing: 0.06em;
+            backdrop-filter: blur(4px);
+        }
+
+        /* card body */
+        .card-body {
+            padding: 1.25rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.45rem;
+            color: var(--text-light);
+            line-height: 1.3;
+        }
+
+        .card-desc {
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+            flex: 1;
+            margin-bottom: 1rem;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .tech-tag {
+            padding: 0.28rem 0.7rem;
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.25);
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: var(--primary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--glass-border);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            transition: color 0.2s;
+        }
+
+        .project-card:hover .card-footer { color: var(--primary); }
+
+        /* ── TECH STACK ── */
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
             gap: 1rem;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
-        
+
         .tech-item {
             background: rgba(0, 102, 255, 0.1);
             border: 1px solid rgba(0, 102, 255, 0.3);
             border-radius: 12px;
-            padding: 1.5rem 1rem;
+            padding: 1.25rem 1rem;
             text-align: center;
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
+            transition: all 0.3s;
             font-weight: 600;
+            font-size: 0.88rem;
         }
-        
+
         .tech-item:hover {
             background: rgba(0, 102, 255, 0.2);
-            transform: translateY(-8px) scale(1.02);
+            transform: translateY(-6px);
             border-color: var(--secondary);
-            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.2);
         }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2.5rem;
-            position: relative;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
-            cursor: pointer;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            transform: translateZ(0);
-        }
-        
-        .project-card:hover {
-            transform: translateY(-8px) translateZ(0);
-            border-color: rgba(0, 255, 136, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .project-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .project-icon {
-            font-size: 2rem;
-        }
-        
-        .project-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--text-light);
-        }
-        
-        .project-description {
-            color: var(--text-dim);
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .tech-tag {
-            padding: 0.4rem 1rem;
-            background: rgba(0, 255, 136, 0.2);
-            border: 1px solid var(--primary);
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: var(--primary);
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        
-        .cert-card {
-            background: linear-gradient(135deg, rgba(255, 51, 102, 0.1), rgba(0, 102, 255, 0.1));
-            border: 1px solid rgba(255, 51, 102, 0.3);
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .cert-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(255, 51, 102, 0.2);
-        }
-        
-        .cert-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .cert-status {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-        }
-        
+
+        /* ── TERMINAL ── */
         .terminal {
             background: #000;
             border-radius: 12px;
-            padding: 1rem;
+            padding: 1.25rem;
             font-family: 'JetBrains Mono', monospace;
             margin: 2rem 0;
             border: 1px solid var(--primary);
             position: relative;
         }
-        
+
         .terminal::before {
             content: '● ● ●';
             position: absolute;
-            top: -15px;
-            left: 15px;
+            top: -15px; left: 15px;
             background: #000;
             padding: 0 10px;
             color: var(--primary);
+            font-size: 0.8rem;
         }
-        
+
         .terminal-line {
             margin: 0.5rem 0;
-            transition: all 0.3s ease;
+            transition: all 0.2s;
+            font-size: 0.9rem;
         }
-        
+
         .terminal-line:hover {
-            background: rgba(0, 255, 136, 0.1);
-            padding-left: 1rem;
+            background: rgba(0, 255, 136, 0.08);
+            padding-left: 0.75rem;
             border-left: 2px solid var(--primary);
-            transform: translateX(10px);
+            transform: translateX(8px);
         }
-        
+
         .prompt { color: var(--primary); }
         .command { color: var(--secondary); }
-        
+
+        /* ── CERTIFICATIONS ── */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-card {
+            background: linear-gradient(135deg, rgba(255, 51, 102, 0.1), rgba(0, 102, 255, 0.1));
+            border: 1px solid rgba(255, 51, 102, 0.3);
+            border-radius: 16px;
+            padding: 1.75rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 36px rgba(255, 51, 102, 0.15);
+        }
+
+        .cert-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .cert-status { color: var(--text-dim); font-size: 0.85rem; }
+
+        /* ── FADE IN ── */
         .fade-in {
             opacity: 0;
-            transform: translateY(60px);
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+            transform: translateY(40px);
+            transition: all 0.7s cubic-bezier(0.23, 1, 0.320, 1);
         }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        @media (max-width: 768px) {
-            .container { padding: 1rem; }
-            .glass-card { padding: 2rem; }
-            .hero h1 { font-size: 3rem; }
-            .cta-buttons { flex-direction: column; align-items: center; }
-            .projects-grid { grid-template-columns: 1fr; }
-        }
-        
+
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── LOADER ── */
         .loader {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: var(--bg-dark);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             z-index: 9999;
-            transition: opacity 0.5s ease;
+            transition: opacity 0.4s ease;
         }
-        
-        .loader.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        .cyber-loader {
-            width: 200px;
-            height: 200px;
-            position: relative;
-            margin-bottom: 2rem;
-        }
-        
+
+        .loader.hidden { opacity: 0; pointer-events: none; }
+
+        .cyber-loader { width: 160px; height: 160px; position: relative; margin-bottom: 1.5rem; }
+
         .cyber-circle {
             position: absolute;
             border: 2px solid transparent;
             border-radius: 50%;
             animation: cyberSpin 2s linear infinite;
         }
-        
+
         .cyber-circle:nth-child(1) { width: 100%; height: 100%; border-top-color: var(--primary); animation-duration: 1.5s; }
         .cyber-circle:nth-child(2) { width: 80%; height: 80%; top: 10%; left: 10%; border-right-color: var(--secondary); animation-duration: 2s; animation-direction: reverse; }
         .cyber-circle:nth-child(3) { width: 60%; height: 60%; top: 20%; left: 20%; border-bottom-color: var(--accent); animation-duration: 1s; }
-        
+
         @keyframes cyberSpin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        
+
         .loading-text {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: var(--primary);
             text-align: center;
             animation: pulse 1.5s ease-in-out infinite;
         }
-        
+
         @keyframes pulse {
             0%, 100% { opacity: 0.5; }
             50% { opacity: 1; }
         }
 
-        /* Modal Styles */
+        /* ── MODAL ── */
         .modal {
             display: none;
             position: fixed;
             z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px); /* blur kept only on modal overlay */
         }
-        
+
         .modal-content {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
+            background: #111118;
             border: 1px solid var(--glass-border);
             border-radius: 24px;
             margin: 5% auto;
             padding: 3rem;
             width: 90%;
-            max-width: 800px;
+            max-width: 780px;
             max-height: 80vh;
             overflow-y: auto;
             position: relative;
-            animation: modalSlideIn 0.3s ease;
+            animation: modalSlideIn 0.25s ease;
         }
-        
+
         @keyframes modalSlideIn {
-            from { opacity: 0; transform: translateY(-50px) scale(0.9); }
+            from { opacity: 0; transform: translateY(-40px) scale(0.95); }
             to { opacity: 1; transform: translateY(0) scale(1); }
         }
-        
+
         .close {
             position: absolute;
-            right: 2rem;
-            top: 2rem;
-            font-size: 2rem;
+            right: 1.75rem; top: 1.75rem;
+            font-size: 1.8rem;
             color: var(--text-dim);
             cursor: pointer;
-            transition: color 0.3s ease;
+            transition: color 0.2s;
+            background: none;
+            border: none;
+            line-height: 1;
         }
-        
+
         .close:hover { color: var(--accent); }
-        
-        .modal-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
-        .modal-icon { font-size: 3rem; }
-        .modal-title { font-size: 2.5rem; font-weight: 700; color: var(--text-light); }
-        .modal-description { color: var(--text-dim); line-height: 1.8; font-size: 1.1rem; margin-bottom: 2rem; }
-        .modal-features { margin-bottom: 2rem; }
-        .modal-features h4 { color: var(--primary); margin-bottom: 1rem; font-size: 1.3rem; }
+
+        .modal-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+        .modal-icon { font-size: 2.5rem; }
+        .modal-title { font-size: 2rem; font-weight: 700; color: var(--text-light); line-height: 1.2; }
+        .modal-description { color: var(--text-dim); line-height: 1.8; font-size: 1rem; margin-bottom: 1.5rem; }
+        .modal-features { margin-bottom: 1.5rem; }
+        .modal-features h4 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.1rem; }
         .modal-features ul { list-style: none; padding-left: 0; }
-        .modal-features li { padding: 0.5rem 0; color: var(--text-dim); position: relative; padding-left: 2rem; }
-        .modal-features li::before { content: '▶'; color: var(--primary); position: absolute; left: 0; }
-        .modal-tech { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2rem; }
-        .modal-tech-tag { padding: 0.6rem 1.2rem; background: rgba(0, 255, 136, 0.2); border: 1px solid var(--primary); border-radius: 25px; font-size: 0.9rem; color: var(--primary); font-family: 'JetBrains Mono', monospace; }
+        .modal-features li { padding: 0.4rem 0; color: var(--text-dim); position: relative; padding-left: 1.75rem; font-size: 0.9rem; }
+        .modal-features li::before { content: '▶'; color: var(--primary); position: absolute; left: 0; font-size: 0.7rem; top: 0.55rem; }
+        .modal-tech { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.5rem; }
+        .modal-tech-tag { padding: 0.5rem 1rem; background: rgba(0, 255, 136, 0.1); border: 1px solid rgba(0, 255, 136, 0.3); border-radius: 20px; font-size: 0.8rem; color: var(--primary); font-family: 'JetBrains Mono', monospace; }
         .modal-links { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .modal-link { padding: 1rem 2rem; background: linear-gradient(45deg, var(--primary), var(--secondary)); color: var(--bg-dark); text-decoration: none; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; }
-        .modal-link:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3); }
-        
-        ::-webkit-scrollbar { width: 8px; }
+        .modal-link { padding: 0.85rem 1.75rem; background: linear-gradient(45deg, var(--primary), var(--secondary)); color: var(--bg-dark); text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: all 0.25s; }
+        .modal-link:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 255, 136, 0.3); }
+
+        /* ── SCROLLBAR ── */
+        ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: var(--bg-darker); }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 3px; }
+
+        /* ── IMPROVEMENT 10: MOBILE ── */
+        @media (max-width: 768px) {
+            .container { padding: 1rem; padding-top: 3rem; }
+            .glass-card { padding: 1.5rem; }
+            .hero { padding: 2rem 0; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .cert-grid { grid-template-columns: 1fr; }
+            .site-nav a { padding: 0.3rem 0.5rem; font-size: 0.62rem; }
+            .section-header h2 { font-size: 1.6rem; }
+            .card-title { font-size: 1rem; }
+            .card-desc { font-size: 0.8rem; }
+            .terminal-line { font-size: 0.78rem; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Loading Screen -->
-    <div class="loader" id="loader">
-        <div class="cyber-loader">
+    <!-- IMPROVEMENT 2: loader reduced to 300ms -->
+    <div class="loader" id="loader" role="status" aria-label="Loading">
+        <div class="cyber-loader" aria-hidden="true">
             <div class="cyber-circle"></div>
             <div class="cyber-circle"></div>
             <div class="cyber-circle"></div>
         </div>
         <div class="loading-text">
-            <div>Initializing Emsly S.<span class="loading-dots"></span></div>
-            <div style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.7;">Loading security protocols...</div>
+            <div>Initializing Emsly S.</div>
+            <div style="font-size: 0.8rem; margin-top: 0.4rem; opacity: 0.6;">Loading security protocols...</div>
         </div>
     </div>
 
-    <div class="bg-animation"></div>
-    <canvas class="matrix" id="matrix"></canvas>
+    <div class="bg-animation" aria-hidden="true"></div>
+    <canvas class="matrix" id="matrix" aria-hidden="true"></canvas>
 
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- MODALS — outside all glass-cards           -->
-    <!-- ═══════════════════════════════════════════ -->
+    <!-- IMPROVEMENT 9: Sticky navigation -->
+    <nav class="site-nav" aria-label="Site sections">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#arsenal">Arsenal</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <div id="azuresoc" class="modal">
+    <!-- MODALS — direct children of body, outside all sections -->
+    <div id="azuresoc" class="modal" role="dialog" aria-modal="true" aria-labelledby="azuresoc-title">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('azuresoc')">&times;</span>
+            <button class="close" onclick="closeModal('azuresoc')" aria-label="Close">&times;</button>
             <div class="modal-header">
-                <div class="modal-icon">🛡️</div>
-                <div class="modal-title">Azure SOC Operations Center</div>
+                <div class="modal-icon" aria-hidden="true">🛡️</div>
+                <h3 class="modal-title" id="azuresoc-title">Azure SOC Operations Center</h3>
             </div>
             <div class="modal-description">
                 A cloud-native Security Operations Center built on Microsoft Azure, demonstrating advanced threat detection, incident response, and security analytics capabilities.
@@ -624,33 +705,31 @@
                 <ul>
                     <li>Microsoft Sentinel SIEM deployment and configuration</li>
                     <li>Custom KQL queries for threat hunting and detection</li>
-                    <li>Automated incident response workflows</li>
-                    <li>Live attack simulation and analysis — 6,000+ captured attempts</li>
-                    <li>Security metrics dashboard and reporting</li>
-                    <li>Integration with Azure Monitor and Log Analytics</li>
+                    <li>Automated incident response workflows and playbooks</li>
+                    <li>Live honeypot capturing 6,000+ real attack attempts</li>
+                    <li>Security metrics dashboard and MITRE ATT&CK mapping</li>
                 </ul>
             </div>
             <div class="modal-tech">
                 <span class="modal-tech-tag">Microsoft Azure</span>
-                <span class="modal-tech-tag">Azure Sentinel</span>
+                <span class="modal-tech-tag">Sentinel</span>
                 <span class="modal-tech-tag">KQL</span>
                 <span class="modal-tech-tag">Log Analytics</span>
                 <span class="modal-tech-tag">Azure Monitor</span>
-                <span class="modal-tech-tag">SIEM</span>
             </div>
             <div class="modal-links">
-                <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" class="modal-link" target="_blank">View on GitHub</a>
-                <a href="#" class="modal-link" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);" onclick="closeModal('azuresoc'); return false;">Close</a>
+                <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" class="modal-link" target="_blank" rel="noopener">View on GitHub</a>
+                <a href="#" class="modal-link" style="background:transparent;border:1px solid var(--primary);color:var(--primary);" onclick="closeModal('azuresoc');return false;">Close</a>
             </div>
         </div>
     </div>
 
-    <div id="vuln" class="modal">
+    <div id="vuln" class="modal" role="dialog" aria-modal="true" aria-labelledby="vuln-title">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('vuln')">&times;</span>
+            <button class="close" onclick="closeModal('vuln')" aria-label="Close">&times;</button>
             <div class="modal-header">
-                <div class="modal-icon">🔍</div>
-                <div class="modal-title">Vulnerability Management Platform</div>
+                <div class="modal-icon" aria-hidden="true">🔍</div>
+                <h3 class="modal-title" id="vuln-title">Vulnerability Management Platform</h3>
             </div>
             <div class="modal-description">
                 Enterprise-grade vulnerability assessment and remediation platform using Tenable Nessus Professional, demonstrating the full vulnerability management lifecycle from discovery to remediation.
@@ -660,34 +739,33 @@
                 <ul>
                     <li>Tenable Nessus Professional deployed on Azure VM</li>
                     <li>Automated vulnerability scanning with scheduling</li>
-                    <li>CVSS risk scoring and prioritization</li>
-                    <li>Compliance framework mapping to NIST and CIS</li>
-                    <li>Custom reporting dashboard and remediation workflow</li>
+                    <li>CVSS risk scoring and prioritization framework</li>
+                    <li>Compliance mapping to NIST and CIS frameworks</li>
+                    <li>Full remediation workflow documentation</li>
                 </ul>
             </div>
             <div class="modal-tech">
-                <span class="modal-tech-tag">Tenable Nessus Professional</span>
-                <span class="modal-tech-tag">Azure Virtual Machines</span>
-                <span class="modal-tech-tag">CVSS Framework</span>
-                <span class="modal-tech-tag">Compliance Reporting</span>
-                <span class="modal-tech-tag">Risk Assessment</span>
+                <span class="modal-tech-tag">Tenable Nessus</span>
+                <span class="modal-tech-tag">Azure VM</span>
+                <span class="modal-tech-tag">CVSS</span>
+                <span class="modal-tech-tag">NIST / CIS</span>
             </div>
             <div class="modal-links">
-                <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" class="modal-link" target="_blank">View on GitHub</a>
-                <a href="#" class="modal-link" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);" onclick="closeModal('vuln'); return false;">Close</a>
+                <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" class="modal-link" target="_blank" rel="noopener">View on GitHub</a>
+                <a href="#" class="modal-link" style="background:transparent;border:1px solid var(--primary);color:var(--primary);" onclick="closeModal('vuln');return false;">Close</a>
             </div>
         </div>
     </div>
 
-    <div id="pfsense" class="modal">
+    <div id="pfsense" class="modal" role="dialog" aria-modal="true" aria-labelledby="pfsense-title">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('pfsense')">&times;</span>
+            <button class="close" onclick="closeModal('pfsense')" aria-label="Close">&times;</button>
             <div class="modal-header">
-                <div class="modal-icon">🔥</div>
-                <div class="modal-title">pfSense Firewall Configuration Lab</div>
+                <div class="modal-icon" aria-hidden="true">🔥</div>
+                <h3 class="modal-title" id="pfsense-title">pfSense Firewall Configuration Lab</h3>
             </div>
             <div class="modal-description">
-                Firewall policy enforcement using pfSense, focusing on traffic control, security hardening, and rule validation across a multi-VLAN network environment.
+                Multi-VLAN network segmentation with enforced firewall policies, traffic filtering, and access control across management, server, workstation, and DMZ zones.
             </div>
             <div class="modal-features">
                 <h4>🎯 Key Features</h4>
@@ -695,373 +773,423 @@
                     <li>Multi-network VLAN segmentation and isolation</li>
                     <li>Firewall rule creation and policy enforcement</li>
                     <li>Traffic filtering and access control implementation</li>
-                    <li>Security hardening configurations and best practices</li>
-                    <li>Rule validation and testing procedures</li>
-                    <li>Network security monitoring and syslog forwarding</li>
+                    <li>Security hardening and syslog forwarding to SIEM</li>
+                    <li>Rule validation through structured testing</li>
                 </ul>
             </div>
             <div class="modal-tech">
                 <span class="modal-tech-tag">pfSense 2.7.2</span>
                 <span class="modal-tech-tag">VLAN Segmentation</span>
                 <span class="modal-tech-tag">Firewall Rules</span>
-                <span class="modal-tech-tag">Network Security</span>
                 <span class="modal-tech-tag">Syslog</span>
             </div>
             <div class="modal-links">
-                <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" class="modal-link" target="_blank">View on GitHub</a>
-                <a href="#" class="modal-link" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);" onclick="closeModal('pfsense'); return false;">Close</a>
+                <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" class="modal-link" target="_blank" rel="noopener">View on GitHub</a>
+                <a href="#" class="modal-link" style="background:transparent;border:1px solid var(--primary);color:var(--primary);" onclick="closeModal('pfsense');return false;">Close</a>
             </div>
         </div>
     </div>
 
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- MAIN CONTENT                               -->
-    <!-- ═══════════════════════════════════════════ -->
-
+    <!-- ═══════════════════════════════════════ -->
+    <!-- MAIN CONTENT                           -->
+    <!-- ═══════════════════════════════════════ -->
     <div class="container">
 
-        <!-- Hero Section -->
-        <div class="glass-card hero fade-in">
-            <h1>Emsly S.</h1>
-            <div class="subtitle typing-effect">IT & Security Professional</div>
-            
-            <div class="role-badges">
-                <span class="role-badge">🖥️ System Administrator</span>
-                <span class="role-badge">🛡️ SOC Analyst</span>
-                <span class="role-badge">☁️ Cloud Security</span>
-                <span class="role-badge">🔐 Identity & Access</span>
+        <!-- IMPROVEMENT 4: semantic header -->
+        <header>
+            <div class="glass-card hero fade-in">
+                <h1>Emsly S.</h1>
+                <p class="subtitle typing-effect" aria-label="IT & Security Professional"></p>
+
+                <div class="role-badges" role="list">
+                    <span class="role-badge" role="listitem">🖥️ System Administrator</span>
+                    <span class="role-badge" role="listitem">🛡️ SOC Analyst</span>
+                    <span class="role-badge" role="listitem">☁️ Cloud Security</span>
+                    <span class="role-badge" role="listitem">🔐 Identity &amp; Access</span>
+                </div>
+
+                <nav class="cta-buttons" aria-label="Contact and profile links">
+                    <a href="mailto:slycyber7@gmail.com" class="cta-btn cta-primary">Get In Touch</a>
+                    <a href="https://www.linkedin.com/in/emsly-s/" class="cta-btn cta-secondary" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn Profile</a>
+                    <a href="https://blog.slytech.us" class="cta-btn cta-secondary" target="_blank" rel="noopener">SlyTech Blog</a>
+                </nav>
             </div>
+        </header>
 
-            <div class="cta-buttons">
-                <a href="mailto:slycyber7@gmail.com" class="cta-btn cta-primary">Get In Touch</a>
-                <a href="https://www.linkedin.com/in/emsly-s/" class="cta-btn cta-secondary" target="_blank">LinkedIn Profile</a>
-                <a href="https://blog.slytech.us" class="cta-btn cta-secondary" target="_blank">SlyTech Blog</a>
-            </div>
-        </div>
+        <!-- IMPROVEMENT 4: semantic main -->
+        <main>
 
-        <!-- About -->
-        <div class="glass-card fade-in">
-            <div class="section-header">
-                <h2>💫 Who I Am</h2>
-            </div>
-            
-            <div class="terminal">
-                <div class="terminal-line terminal-cmd">
-                    <span class="prompt">emsly@slytech:~$</span> 
-                    <span class="command">whoami</span>
-                </div>
-                <div class="terminal-line terminal-output" data-text="IT Administrator with 4+ years managing enterprise infrastructure, Active Directory, and compliance frameworks, now building toward infrastructure, cloud, security, and identity roles.">IT Administrator with 4+ years managing enterprise infrastructure, Active Directory, and compliance frameworks, now building toward infrastructure, cloud, security, and identity roles.</div>
-                <div class="terminal-line terminal-cmd">
-                    <span class="prompt">emsly@slytech:~$</span> 
-                    <span class="command">cat mission.txt</span>
-                </div>
-                <div class="terminal-line terminal-output" data-text="Documenting the build in public — homelabs, detection engineering, and compliance work at blog.slytech.us">Documenting the build in public — homelabs, detection engineering, and compliance work at blog.slytech.us</div>
-                <div class="terminal-line terminal-cmd">
-                    <span class="prompt">emsly@slytech:~$</span> 
-                    <span class="command">ls skills/</span>
-                </div>
-                <div class="terminal-line terminal-output" data-text="incident-response/  detection-engineering/  siem-operations/  cloud-security/  compliance/  identity-access/">incident-response/  detection-engineering/  siem-operations/  cloud-security/  compliance/  identity-access/</div>
-                <div class="terminal-line terminal-cmd">
-                    <span class="prompt">emsly@slytech:~$</span> 
-                    <span class="command">cat focus.md</span>
-                </div>
-                <div class="terminal-line terminal-output" data-text="# Current Objectives"># Current Objectives</div>
-                <div class="terminal-line terminal-output" data-text="- Infrastructure, Cloud, Security, and Identity roles">- Infrastructure, Cloud, Security, and Identity roles</div>
-                <div class="terminal-line terminal-output" data-text="- Multilingual: English, Spanish, French">- Multilingual: English, Spanish, French</div>
-            </div>
-        </div>
+            <!-- IMPROVEMENT 1: Projects now section 2 -->
+            <section id="projects" aria-labelledby="projects-heading">
+                <div class="glass-card fade-in">
+                    <div class="section-header">
+                        <h2 id="projects-heading">🚀 Featured Projects</h2>
+                    </div>
 
-        <!-- Tech Stack -->
-        <div class="glass-card fade-in">
-            <div class="section-header">
-                <h2>🛠️ Arsenal</h2>
-            </div>
-            
-            <div class="tech-grid">
-                <div class="tech-item">Linux</div>
-                <div class="tech-item">Bash</div>
-                <div class="tech-item">PowerShell</div>
-                <div class="tech-item">Python</div>
-                <div class="tech-item">Splunk</div>
-                <div class="tech-item">Wazuh</div>
-                <div class="tech-item">Azure</div>
-                <div class="tech-item">Proxmox</div>
-                <div class="tech-item">Active Directory</div>
-                <div class="tech-item">Entra ID</div>
-                <div class="tech-item">pfSense</div>
-                <div class="tech-item">Docker</div>
-                <div class="tech-item">Kali Linux</div>
-                <div class="tech-item">MITRE ATT&CK</div>
-                <div class="tech-item">Nessus</div>
-                <div class="tech-item">KQL</div>
-                <div class="tech-item">SIEM</div>
-                <div class="tech-item">Detection Engineering</div>
-            </div>
-        </div>
+                    <div class="projects-grid">
 
-        <!-- Projects -->
-        <div class="glass-card fade-in">
-            <div class="section-header">
-                <h2>🚀 Featured Projects</h2>
-            </div>
-            
-            <div class="projects-grid">
+                        <!-- IAM LAB -->
+                        <a href="https://blog.slytech.us/iam-lab/" target="_blank" rel="noopener" class="project-card" aria-label="Identity and Access Management Lab — read blog post">
+                            <div class="card-thumb">
+                                <!--
+                                  To add a screenshot, replace the placeholder div below with:
+                                  <img src="/assets/images/iam-lab-preview.png"
+                                       alt="PowerShell provisioning script output showing user creation with OU placement and group assignment in Active Directory"
+                                       loading="lazy">
+                                -->
+                                <div class="card-thumb-placeholder" aria-hidden="true">🔐</div>
+                                <span class="card-thumb-badge">BLOG POST</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Identity &amp; Access Management Lab</h3>
+                                <p class="card-desc">Provisioning, deprovisioning, quarterly access reviews, and GPO enforcement. Scripted in PowerShell with timestamped audit logs and manager-ready CSV output.</p>
+                                <div class="card-tags" aria-label="Technologies used">
+                                    <span class="tech-tag">Active Directory</span>
+                                    <span class="tech-tag">PowerShell</span>
+                                    <span class="tech-tag">GPO</span>
+                                    <span class="tech-tag">Identity Lifecycle</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/iam-lab</div>
+                            </div>
+                        </a>
 
-                <a href="https://blog.slytech.us/iam-lab/" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-icon">🔐</div>
-                            <div class="project-title">Identity and Access Management Lab</div>
+                        <!-- AI TRIAGE -->
+                        <a href="https://blog.slytech.us/splunk-ai-triage/" target="_blank" rel="noopener" class="project-card" aria-label="AI-Assisted SOC Triage Tool — read blog post">
+                            <div class="card-thumb">
+                                <!--
+                                  <img src="/assets/images/ai-triage-preview.png"
+                                       alt="Terminal output showing AI triage report with CRITICAL brute force finding and MITRE ATT&CK T1110.001 mapping"
+                                       loading="lazy">
+                                -->
+                                <div class="card-thumb-placeholder" aria-hidden="true">🤖</div>
+                                <span class="card-thumb-badge">GITHUB + BLOG</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">AI-Assisted SOC Triage Tool</h3>
+                                <p class="card-desc">Python tool combining Splunk REST API and Anthropic API. Detected four attack patterns including T1110.001 brute force and T1087 account enumeration from real lab data.</p>
+                                <div class="card-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Splunk API</span>
+                                    <span class="tech-tag">Anthropic API</span>
+                                    <span class="tech-tag">MITRE ATT&CK</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ github.com/SlyCyberLab/slytech-ai-labs</div>
+                            </div>
+                        </a>
+
+                        <!-- AZURE SOC -->
+                        <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" target="_blank" rel="noopener" class="project-card" aria-label="Azure SOC Operations Center — view on GitHub">
+                            <div class="card-thumb">
+                                <!--
+                                  <img src="/assets/images/azure-soc-preview.png"
+                                       alt="Microsoft Sentinel dashboard showing incident map with attack origins and KQL detection query results"
+                                       loading="lazy">
+                                -->
+                                <div class="card-thumb-placeholder" aria-hidden="true">🛡️</div>
+                                <span class="card-thumb-badge">GITHUB</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Azure SOC Operations Center</h3>
+                                <p class="card-desc">Microsoft Sentinel with custom KQL detection queries and automated incident response. Honeypot captured 6,000+ live attack attempts mapped to MITRE ATT&CK.</p>
+                                <div class="card-tags">
+                                    <span class="tech-tag">Azure Sentinel</span>
+                                    <span class="tech-tag">KQL</span>
+                                    <span class="tech-tag">Log Analytics</span>
+                                    <span class="tech-tag">SIEM</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab</div>
+                            </div>
+                        </a>
+
+                        <!-- SPLUNK SIEM -->
+                        <a href="https://blog.slytech.us/splunk-lab-1/" target="_blank" rel="noopener" class="project-card" aria-label="Splunk SIEM Engineering Lab — read blog post">
+                            <div class="card-thumb">
+                                <!--
+                                  <img src="/assets/images/splunk-lab-preview.png"
+                                       alt="Splunk web UI showing correlation search results with Windows Security events from dc01"
+                                       loading="lazy">
+                                -->
+                                <div class="card-thumb-placeholder" aria-hidden="true">📊</div>
+                                <span class="card-thumb-badge">BLOG POST</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Splunk SIEM Engineering Lab</h3>
+                                <p class="card-desc">3-part series: Universal Forwarder deployment, SPL correlation searches, CIM normalization, and MITRE ATT&CK detection rules with Security Essentials.</p>
+                                <div class="card-tags">
+                                    <span class="tech-tag">Splunk</span>
+                                    <span class="tech-tag">SPL</span>
+                                    <span class="tech-tag">Detection Engineering</span>
+                                    <span class="tech-tag">Proxmox</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/splunk-lab-1</div>
+                            </div>
+                        </a>
+
+                        <!-- NIST CSF -->
+                        <a href="https://blog.slytech.us/compliance-lab-1/" target="_blank" rel="noopener" class="project-card" aria-label="NIST CSF 2.0 Compliance Lab — read blog post">
+                            <div class="card-thumb">
+                                <!--
+                                  <img src="/assets/images/nist-lab-preview.png"
+                                       alt="OpenSCAP compliance scan results showing remediation progress from 70.9% to 78.12% on RHEL baseline"
+                                       loading="lazy">
+                                -->
+                                <div class="card-thumb-placeholder" aria-hidden="true">📋</div>
+                                <span class="card-thumb-badge">BLOG POST</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">NIST CSF 2.0 Compliance Lab</h3>
+                                <p class="card-desc">Full compliance lifecycle on Proxmox: pfSense VLAN segmentation, Wazuh SIEM, OpenSCAP remediation, GPO hardening, and live attack simulation.</p>
+                                <div class="card-tags">
+                                    <span class="tech-tag">NIST CSF 2.0</span>
+                                    <span class="tech-tag">Wazuh</span>
+                                    <span class="tech-tag">OpenSCAP</span>
+                                    <span class="tech-tag">pfSense</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/compliance-lab-1</div>
+                            </div>
+                        </a>
+
+                        <!-- VULN MGMT -->
+                        <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" target="_blank" rel="noopener" class="project-card" aria-label="Vulnerability Management Platform — view on GitHub">
+                            <div class="card-thumb">
+                                <!--
+                                  <img src="/assets/images/vuln-lab-preview.png"
+                                       alt="Tenable Nessus Professional dashboard showing vulnerability scan results with CVSS risk scoring"
+                                       loading="lazy">
+                                -->
+                                <div class="card-thumb-placeholder" aria-hidden="true">🔍</div>
+                                <span class="card-thumb-badge">GITHUB</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Vulnerability Management Platform</h3>
+                                <p class="card-desc">Tenable Nessus Professional on Azure with automated scheduling, CVSS risk scoring, and NIST and CIS framework mapping with full remediation workflow.</p>
+                                <div class="card-tags">
+                                    <span class="tech-tag">Nessus</span>
+                                    <span class="tech-tag">Azure VM</span>
+                                    <span class="tech-tag">CVSS</span>
+                                    <span class="tech-tag">NIST / CIS</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ github.com/SlyCyberLab/Vulnerability-Management-Lab</div>
+                            </div>
+                        </a>
+
+                        <!-- WAZUH -->
+                        <a href="https://blog.slytech.us/wazuh-siem-setup/" target="_blank" rel="noopener" class="project-card" aria-label="Wazuh SIEM Homelab — read blog post">
+                            <div class="card-thumb">
+                                <div class="card-thumb-placeholder" aria-hidden="true">🔎</div>
+                                <span class="card-thumb-badge">BLOG POST</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Wazuh SIEM Homelab</h3>
+                                <p class="card-desc">Deployed Wazuh on Ubuntu with agents on Windows and Linux endpoints. Configured custom detection rules, active response, and GPO hardening on the slytech.us domain.</p>
+                                <div class="card-tags">
+                                    <span class="tech-tag">Wazuh</span>
+                                    <span class="tech-tag">Proxmox</span>
+                                    <span class="tech-tag">Active Directory</span>
+                                    <span class="tech-tag">SIEM</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/wazuh-siem-setup</div>
+                            </div>
+                        </a>
+
+                        <!-- PFSENSE -->
+                        <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" target="_blank" rel="noopener" class="project-card" aria-label="pfSense Firewall Configuration Lab — view on GitHub">
+                            <div class="card-thumb">
+                                <div class="card-thumb-placeholder" aria-hidden="true">🔥</div>
+                                <span class="card-thumb-badge">GITHUB</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">pfSense Firewall Configuration Lab</h3>
+                                <p class="card-desc">Multi-VLAN network segmentation with enforced firewall policies, traffic filtering, and access control rules across management, server, workstation, and DMZ zones.</p>
+                                <div class="card-tags">
+                                    <span class="tech-tag">pfSense 2.7.2</span>
+                                    <span class="tech-tag">VLAN Segmentation</span>
+                                    <span class="tech-tag">Firewall Rules</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ github.com/SlyCyberLab/pfSense-Firewall-Config</div>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2.5rem;">
+                        <p style="color: var(--text-dim); margin-bottom: 1.25rem; font-size: 0.95rem;">
+                            All projects documented with build notes, troubleshooting, and real lab data at blog.slytech.us
+                        </p>
+                        <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+                            <a href="https://github.com/SlyCyberLab?tab=repositories" class="cta-btn cta-secondary" target="_blank" rel="noopener">GitHub Repos →</a>
+                            <a href="https://blog.slytech.us" class="cta-btn cta-primary" target="_blank" rel="noopener">Blog Documentation →</a>
                         </div>
-                        <div class="project-description">
-                            End-to-end IAM implementation covering provisioning workflows, least-privilege group design, quarterly access review automation, and GPO-based access control. All scripted in PowerShell with audit logs.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Active Directory</span>
-                            <span class="tech-tag">PowerShell</span>
-                            <span class="tech-tag">Identity Lifecycle</span>
-                            <span class="tech-tag">GPO</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-icon">🛡️</div>
-                            <div class="project-title">Azure SOC Operations Center</div>
-                        </div>
-                        <div class="project-description">
-                            Cloud-native Security Operations Center with real-time threat detection, advanced analytics, and automated incident response capturing 6,000+ live attack attempts.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Microsoft Azure</span>
-                            <span class="tech-tag">Sentinel</span>
-                            <span class="tech-tag">KQL</span>
-                            <span class="tech-tag">SIEM</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-icon">🔍</div>
-                            <div class="project-title">Vulnerability Management Platform</div>
-                        </div>
-                        <div class="project-description">
-                            Enterprise-grade vulnerability assessment and remediation pipeline using Tenable Nessus Professional with automated scanning, risk scoring, and compliance reporting.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Nessus Professional</span>
-                            <span class="tech-tag">Azure VM</span>
-                            <span class="tech-tag">CVSS</span>
-                            <span class="tech-tag">NIST / CIS</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-icon">🔥</div>
-                            <div class="project-title">pfSense Firewall Configuration Lab</div>
-                        </div>
-                        <div class="project-description">
-                            Multi-VLAN network segmentation with enforced firewall policies, traffic filtering, and access control rules across management, server, workstation, and DMZ zones.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">pfSense 2.7.2</span>
-                            <span class="tech-tag">VLAN Segmentation</span>
-                            <span class="tech-tag">Firewall Rules</span>
-                        </div>
-                    </div>
-                </a>
-
-                <div class="project-card" onclick="window.open('https://blog.slytech.us/splunk-lab-1/', '_blank')" style="cursor: pointer;">
-                    <div class="project-header">
-                        <div class="project-icon">📊</div>
-                        <div class="project-title">Splunk SIEM Lab</div>
-                    </div>
-                    <div class="project-description">
-                        3-part series building a full Splunk SIEM on Proxmox — Universal Forwarder deployment, SPL detections, MITRE ATT&CK mapping with Security Essentials, and a complete SOC workflow.
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Splunk</span>
-                        <span class="tech-tag">MITRE ATT&CK</span>
-                        <span class="tech-tag">Detection Engineering</span>
-                        <span class="tech-tag">Proxmox</span>
                     </div>
                 </div>
+            </section>
 
-                <div class="project-card" onclick="window.open('https://blog.slytech.us/compliance-lab-1/', '_blank')" style="cursor: pointer;">
-                    <div class="project-header">
-                        <div class="project-icon">📋</div>
-                        <div class="project-title">Security Compliance Lab</div>
+            <!-- ABOUT -->
+            <section id="about" aria-labelledby="about-heading">
+                <div class="glass-card fade-in">
+                    <div class="section-header">
+                        <h2 id="about-heading">💫 Who I Am</h2>
                     </div>
-                    <div class="project-description">
-                        3-part series mapping real controls to ISO 27001 Annex A and NIST CSF 2.0, with live attack simulation, OpenSCAP remediation, and Wazuh active response on Proxmox.
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">ISO 27001</span>
-                        <span class="tech-tag">NIST CSF 2.0</span>
-                        <span class="tech-tag">Wazuh</span>
-                        <span class="tech-tag">pfSense</span>
-                    </div>
-                </div>
 
-                <div class="project-card" onclick="window.open('https://blog.slytech.us/splunk-ai-triage/', '_blank')" style="cursor: pointer;">
-                    <div class="project-header">
-                        <div class="project-icon">🤖</div>
-                        <div class="project-title">AI-Assisted SOC Triage Tool</div>
-                    </div>
-                    <div class="project-description">
-                        Python tool that pulls Windows Security events from Splunk, sends them to the Anthropic API, and returns a structured SOC triage report with MITRE ATT&CK mapping and triage priorities.
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Splunk REST API</span>
-                        <span class="tech-tag">Anthropic API</span>
-                        <span class="tech-tag">MITRE ATT&CK</span>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="window.open('https://blog.slytech.us/wazuh-siem-setup/', '_blank')" style="cursor: pointer;">
-                    <div class="project-header">
-                        <div class="project-icon">🔎</div>
-                        <div class="project-title">Wazuh SIEM Homelab</div>
-                    </div>
-                    <div class="project-description">
-                        Deployed Wazuh on Ubuntu server with agents on Windows and Linux endpoints. Configured custom detection rules, active response, and GPO hardening on the slytech.us domain.
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Wazuh</span>
-                        <span class="tech-tag">Proxmox</span>
-                        <span class="tech-tag">Active Directory</span>
-                        <span class="tech-tag">SIEM</span>
+                    <div class="terminal" role="region" aria-label="Terminal bio">
+                        <div class="terminal-line">
+                            <span class="prompt">emsly@slytech:~$</span>
+                            <span class="command"> whoami</span>
+                        </div>
+                        <div class="terminal-line terminal-output" data-text="IT Administrator with 4+ years managing enterprise infrastructure, Active Directory, and compliance frameworks, now building toward infrastructure, cloud, security, and identity roles.">IT Administrator with 4+ years managing enterprise infrastructure, Active Directory, and compliance frameworks, now building toward infrastructure, cloud, security, and identity roles.</div>
+                        <div class="terminal-line">
+                            <span class="prompt">emsly@slytech:~$</span>
+                            <span class="command"> cat mission.txt</span>
+                        </div>
+                        <div class="terminal-line terminal-output" data-text="Documenting the build in public — homelabs, detection engineering, and compliance work at blog.slytech.us">Documenting the build in public — homelabs, detection engineering, and compliance work at blog.slytech.us</div>
+                        <div class="terminal-line">
+                            <span class="prompt">emsly@slytech:~$</span>
+                            <span class="command"> ls skills/</span>
+                        </div>
+                        <div class="terminal-line terminal-output" data-text="incident-response/  detection-engineering/  siem-operations/  cloud-security/  compliance/  identity-access/">incident-response/  detection-engineering/  siem-operations/  cloud-security/  compliance/  identity-access/</div>
+                        <div class="terminal-line">
+                            <span class="prompt">emsly@slytech:~$</span>
+                            <span class="command"> cat focus.md</span>
+                        </div>
+                        <div class="terminal-line terminal-output" data-text="# Current Objectives"># Current Objectives</div>
+                        <div class="terminal-line terminal-output" data-text="- Infrastructure, Cloud, Security, and Identity roles">- Infrastructure, Cloud, Security, and Identity roles</div>
+                        <div class="terminal-line terminal-output" data-text="- Multilingual: English, Spanish, French, Haitian Creole">- Multilingual: English, Spanish, French, Haitian Creole</div>
                     </div>
                 </div>
+            </section>
 
-            </div>
+            <!-- ARSENAL -->
+            <section id="arsenal" aria-labelledby="arsenal-heading">
+                <div class="glass-card fade-in">
+                    <div class="section-header">
+                        <h2 id="arsenal-heading">🛠️ Arsenal</h2>
+                    </div>
+                    <div class="tech-grid" role="list" aria-label="Technologies and tools">
+                        <div class="tech-item" role="listitem">Linux</div>
+                        <div class="tech-item" role="listitem">Bash</div>
+                        <div class="tech-item" role="listitem">PowerShell</div>
+                        <div class="tech-item" role="listitem">Python</div>
+                        <div class="tech-item" role="listitem">Splunk</div>
+                        <div class="tech-item" role="listitem">Wazuh</div>
+                        <div class="tech-item" role="listitem">Azure</div>
+                        <div class="tech-item" role="listitem">Proxmox</div>
+                        <div class="tech-item" role="listitem">Active Directory</div>
+                        <div class="tech-item" role="listitem">Entra ID</div>
+                        <div class="tech-item" role="listitem">pfSense</div>
+                        <div class="tech-item" role="listitem">Docker</div>
+                        <div class="tech-item" role="listitem">Kali Linux</div>
+                        <div class="tech-item" role="listitem">MITRE ATT&CK</div>
+                        <div class="tech-item" role="listitem">Nessus</div>
+                        <div class="tech-item" role="listitem">KQL</div>
+                        <div class="tech-item" role="listitem">SIEM</div>
+                        <div class="tech-item" role="listitem">Detection Engineering</div>
+                    </div>
+                </div>
+            </section>
 
-            <div style="text-align: center; margin-top: 3rem;">
-                <p style="color: var(--text-dim); margin-bottom: 1.5rem; font-size: 1rem;">
-                    Most projects are fully documented with build notes, troubleshooting, and real lab data at blog.slytech.us
-                </p>
-                <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-                    <a href="https://github.com/SlyCyberLab?tab=repositories" class="cta-btn cta-secondary" target="_blank">GitHub Repos →</a>
-                    <a href="https://blog.slytech.us" class="cta-btn cta-primary" target="_blank">Blog Documentation →</a>
+            <!-- CERTIFICATIONS -->
+            <section id="certs" aria-labelledby="certs-heading">
+                <div class="glass-card fade-in">
+                    <div class="section-header">
+                        <h2 id="certs-heading">🏅 Professional Certifications</h2>
+                    </div>
+                    <div class="cert-grid">
+                        <article class="cert-card">
+                            <div class="cert-name">CompTIA Security+</div>
+                            <div class="cert-status">Certified — September 2024</div>
+                        </article>
+                        <article class="cert-card">
+                            <div class="cert-name">CompTIA Network+</div>
+                            <div class="cert-status">Certified — July 2024</div>
+                        </article>
+                        <article class="cert-card">
+                            <div class="cert-name">Splunk Core Certified User</div>
+                            <div class="cert-status">Certified — November 2024</div>
+                        </article>
+                        <article class="cert-card">
+                            <div class="cert-name">Microsoft Azure Fundamentals (AZ-900)</div>
+                            <div class="cert-status">Certified — 2025</div>
+                        </article>
+                        <article class="cert-card">
+                            <div class="cert-name">Microsoft Azure Administrator (AZ-104)</div>
+                            <div class="cert-status">Certified — 2026</div>
+                        </article>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </section>
 
-        <!-- Certifications -->
-        <div class="glass-card fade-in">
-            <div class="section-header">
-                <h2>🏅 Professional Certifications</h2>
-            </div>
-            
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <div class="cert-name">CompTIA Security+</div>
-                    <div class="cert-status">Certified</div>
+            <!-- CONTACT -->
+            <section id="contact" aria-labelledby="contact-heading">
+                <div class="glass-card fade-in" style="text-align: center;">
+                    <h2 id="contact-heading" style="margin-bottom: 1.5rem; font-size: clamp(1.8rem, 3vw, 2.5rem);">Open to New Opportunities</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-dim); margin-bottom: 2.5rem; max-width: 60ch; margin-left: auto; margin-right: auto;">
+                        Open to infrastructure, security, cloud, and identity roles. I build production-grade labs, automate workflows, and document everything publicly at <a href="https://blog.slytech.us" style="color: var(--primary);" target="_blank" rel="noopener">blog.slytech.us</a>.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="mailto:slycyber7@gmail.com" class="cta-btn cta-primary">Start the Conversation</a>
+                        <a href="https://github.com/SlyCyberLab" class="cta-btn cta-secondary" target="_blank" rel="noopener">View My Work</a>
+                        <a href="https://blog.slytech.us" class="cta-btn cta-secondary" target="_blank" rel="noopener">Read the Blog</a>
+                    </div>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-name">CompTIA Network+</div>
-                    <div class="cert-status">Certified</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-name">Splunk Core Certified</div>
-                    <div class="cert-status">Certified</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-name">Microsoft Azure Fundamentals (AZ-900)</div>
-                    <div class="cert-status">Certified</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-name">Microsoft Azure Administrator (AZ-104)</div>
-                    <div class="cert-status">Certified</div>
-                </div>
-            </div>
-        </div>
+            </section>
 
-        <!-- Call to Action -->
-        <div class="glass-card fade-in" style="text-align: center;">
-            <h2 style="margin-bottom: 2rem; font-size: 2.5rem;">Open to New Opportunities</h2>
-            <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 3rem;">
-                Open to infrastructure, security, cloud, and identity roles. I build production-grade labs, automate workflows, and document everything publicly at <a href="https://blog.slytech.us" style="color: var(--primary);">blog.slytech.us</a>.
-            </p>
-            <div class="cta-buttons">
-                <a href="mailto:slycyber7@gmail.com" class="cta-btn cta-primary">Start the Conversation</a>
-                <a href="https://github.com/SlyCyberLab" class="cta-btn cta-secondary" target="_blank">View My Work</a>
-                <a href="https://blog.slytech.us" class="cta-btn cta-secondary" target="_blank">Read the Blog</a>
-            </div>
-        </div>
-
+        </main>
     </div>
 
     <script>
-        // Loading Screen
+        // IMPROVEMENT 2: loader reduced from 2000ms to 300ms
         window.addEventListener('load', function() {
             setTimeout(() => {
                 const loader = document.getElementById('loader');
                 loader.classList.add('hidden');
-                setTimeout(() => loader.remove(), 500);
-                setTimeout(startTerminalAnimation, 800);
-            }, 2000);
+                setTimeout(() => loader.remove(), 400);
+                setTimeout(startTerminalAnimation, 600);
+            }, 300);
         });
-        
+
         // Terminal Typing Animation
         function startTerminalAnimation() {
-            const terminalOutputs = document.querySelectorAll('.terminal-output');
-            terminalOutputs.forEach((output, index) => {
+            const outputs = document.querySelectorAll('.terminal-output');
+            outputs.forEach((output, index) => {
                 setTimeout(() => {
                     const text = output.getAttribute('data-text');
                     output.textContent = '';
                     let i = 0;
-                    const typeInterval = setInterval(() => {
+                    const t = setInterval(() => {
                         output.textContent = text.substring(0, i + 1);
                         i++;
-                        if (i >= text.length) clearInterval(typeInterval);
-                    }, 30);
-                }, index * 800);
+                        if (i >= text.length) clearInterval(t);
+                    }, 28);
+                }, index * 700);
             });
         }
 
         // Modal Functions
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'block';
-            document.body.style.overflow = 'hidden';
+        function openModal(id) {
+            const m = document.getElementById(id);
+            if (m) { m.style.display = 'block'; document.body.style.overflow = 'hidden'; }
         }
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-            document.body.style.overflow = 'auto';
+        function closeModal(id) {
+            const m = document.getElementById(id);
+            if (m) { m.style.display = 'none'; document.body.style.overflow = 'auto'; }
         }
 
-        window.onclick = function(event) {
-            const modals = document.querySelectorAll('.modal');
-            modals.forEach(modal => {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
+        window.addEventListener('click', (e) => {
+            document.querySelectorAll('.modal').forEach(modal => {
+                if (e.target === modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
             });
-        }
+        });
 
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const modals = document.querySelectorAll('.modal');
-                modals.forEach(modal => {
-                    if (modal.style.display === 'block') {
-                        modal.style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                    }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    if (modal.style.display === 'block') { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
                 });
             }
         });
 
-        // Matrix Rain Effect
+        // IMPROVEMENT 8: Matrix pauses when tab not visible
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
@@ -1069,10 +1197,10 @@
 
         const matrixChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}".split("");
         const fontSize = 10;
-        const columns = canvas.width / fontSize;
-        const drops = Array(Math.floor(columns)).fill(1);
+        const drops = Array(Math.floor(canvas.width / fontSize)).fill(1);
+        let matrixInterval;
 
-        function draw() {
+        function drawMatrix() {
             ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = '#00ff88';
@@ -1084,40 +1212,53 @@
                 drops[i]++;
             });
         }
-        setInterval(draw, 35);
+
+        function startMatrix() { matrixInterval = setInterval(drawMatrix, 35); }
+        function stopMatrix() { clearInterval(matrixInterval); }
+
+        startMatrix();
+
+        document.addEventListener('visibilitychange', () => {
+            document.hidden ? stopMatrix() : startMatrix();
+        });
 
         // Scroll Animations
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
         // Typing Effect
         const subtitle = document.querySelector('.typing-effect');
-        const text = 'IT & Security Professional';
-        let i = 0;
+        const subtitleText = 'IT & Security Professional';
+        let si = 0;
         function typeWriter() {
-            if (i < text.length) {
-                subtitle.textContent = text.substring(0, i + 1);
-                i++;
-                setTimeout(typeWriter, 100);
+            if (si < subtitleText.length) {
+                subtitle.textContent = subtitleText.substring(0, si + 1);
+                si++;
+                setTimeout(typeWriter, 95);
             }
         }
-        setTimeout(typeWriter, 1000);
+        setTimeout(typeWriter, 800);
 
-        // Resize Matrix
+        // Resize
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         });
 
-        // Parallax Effect
+        // IMPROVEMENT 7: Parallax wrapped in requestAnimationFrame
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            document.querySelector('.bg-animation').style.transform = `translateY(${scrolled * 0.5}px)`;
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const scrolled = window.pageYOffset;
+                    document.querySelector('.bg-animation').style.transform = `translateY(${scrolled * 0.4}px)`;
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
     </script>
 </body>
