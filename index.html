@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="https://slytech.us/assets/images/og-preview.png">
 
-    <!-- IMPROVEMENT 6: SEO + Open Graph -->
     <title>Emsly S. | IT & Security Professional — slytech.us</title>
-    <meta name="description" content="IT Administrator and security practitioner with 4+ years in infrastructure, compliance, and detection engineering. Published labs and write-ups at blog.slytech.us.">
+    <meta name="description" content="Systems administrator with 3+ years in IT, managing infrastructure, security, and IAM across hybrid Windows and Linux environments. Published labs and write-ups at blog.slytech.us.">
     <meta name="author" content="Emsly Severe">
     <meta property="og:title" content="Emsly S. | IT & Security Professional">
-    <meta property="og:description" content="IT Administrator building toward cloud, identity, and security engineering roles. 8 published labs, 10+ blog posts, open to new opportunities.">
+    <meta property="og:description" content="Systems administrator managing infrastructure, security, and IAM. 8 published labs, 10+ blog posts, open to new opportunities.">
     <meta property="og:url" content="https://slytech.us">
     <meta property="og:type" content="website">
+
+    <!-- ============================================================
+      FAVICON — "ES" initials on dark background
+      To swap: replace with <link rel="icon" href="favicon.png" type="image/png">
+      ============================================================ -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230a0a0a'/%3E%3Ctext x='16' y='22' font-family='system-ui%2Csans-serif' font-weight='700' font-size='15' fill='%2300ff88' text-anchor='middle'%3EES%3C/text%3E%3C/svg%3E">
+
+    <!-- Google Fonts — preconnect reduces DNS + TLS handshake time -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM5BKKZZN5"></script>
@@ -24,8 +34,6 @@
     </script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;600;800&display=swap');
-
         /* ── CSS VARIABLES ── */
         :root {
             --primary: #00ff88;
@@ -51,6 +59,30 @@
             scroll-behavior: smooth;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ── SKIP LINK — keyboard accessibility ── */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 1rem;
+            z-index: 300;
+            background: var(--primary);
+            color: var(--bg-dark);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 0 0 4px 4px;
+            text-decoration: none;
+        }
+        .skip-link:focus { top: 0; outline: none; }
+
+        /* ── FOCUS STYLES ── */
+        :focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 3px;
+            border-radius: 2px;
         }
 
         /* ── BACKGROUND ── */
@@ -96,7 +128,7 @@
             opacity: 0.1;
         }
 
-        /* ── IMPROVEMENT 9: STICKY NAV ── */
+        /* ── STICKY NAV ── */
         .site-nav {
             position: fixed;
             top: 0; left: 0; right: 0;
@@ -108,6 +140,7 @@
             background: rgba(10, 10, 10, 0.9);
             border-bottom: 1px solid var(--glass-border);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
 
         .site-nav a {
@@ -132,12 +165,10 @@
             max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
-            padding-top: 3.5rem; /* offset for fixed nav */
+            padding-top: 3.5rem;
         }
 
-        /* ── IMPROVEMENT 3: glass-card without backdrop-filter blur ── */
-        /* blur on every card causes GPU composite layers and scroll jank  */
-        /* removed: backdrop-filter: blur(20px) */
+        /* ── GLASS CARD ── */
         .glass-card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
@@ -303,7 +334,14 @@
             background: linear-gradient(90deg, var(--primary), transparent);
         }
 
-        /* ── IMPROVEMENT 5: PROJECT CARDS WITH THUMBNAILS ── */
+        /* ── PROJECT CARDS WITH THUMBNAILS ── */
+        /* ============================================================
+           TO ADD A NEW PROJECT:
+           1. Copy one <a class="project-card"> block below
+           2. Update href, aria-label, img src, img alt, h3 title,
+              card-desc text, tech-tag spans, and card-footer link
+           3. Save and push to GitHub
+           ============================================================ */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -329,7 +367,11 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
-        /* thumbnail */
+        /* ============================================================
+           TO SWAP A PROJECT IMAGE:
+           Replace the src="assets/images/FILENAME.png" value below
+           with your screenshot path. Recommended size: 1280x720px.
+           ============================================================ */
         .card-thumb {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -353,7 +395,6 @@
             transform: scale(1.04);
         }
 
-        /* emoji fallback when no screenshot yet */
         .card-thumb-placeholder {
             width: 100%;
             height: 100%;
@@ -380,7 +421,6 @@
             backdrop-filter: blur(4px);
         }
 
-        /* card body */
         .card-body {
             padding: 1.25rem;
             flex: 1;
@@ -499,6 +539,11 @@
         .command { color: var(--secondary); }
 
         /* ── CERTIFICATIONS ── */
+        /* ============================================================
+           TO ADD OR UPDATE A CERT:
+           Copy an <article class="cert-card"> block in the certs section
+           and update cert-name and cert-status text.
+           ============================================================ */
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -575,10 +620,10 @@
             font-size: 1rem;
             color: var(--primary);
             text-align: center;
-            animation: pulse 1.5s ease-in-out infinite;
+            animation: loadPulse 1.5s ease-in-out infinite;
         }
 
-        @keyframes pulse {
+        @keyframes loadPulse {
             0%, 100% { opacity: 0.5; }
             50% { opacity: 1; }
         }
@@ -591,7 +636,7 @@
             left: 0; top: 0;
             width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(12px); /* blur kept only on modal overlay */
+            backdrop-filter: blur(12px);
         }
 
         .modal-content {
@@ -647,7 +692,7 @@
         ::-webkit-scrollbar-track { background: var(--bg-darker); }
         ::-webkit-scrollbar-thumb { background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 3px; }
 
-        /* ── IMPROVEMENT 10: MOBILE ── */
+        /* ── MOBILE ── */
         @media (max-width: 768px) {
             .container { padding: 1rem; padding-top: 3rem; }
             .glass-card { padding: 1.5rem; }
@@ -665,7 +710,10 @@
 </head>
 <body>
 
-    <!-- IMPROVEMENT 2: loader reduced to 300ms -->
+    <!-- Skip link for keyboard users -->
+    <a class="skip-link" href="#projects">Skip to projects</a>
+
+    <!-- Loader -->
     <div class="loader" id="loader" role="status" aria-label="Loading">
         <div class="cyber-loader" aria-hidden="true">
             <div class="cyber-circle"></div>
@@ -681,7 +729,7 @@
     <div class="bg-animation" aria-hidden="true"></div>
     <canvas class="matrix" id="matrix" aria-hidden="true"></canvas>
 
-    <!-- IMPROVEMENT 9: Sticky navigation -->
+    <!-- Sticky navigation -->
     <nav class="site-nav" aria-label="Site sections">
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
@@ -690,7 +738,13 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- MODALS — direct children of body, outside all sections -->
+    <!-- ============================================================
+      MODALS — direct children of body
+      To add a new modal: copy one block, give it a unique id,
+      update the title, description, features, tech tags, and link.
+      Then add onclick="openModal('your-id')" to the project card.
+      ============================================================ -->
+
     <div id="azuresoc" class="modal" role="dialog" aria-modal="true" aria-labelledby="azuresoc-title">
         <div class="modal-content">
             <button class="close" onclick="closeModal('azuresoc')" aria-label="Close">&times;</button>
@@ -719,7 +773,7 @@
                 <span class="modal-tech-tag">Azure Monitor</span>
             </div>
             <div class="modal-links">
-                <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" class="modal-link" target="_blank" rel="noopener">View on GitHub</a>
+                <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" class="modal-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                 <a href="#" class="modal-link" style="background:transparent;border:1px solid var(--primary);color:var(--primary);" onclick="closeModal('azuresoc');return false;">Close</a>
             </div>
         </div>
@@ -752,7 +806,7 @@
                 <span class="modal-tech-tag">NIST / CIS</span>
             </div>
             <div class="modal-links">
-                <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" class="modal-link" target="_blank" rel="noopener">View on GitHub</a>
+                <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" class="modal-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                 <a href="#" class="modal-link" style="background:transparent;border:1px solid var(--primary);color:var(--primary);" onclick="closeModal('vuln');return false;">Close</a>
             </div>
         </div>
@@ -785,7 +839,7 @@
                 <span class="modal-tech-tag">Syslog</span>
             </div>
             <div class="modal-links">
-                <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" class="modal-link" target="_blank" rel="noopener">View on GitHub</a>
+                <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" class="modal-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                 <a href="#" class="modal-link" style="background:transparent;border:1px solid var(--primary);color:var(--primary);" onclick="closeModal('pfsense');return false;">Close</a>
             </div>
         </div>
@@ -796,12 +850,14 @@
     <!-- ═══════════════════════════════════════ -->
     <div class="container">
 
-        <!-- IMPROVEMENT 4: semantic header -->
         <header>
             <div class="glass-card hero fade-in">
                 <h1>Emsly S.</h1>
                 <p class="subtitle typing-effect" aria-label="IT & Security Professional"></p>
 
+                <!-- ============================================================
+                  ROLE BADGES — update these to match your current positioning
+                  ============================================================ -->
                 <div class="role-badges" role="list">
                     <span class="role-badge" role="listitem">🖥️ System Administrator</span>
                     <span class="role-badge" role="listitem">🛡️ SOC Analyst</span>
@@ -809,18 +865,24 @@
                     <span class="role-badge" role="listitem">🔐 Identity &amp; Access</span>
                 </div>
 
+                <!-- ============================================================
+                  HERO CTAs — update email, LinkedIn, and blog links here
+                  ============================================================ -->
                 <nav class="cta-buttons" aria-label="Contact and profile links">
                     <a href="mailto:slycyber7@gmail.com" class="cta-btn cta-primary">Get In Touch</a>
-                    <a href="https://www.linkedin.com/in/emsly-s/" class="cta-btn cta-secondary" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn Profile</a>
-                    <a href="https://blog.slytech.us" class="cta-btn cta-secondary" target="_blank" rel="noopener">SlyTech Blog</a>
+                    <a href="https://www.linkedin.com/in/emsly-s/" class="cta-btn cta-secondary" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn Profile</a>
+                    <a href="https://blog.slytech.us" class="cta-btn cta-secondary" target="_blank" rel="noopener noreferrer">SlyTech Blog</a>
                 </nav>
             </div>
         </header>
 
-        <!-- IMPROVEMENT 4: semantic main -->
         <main>
 
-            <!-- IMPROVEMENT 1: Projects now section 2 -->
+            <!-- ============================================================
+              PROJECTS SECTION
+              TO ADD A NEW PROJECT: copy any project-card block,
+              give it a new href, update all text and image paths.
+              ============================================================ -->
             <section id="projects" aria-labelledby="projects-heading">
                 <div class="glass-card fade-in">
                     <div class="section-header">
@@ -829,15 +891,12 @@
 
                     <div class="projects-grid">
 
-                        <!-- IAM LAB -->
-                        <a href="https://blog.slytech.us/iam-lab/" target="_blank" rel="noopener" class="project-card" aria-label="Identity and Access Management Lab — read blog post">
+                        <!-- PROJECT: IAM LAB -->
+                        <a href="https://blog.slytech.us/iam-lab/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Identity and Access Management Lab — read blog post">
                             <div class="card-thumb">
-                               
-                                
-                                  <img src="assets/images/iam-lab-preview.png"
-                                       alt="OU placement and group assignment in Active Directory"
-                                       loading="lazy">
-                               
+                                <img src="assets/images/iam-lab-preview.png"
+                                     alt="OU placement and group assignment in Active Directory"
+                                     loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">🔐</div>
                                 <span class="card-thumb-badge">BLOG POST</span>
                             </div>
@@ -854,14 +913,12 @@
                             </div>
                         </a>
 
-                        <!-- AI TRIAGE -->
-                        <a href="https://blog.slytech.us/splunk-ai-triage/" target="_blank" rel="noopener" class="project-card" aria-label="AI-Assisted SOC Triage Tool — read blog post">
+                        <!-- PROJECT: AI TRIAGE -->
+                        <a href="https://blog.slytech.us/splunk-ai-triage/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="AI-Assisted SOC Triage Tool — read blog post">
                             <div class="card-thumb">
-                                
-                                  <img src="assets/images/ai-triage-preview.png"
-                                       alt="Terminal output showing AI triage report with CRITICAL brute force finding and MITRE ATT&CK T1110.001 mapping"
-                                       loading="lazy">
-                                
+                                <img src="assets/images/ai-triage-preview.png"
+                                     alt="Terminal output showing AI triage report with CRITICAL brute force finding and MITRE ATT&CK T1110.001 mapping"
+                                     loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">🤖</div>
                                 <span class="card-thumb-badge">GITHUB + BLOG</span>
                             </div>
@@ -878,14 +935,12 @@
                             </div>
                         </a>
 
-                        <!-- AZURE SOC -->
-                        <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" target="_blank" rel="noopener" class="project-card" aria-label="Azure SOC Operations Center — view on GitHub">
+                        <!-- PROJECT: AZURE SOC -->
+                        <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Azure SOC Operations Center — view on GitHub">
                             <div class="card-thumb">
-                                
-                                  <img src="assets/images/azure-soc-preview.png"
-                                       alt="Microsoft Sentinel dashboard showing incident map with attack origins and KQL detection query results"
-                                       loading="lazy">
-                                
+                                <img src="assets/images/azure-soc-preview.png"
+                                     alt="Microsoft Sentinel dashboard showing incident map with attack origins and KQL detection query results"
+                                     loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">🛡️</div>
                                 <span class="card-thumb-badge">GITHUB</span>
                             </div>
@@ -902,14 +957,12 @@
                             </div>
                         </a>
 
-                        <!-- SPLUNK SIEM -->
-                        <a href="https://blog.slytech.us/splunk-lab-1/" target="_blank" rel="noopener" class="project-card" aria-label="Splunk SIEM Engineering Lab — read blog post">
+                        <!-- PROJECT: SPLUNK SIEM -->
+                        <a href="https://blog.slytech.us/splunk-lab-1/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Splunk SIEM Engineering Lab — read blog post">
                             <div class="card-thumb">
-                                
-                                  <img src="assets/images/splunk-lab-preview.png"
-                                       alt="Splunk web UI showing correlation search results with Windows Security events from dc01"
-                                       loading="lazy">
-                                
+                                <img src="assets/images/splunk-lab-preview.png"
+                                     alt="Splunk web UI showing correlation search results with Windows Security events from dc01"
+                                     loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">📊</div>
                                 <span class="card-thumb-badge">BLOG POST</span>
                             </div>
@@ -926,14 +979,12 @@
                             </div>
                         </a>
 
-                        <!-- NIST CSF -->
-                        <a href="https://blog.slytech.us/compliance-lab-1/" target="_blank" rel="noopener" class="project-card" aria-label="NIST CSF 2.0 Compliance Lab — read blog post">
+                        <!-- PROJECT: NIST CSF -->
+                        <a href="https://blog.slytech.us/compliance-lab-1/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="NIST CSF 2.0 Compliance Lab — read blog post">
                             <div class="card-thumb">
-                                
-                                  <img src="assets/images/nist-lab-preview.png"
-                                       alt="OpenSCAP compliance scan results showing remediation progress from 70.9% to 78.12% on RHEL baseline"
-                                       loading="lazy">
-                               
+                                <img src="assets/images/nist-lab-preview.png"
+                                     alt="OpenSCAP compliance scan results showing remediation progress from 70.9% to 78.12% on RHEL baseline"
+                                     loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">📋</div>
                                 <span class="card-thumb-badge">BLOG POST</span>
                             </div>
@@ -950,14 +1001,12 @@
                             </div>
                         </a>
 
-                        <!-- VULN MGMT -->
-                        <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" target="_blank" rel="noopener" class="project-card" aria-label="Vulnerability Management Platform — view on GitHub">
+                        <!-- PROJECT: VULN MGMT -->
+                        <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Vulnerability Management Platform — view on GitHub">
                             <div class="card-thumb">
-                                
-                                  <img src="assets/images/vuln-lab-preview.png"
-                                       alt="Tenable Nessus Professional dashboard showing vulnerability scan results with CVSS risk scoring"
-                                       loading="lazy">
-                                
+                                <img src="assets/images/vuln-lab-preview.png"
+                                     alt="Tenable Nessus Professional dashboard showing vulnerability scan results with CVSS risk scoring"
+                                     loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">🔍</div>
                                 <span class="card-thumb-badge">GITHUB</span>
                             </div>
@@ -974,14 +1023,12 @@
                             </div>
                         </a>
 
-                        <!-- WAZUH -->
-                        <a href="https://blog.slytech.us/wazuh-siem-setup/" target="_blank" rel="noopener" class="project-card" aria-label="Wazuh SIEM Homelab — read blog post">
+                        <!-- PROJECT: WAZUH -->
+                        <a href="https://blog.slytech.us/wazuh-siem-setup/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Wazuh SIEM Homelab — read blog post">
                             <div class="card-thumb">
-                                
-                                  <img src="assets/images/wazuh-lab-preview.png"
-                                       alt="Wazuh Dashboard"
-                                       loading="lazy">
-                                
+                                <img src="assets/images/wazuh-lab-preview.png"
+                                     alt="Wazuh Dashboard showing agent alerts and active response events"
+                                     loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">🔎</div>
                                 <span class="card-thumb-badge">BLOG POST</span>
                             </div>
@@ -998,14 +1045,12 @@
                             </div>
                         </a>
 
-                        <!-- PFSENSE -->
-                        <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" target="_blank" rel="noopener" class="project-card" aria-label="pfSense Firewall Configuration Lab — view on GitHub">
+                        <!-- PROJECT: PFSENSE -->
+                        <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="pfSense Firewall Configuration Lab — view on GitHub">
                             <div class="card-thumb">
-
-                                  <img src="assets/images/pfsense-lab-preview.png"
-                                       alt="pfSense setup"
-                                       loading="lazy">
-                                
+                                <img src="assets/images/pfsense-lab-preview.png"
+                                     alt="pfSense firewall rules dashboard showing VLAN segmentation policies"
+                                     loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">🔥</div>
                                 <span class="card-thumb-badge">GITHUB</span>
                             </div>
@@ -1028,14 +1073,18 @@
                             All projects documented with build notes, troubleshooting, and real lab data at blog.slytech.us
                         </p>
                         <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
-                            <a href="https://github.com/SlyCyberLab?tab=repositories" class="cta-btn cta-secondary" target="_blank" rel="noopener">GitHub Repos →</a>
-                            <a href="https://blog.slytech.us" class="cta-btn cta-primary" target="_blank" rel="noopener">Blog Documentation →</a>
+                            <a href="https://github.com/SlyCyberLab?tab=repositories" class="cta-btn cta-secondary" target="_blank" rel="noopener noreferrer">GitHub Repos →</a>
+                            <a href="https://blog.slytech.us" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">Blog Documentation →</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- ABOUT -->
+            <!-- ============================================================
+              ABOUT SECTION
+              Update the terminal-output data-text and visible text together.
+              Both must match or the typing animation will show old text.
+              ============================================================ -->
             <section id="about" aria-labelledby="about-heading">
                 <div class="glass-card fade-in">
                     <div class="section-header">
@@ -1047,7 +1096,7 @@
                             <span class="prompt">emsly@slytech:~$</span>
                             <span class="command"> whoami</span>
                         </div>
-                        <div class="terminal-line terminal-output" data-text="IT Administrator with 4+ years managing enterprise infrastructure, Active Directory, and compliance frameworks, now building toward infrastructure, cloud, security, and identity roles.">IT Administrator with 4+ years managing enterprise infrastructure, Active Directory, and compliance frameworks, now building toward infrastructure, cloud, security, and identity roles.</div>
+                        <div class="terminal-line terminal-output" data-text="Three years in IT. Started on the help desk, grew into a systems administrator role managing infrastructure, security, and IAM across hybrid Windows and Linux estates.">Three years in IT. Started on the help desk, grew into a systems administrator role managing infrastructure, security, and IAM across hybrid Windows and Linux estates.</div>
                         <div class="terminal-line">
                             <span class="prompt">emsly@slytech:~$</span>
                             <span class="command"> cat mission.txt</span>
@@ -1069,7 +1118,7 @@
                 </div>
             </section>
 
-            <!-- ARSENAL -->
+            <!-- ARSENAL SECTION -->
             <section id="arsenal" aria-labelledby="arsenal-heading">
                 <div class="glass-card fade-in">
                     <div class="section-header">
@@ -1098,7 +1147,11 @@
                 </div>
             </section>
 
-            <!-- CERTIFICATIONS -->
+            <!-- ============================================================
+              CERTIFICATIONS SECTION
+              To add a cert: copy an <article class="cert-card"> block
+              and update the cert-name and cert-status text.
+              ============================================================ -->
             <section id="certs" aria-labelledby="certs-heading">
                 <div class="glass-card fade-in">
                     <div class="section-header">
@@ -1129,17 +1182,20 @@
                 </div>
             </section>
 
-            <!-- CONTACT -->
+            <!-- ============================================================
+              CONTACT SECTION
+              Update email, GitHub username, and blog URL here.
+              ============================================================ -->
             <section id="contact" aria-labelledby="contact-heading">
                 <div class="glass-card fade-in" style="text-align: center;">
                     <h2 id="contact-heading" style="margin-bottom: 1.5rem; font-size: clamp(1.8rem, 3vw, 2.5rem);">Open to New Opportunities</h2>
                     <p style="font-size: 1.1rem; color: var(--text-dim); margin-bottom: 2.5rem; max-width: 60ch; margin-left: auto; margin-right: auto;">
-                        Open to infrastructure, security, cloud, and identity roles. I build production-grade labs, automate workflows, and document everything publicly at <a href="https://blog.slytech.us" style="color: var(--primary);" target="_blank" rel="noopener">blog.slytech.us</a>.
+                        Open to infrastructure, security, cloud, and identity roles. I build production-grade labs, automate workflows, and document everything publicly at <a href="https://blog.slytech.us" style="color: var(--primary);" target="_blank" rel="noopener noreferrer">blog.slytech.us</a>.
                     </p>
                     <div class="cta-buttons">
                         <a href="mailto:slycyber7@gmail.com" class="cta-btn cta-primary">Start the Conversation</a>
-                        <a href="https://github.com/SlyCyberLab" class="cta-btn cta-secondary" target="_blank" rel="noopener">View My Work</a>
-                        <a href="https://blog.slytech.us" class="cta-btn cta-secondary" target="_blank" rel="noopener">Read the Blog</a>
+                        <a href="https://github.com/SlyCyberLab" class="cta-btn cta-secondary" target="_blank" rel="noopener noreferrer">View My Work</a>
+                        <a href="https://blog.slytech.us" class="cta-btn cta-secondary" target="_blank" rel="noopener noreferrer">Read the Blog</a>
                     </div>
                 </div>
             </section>
@@ -1148,7 +1204,7 @@
     </div>
 
     <script>
-        // IMPROVEMENT 2: loader reduced from 2000ms to 300ms
+        // Loader — reduced to 300ms
         window.addEventListener('load', function() {
             setTimeout(() => {
                 const loader = document.getElementById('loader');
@@ -1200,7 +1256,7 @@
             }
         });
 
-        // IMPROVEMENT 8: Matrix pauses when tab not visible
+        // Matrix rain — pauses when tab is not visible
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
@@ -1240,6 +1296,13 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+        // Safety net — force reveal anything still hidden after 2 seconds
+        setTimeout(() => {
+            document.querySelectorAll('.fade-in:not(.visible)').forEach(el => {
+                el.classList.add('visible');
+            });
+        }, 2000);
+
         // Typing Effect
         const subtitle = document.querySelector('.typing-effect');
         const subtitleText = 'IT & Security Professional';
@@ -1253,13 +1316,13 @@
         }
         setTimeout(typeWriter, 800);
 
-        // Resize
+        // Resize matrix canvas on window resize
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         });
 
-        // IMPROVEMENT 7: Parallax wrapped in requestAnimationFrame
+        // Parallax background — wrapped in requestAnimationFrame
         let ticking = false;
         window.addEventListener('scroll', () => {
             if (!ticking) {
