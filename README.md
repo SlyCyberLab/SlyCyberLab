@@ -14,7 +14,7 @@
 
 ## 🚀 About Me
 
-> **Hi, I'm Emsly, an IT professional with 4+ years of experience across infrastructure administration, security operations, and cloud environments.**  
+> **Hi, I'm Emsly, an IT professional with 3+ years of experience across infrastructure administration, security operations, and cloud environments.**  
 > I build hands-on labs, automate workflows, and document everything publicly. I enjoy solving real technical problems and building systems that are reliable, secure, and well-documented.
 
 ### At a Glance
