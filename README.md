@@ -82,7 +82,7 @@ AI-assisted SOC triage tool combining the Splunk REST API and Anthropic API to a
 <tr>
 <td width="50%">
 
-### 🛡️ [**NIST CSF 2.0 / FISMA-Aligned SOC Lab**](https://blog.slytech.us/compliance-lab-1/)
+### 🛡️ [**NIST CSF 2.0 / FISMA-Aligned SOC Lab**](https://blog.slytech.us/blog/compliance-lab-1/)
 Full compliance lifecycle implementation across a multi-VLAN segmented enterprise lab. Covers GOVERN through RECOVER with pfSense, Wazuh SIEM, OpenSCAP remediation, GPO hardening, and simulated MITRE ATT&CK attacks. Documented as a 3-part technical blog series.
 
 ![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-3AAAFF)
@@ -105,7 +105,7 @@ Cloud-based SOC environment with Microsoft Sentinel, custom KQL threat detection
 <tr>
 <td width="50%">
 
-### 🔐 [**Identity and Access Management Lab**](https://blog.slytech.us/iam-lab/)
+### 🔐 [**Identity and Access Management Lab**](https://blog.slytech.us/blog/iam-lab/)
 End-to-end IAM implementation on Active Directory covering structured provisioning and deprovisioning workflows, least-privilege OU and group design, quarterly access review automation, and GPO-based access control scoped per department. All scenarios scripted in PowerShell with timestamped audit logs.
 
 ![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE)
