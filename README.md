@@ -22,7 +22,7 @@
 ⚡ **Core Strengths:** Windows/AD Administration, Security Operations, Cloud Infrastructure, Automation
 
 ### 💪 What Sets Me Apart
-- 🏗️ **Production Infrastructure:** 4+ years administering Windows Server, Active Directory, Entra ID, Microsoft 365, and enterprise network infrastructure, including identity lifecycle management and endpoint deployment at scale
+- 🏗️ **Production Infrastructure:** 3+ years administering Windows Server, Active Directory, Entra ID, Microsoft 365, and enterprise network infrastructure, including identity lifecycle management and endpoint deployment at scale
 - 🛡️ **Security Operations:** Built custom SIEM detection rules in Splunk and Wazuh mapped to MITRE ATT&CK, with published lab documentation at **[blog.slytech.us](https://blog.slytech.us)**
 - 🤖 **AI Integration:** Built a Python tool combining the Splunk REST API and Anthropic API for automated security event triage with MITRE ATT&CK mapping
 - 🌐 **Global Communicator:** Multilingual (English, Spanish, French, Haitian Creole) supporting diverse teams and clients
