@@ -2,7 +2,7 @@
   
 # 👋 Welcome!
 
-<p><strong>🛡️ IT Administrator | 🐧 Linux | ☁️ Cloud & Identity | 🔵 Security Operations</strong></p>
+<p><strong>🛡️ IT Administrator | ☁️ Cloud & Identity | ⚙️ Automation | 🔵 Security Operations | 🐧 Linux</strong></p>
 
 [![Email](https://img.shields.io/badge/Email-slycyber7@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:slycyber7@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emsly-s-482794196/)
@@ -38,10 +38,12 @@
 ![Bash](https://img.shields.io/badge/-Bash-4EAA25?logo=gnubash&logoColor=fff)
 ![PowerShell](https://img.shields.io/badge/-PowerShell-5391FE?logo=powershell&logoColor=fff)
 ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=fff)
-![Splunk](https://img.shields.io/badge/-Splunk-000000?logo=splunk&logoColor=fff)
-![Wazuh](https://img.shields.io/badge/-Wazuh-3AAAFF?logo=wazuh&logoColor=fff)
+![Microsoft Graph](https://img.shields.io/badge/-Microsoft%20Graph-0078D4?logo=microsoft&logoColor=fff)
+![Terraform](https://img.shields.io/badge/-Terraform-7B42BC?logo=terraform&logoColor=fff)
 ![Azure](https://img.shields.io/badge/-Azure-0078D4?logo=microsoftazure&logoColor=fff)
 ![Active Directory](https://img.shields.io/badge/-Active%20Directory-0078D4?logo=microsoft&logoColor=fff)
+![Splunk](https://img.shields.io/badge/-Splunk-000000?logo=splunk&logoColor=fff)
+![Wazuh](https://img.shields.io/badge/-Wazuh-3AAAFF?logo=wazuh&logoColor=fff)
 ![pfSense](https://img.shields.io/badge/-pfSense-1f425f?logo=pfsense&logoColor=fff)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=fff)
 ![Proxmox](https://img.shields.io/badge/-Proxmox-E57000?logo=proxmox&logoColor=fff)
@@ -56,6 +58,17 @@
 <tr>
 <td width="50%">
 
+### 🤖 [**Identity Lifecycle Automation**](https://github.com/SlyCyberLab/IdentityLifecycleAutomation)
+HR-driven onboarding and offboarding automation across Active Directory and Microsoft 365. A SharePoint request triggers a scheduled PowerShell job that provisions AD users, syncs to Entra ID, assigns M365 licenses, and notifies managers via the Graph API. Offboarding disables accounts, revokes all sessions, and reclaims licenses with a full audit trail.
+
+![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE)
+![Microsoft Graph](https://img.shields.io/badge/Microsoft-Graph%20API-0078D4)
+![IAM](https://img.shields.io/badge/IAM-Lifecycle-d63384)
+![Blog](https://img.shields.io/badge/Blog-Published-orange)
+
+</td>
+<td width="50%">
+
 ### 🤖 [**Splunk AI Triage Lab**](https://github.com/SlyCyberLab/slytech-ai-labs)
 AI-assisted SOC triage tool combining the Splunk REST API and Anthropic API to analyze Windows Security events and generate MITRE ATT&CK mapped reports. Detected T1110.001 brute force, T1110.003 password spraying, and T1087 account enumeration automatically from real lab data.
 
@@ -65,8 +78,10 @@ AI-assisted SOC triage tool combining the Splunk REST API and Anthropic API to a
 ![Blog](https://img.shields.io/badge/Blog-Published-orange)
 
 </td>
+</tr>
+<tr>
 <td width="50%">
-  
+
 ### 🛡️ [**NIST CSF 2.0 / FISMA-Aligned SOC Lab**](https://blog.slytech.us/compliance-lab-1/)
 Full compliance lifecycle implementation across a multi-VLAN segmented enterprise lab. Covers GOVERN through RECOVER with pfSense, Wazuh SIEM, OpenSCAP remediation, GPO hardening, and simulated MITRE ATT&CK attacks. Documented as a 3-part technical blog series.
 
@@ -76,8 +91,6 @@ Full compliance lifecycle implementation across a multi-VLAN segmented enterpris
 ![Blog](https://img.shields.io/badge/Blog-Published-orange)
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
 ### 🛡️ [**Azure SOC Lab - Cloud Security Operations Center**](https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab)
@@ -86,16 +99,6 @@ Cloud-based SOC environment with Microsoft Sentinel, custom KQL threat detection
 ![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4)
 ![Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-0078D4)
 ![KQL](https://img.shields.io/badge/KQL-Threat%20Detection-EE0000)
-
-</td>
-<td width="50%">
-
-### 🔍 [**Vulnerability Management Platform**](https://github.com/SlyCyberLab/Vulnerability-Management-Lab)
-Enterprise-grade vulnerability scanning with Tenable Nessus Professional on Azure. Automated scan scheduling, CVSS-based prioritization, NIST and CIS framework mapping, and full remediation workflow documentation.
-
-![Nessus](https://img.shields.io/badge/Nessus-Professional-EE0000)
-![Azure](https://img.shields.io/badge/Azure-Virtual%20Machine-0078D4)
-![CVSS](https://img.shields.io/badge/CVSS-Risk%20Scoring-FFC107)
 
 </td>
 </tr>
@@ -113,12 +116,13 @@ End-to-end IAM implementation on Active Directory covering structured provisioni
 </td>
 <td width="50%">
 
-### 🔥 [**pfSense Firewall Configuration Lab**](https://github.com/SlyCyberLab/pfSense-Firewall-Config)
-Multi-VLAN network segmentation with enforced firewall policies, traffic filtering, and access control rules across management, server, workstation, and DMZ zones. All rule logic validated through structured testing.
+### ☁️ [**Cloud Governance with Terraform & Azure Policy**](https://blog.slytech.us/blog/cloud-governance-terraform-policy-workbooks)
+Infrastructure-as-code provisioning of Azure resources with Terraform, governance enforcement via Azure Policy, and a live security dashboard built in Log Analytics Workbooks on top of the hybrid slytech.us environment.
 
-![pfSense](https://img.shields.io/badge/pfSense-2.7.2-1f425f)
-![VLAN](https://img.shields.io/badge/Focus-VLAN%20Segmentation-d63384)
-![Firewall](https://img.shields.io/badge/Domain-Network%20Security-0A66C2)
+![Terraform](https://img.shields.io/badge/Terraform-IaC-7B42BC)
+![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4)
+![Azure Policy](https://img.shields.io/badge/Azure-Policy-0078D4)
+![Blog](https://img.shields.io/badge/Blog-Published-orange)
 
 </td>
 </tr>
