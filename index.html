@@ -1,28 +1,19 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="https://slytech.us/assets/images/og-preview.png">
+    <title>Emsly S. | IT & Security Professional — slytech.us</title>
+    <meta name="description" content="Systems administrator with 3+ years in IT, managing infrastructure, security, and IAM across hybrid Windows and Linux environments. Published labs and write-ups at blog.slytech.us.">
+    <meta name="author" content="Emsly Severe">
+    <meta property="og:title" content="Emsly S. | IT & Security Professional">
+    <meta property="og:description" content="Systems administrator managing infrastructure, security, and IAM. 8 published labs, 10+ blog posts, open to new opportunities.">
+    <meta property="og:url" content="https://slytech.us">
+    <meta property="og:type" content="website">
 
-```
-<title>Emsly S. | IT & Security Professional — slytech.us</title>
-<meta name="description" content="Systems administrator with 3+ years in IT, managing infrastructure, security, and IAM across hybrid Windows and Linux environments. Published labs and write-ups at blog.slytech.us.">
-<meta name="author" content="Emsly Severe">
-<meta property="og:title" content="Emsly S. | IT & Security Professional">
-<meta property="og:description" content="Systems administrator managing infrastructure, security, and IAM. 8 published labs, 10+ blog posts, open to new opportunities.">
-<meta property="og:url" content="https://slytech.us">
-<meta property="og:type" content="website">
-
-<!-- Umami Analytics -->
-<script defer src="https://cloud.umami.is/script.js"
-        data-website-id="7d31c2a4-0617-4a33-8433-c95da361d41b">
-</script>
-```
-
-</head>
-
+    <!-- Umami Analytics -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="7d31c2a4-0617-4a33-8433-c95da361d41b"></script>
 
     <!-- ============================================================
       FAVICON — "ES" initials on dark background
@@ -38,10 +29,10 @@
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM5BKKZZN5"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BM5BKKZZN5');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BM5BKKZZN5');
     </script>
 
     <style>
@@ -99,8 +90,10 @@
         /* ── BACKGROUND ── */
         .bg-animation {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: -1;
             background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e);
             background-size: 400% 400%;
@@ -111,7 +104,8 @@
         .bg-animation::before {
             content: '';
             position: absolute;
-            width: 200%; height: 200%;
+            width: 200%;
+            height: 200%;
             background:
                 radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.08) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.08) 0%, transparent 50%),
@@ -132,8 +126,10 @@
 
         .matrix {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
             z-index: -1;
             opacity: 0.1;
@@ -142,7 +138,9 @@
         /* ── STICKY NAV ── */
         .site-nav {
             position: fixed;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             z-index: 200;
             display: flex;
             justify-content: center;
@@ -165,7 +163,8 @@
             transition: color 0.2s, background 0.2s;
         }
 
-        .site-nav a:hover, .site-nav a:focus {
+        .site-nav a:hover,
+        .site-nav a:focus {
             color: var(--primary);
             background: rgba(0, 255, 136, 0.08);
             outline: none;
@@ -204,7 +203,9 @@
         .glass-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--primary), transparent);
             animation: borderScan 3s ease-in-out infinite;
@@ -311,7 +312,10 @@
             border: 2px solid var(--secondary);
         }
 
-        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 255, 136, 0.3); }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 255, 136, 0.3);
+        }
 
         /* ── SECTION HEADERS ── */
         .section-header {
@@ -526,7 +530,8 @@
         .terminal::before {
             content: '● ● ●';
             position: absolute;
-            top: -15px; left: 15px;
+            top: -15px;
+            left: 15px;
             background: #000;
             padding: 0 10px;
             color: var(--primary);
@@ -595,8 +600,10 @@
         /* ── LOADER ── */
         .loader {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: var(--bg-dark);
             display: flex;
             flex-direction: column;
@@ -644,8 +651,10 @@
             display: none;
             position: fixed;
             z-index: 1000;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(12px);
         }
@@ -671,7 +680,8 @@
 
         .close {
             position: absolute;
-            right: 1.75rem; top: 1.75rem;
+            right: 1.75rem;
+            top: 1.75rem;
             font-size: 1.8rem;
             color: var(--text-dim);
             cursor: pointer;
@@ -749,113 +759,6 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- ============================================================
-      MODALS — direct children of body
-      To add a new modal: copy one block, give it a unique id,
-      update the title, description, features, tech tags, and link.
-      Then add onclick="openModal('your-id')" to the project card.
-      ============================================================ -->
-
-    <div id="azuresoc" class="modal" role="dialog" aria-modal="true" aria-labelledby="azuresoc-title">
-        <div class="modal-content">
-            <button class="close" onclick="closeModal('azuresoc')" aria-label="Close">&times;</button>
-            <div class="modal-header">
-                <div class="modal-icon" aria-hidden="true">🛡️</div>
-                <h3 class="modal-title" id="azuresoc-title">Azure SOC Operations Center</h3>
-            </div>
-            <div class="modal-description">
-                A cloud-native Security Operations Center built on Microsoft Azure, demonstrating advanced threat detection, incident response, and security analytics capabilities.
-            </div>
-            <div class="modal-features">
-                <h4>🎯 Key Features</h4>
-                <ul>
-                    <li>Microsoft Sentinel SIEM deployment and configuration</li>
-                    <li>Custom KQL queries for threat hunting and detection</li>
-                    <li>Automated incident response workflows and playbooks</li>
-                    <li>Live honeypot capturing 6,000+ real attack attempts</li>
-                    <li>Security metrics dashboard and MITRE ATT&CK mapping</li>
-                </ul>
-            </div>
-            <div class="modal-tech">
-                <span class="modal-tech-tag">Microsoft Azure</span>
-                <span class="modal-tech-tag">Sentinel</span>
-                <span class="modal-tech-tag">KQL</span>
-                <span class="modal-tech-tag">Log Analytics</span>
-                <span class="modal-tech-tag">Azure Monitor</span>
-            </div>
-            <div class="modal-links">
-                <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" class="modal-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                <a href="#" class="modal-link" style="background:transparent;border:1px solid var(--primary);color:var(--primary);" onclick="closeModal('azuresoc');return false;">Close</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="vuln" class="modal" role="dialog" aria-modal="true" aria-labelledby="vuln-title">
-        <div class="modal-content">
-            <button class="close" onclick="closeModal('vuln')" aria-label="Close">&times;</button>
-            <div class="modal-header">
-                <div class="modal-icon" aria-hidden="true">🔍</div>
-                <h3 class="modal-title" id="vuln-title">Vulnerability Management Platform</h3>
-            </div>
-            <div class="modal-description">
-                Enterprise-grade vulnerability assessment and remediation platform using Tenable Nessus Professional, demonstrating the full vulnerability management lifecycle from discovery to remediation.
-            </div>
-            <div class="modal-features">
-                <h4>🎯 Key Features</h4>
-                <ul>
-                    <li>Tenable Nessus Professional deployed on Azure VM</li>
-                    <li>Automated vulnerability scanning with scheduling</li>
-                    <li>CVSS risk scoring and prioritization framework</li>
-                    <li>Compliance mapping to NIST and CIS frameworks</li>
-                    <li>Full remediation workflow documentation</li>
-                </ul>
-            </div>
-            <div class="modal-tech">
-                <span class="modal-tech-tag">Tenable Nessus</span>
-                <span class="modal-tech-tag">Azure VM</span>
-                <span class="modal-tech-tag">CVSS</span>
-                <span class="modal-tech-tag">NIST / CIS</span>
-            </div>
-            <div class="modal-links">
-                <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" class="modal-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                <a href="#" class="modal-link" style="background:transparent;border:1px solid var(--primary);color:var(--primary);" onclick="closeModal('vuln');return false;">Close</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="pfsense" class="modal" role="dialog" aria-modal="true" aria-labelledby="pfsense-title">
-        <div class="modal-content">
-            <button class="close" onclick="closeModal('pfsense')" aria-label="Close">&times;</button>
-            <div class="modal-header">
-                <div class="modal-icon" aria-hidden="true">🔥</div>
-                <h3 class="modal-title" id="pfsense-title">pfSense Firewall Configuration Lab</h3>
-            </div>
-            <div class="modal-description">
-                Multi-VLAN network segmentation with enforced firewall policies, traffic filtering, and access control across management, server, workstation, and DMZ zones.
-            </div>
-            <div class="modal-features">
-                <h4>🎯 Key Features</h4>
-                <ul>
-                    <li>Multi-network VLAN segmentation and isolation</li>
-                    <li>Firewall rule creation and policy enforcement</li>
-                    <li>Traffic filtering and access control implementation</li>
-                    <li>Security hardening and syslog forwarding to SIEM</li>
-                    <li>Rule validation through structured testing</li>
-                </ul>
-            </div>
-            <div class="modal-tech">
-                <span class="modal-tech-tag">pfSense 2.7.2</span>
-                <span class="modal-tech-tag">VLAN Segmentation</span>
-                <span class="modal-tech-tag">Firewall Rules</span>
-                <span class="modal-tech-tag">Syslog</span>
-            </div>
-            <div class="modal-links">
-                <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" class="modal-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                <a href="#" class="modal-link" style="background:transparent;border:1px solid var(--primary);color:var(--primary);" onclick="closeModal('pfsense');return false;">Close</a>
-            </div>
-        </div>
-    </div>
-
     <!-- ═══════════════════════════════════════ -->
     <!-- MAIN CONTENT                           -->
     <!-- ═══════════════════════════════════════ -->
@@ -893,6 +796,8 @@
               PROJECTS SECTION
               TO ADD A NEW PROJECT: copy any project-card block,
               give it a new href, update all text and image paths.
+              TO ADD SCREENSHOTS: replace the card-thumb-placeholder emoji
+              with an <img> tag and set the src to your image path.
               ============================================================ -->
             <section id="projects" aria-labelledby="projects-heading">
                 <div class="glass-card fade-in">
@@ -902,12 +807,50 @@
 
                     <div class="projects-grid">
 
-                        <!-- PROJECT: IAM LAB -->
-                        <a href="https://blog.slytech.us/iam-lab/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Identity and Access Management Lab — read blog post">
+                        <!-- PROJECT: IDENTITY GOVERNANCE PORTAL -->
+                        <a href="https://blog.slytech.us/blog/identity-governance-portal/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Identity Governance Portal — read blog post">
                             <div class="card-thumb">
-                                <img src="assets/images/iam-lab-preview.png"
-                                     alt="OU placement and group assignment in Active Directory"
-                                     loading="lazy">
+                                <img src="assets/images/identity-governance-preview.png" alt="Identity Governance Portal dashboard showing executive health bar, governance score, and AI risk analysis" loading="lazy">
+                                <div class="card-thumb-placeholder" aria-hidden="true">🔍</div>
+                                <span class="card-thumb-badge">GITHUB + BLOG</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Identity Governance Portal</h3>
+                                <p class="card-desc">Read-only identity governance and drift monitoring portal on Microsoft Graph. Weekly PowerShell snapshots feed a Fluent-styled dashboard with an AI Copilot powered by Claude. Surfaces disabled licensed accounts, privileged access changes, and compliance controls mapped to CIS, NIST CSF, and ISO 27001.</p>
+                                <div class="card-tags" aria-label="Technologies used">
+                                    <span class="tech-tag">Microsoft Graph</span>
+                                    <span class="tech-tag">PowerShell</span>
+                                    <span class="tech-tag">Azure Functions</span>
+                                    <span class="tech-tag">Claude AI</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/blog/identity-governance-portal</div>
+                            </div>
+                        </a>
+
+                        <!-- PROJECT: IDENTITY LIFECYCLE AUTOMATION -->
+                        <a href="https://blog.slytech.us/blog/identity-automation/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Identity Lifecycle Automation — read blog post">
+                            <div class="card-thumb">
+                                <img src="assets/images/identity-automation-preview.png" alt="PowerShell terminal showing identity lifecycle automation output for onboarding and offboarding" loading="lazy">
+                                <div class="card-thumb-placeholder" aria-hidden="true">🤖</div>
+                                <span class="card-thumb-badge">GITHUB + BLOG</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Identity Lifecycle Automation</h3>
+                                <p class="card-desc">HR-driven onboarding and offboarding automation across Active Directory and Microsoft 365. PowerShell provisions AD users, syncs to Entra ID, assigns M365 licenses, and notifies managers via Graph API. Offboarding disables accounts, revokes sessions, and reclaims licenses with a full audit trail.</p>
+                                <div class="card-tags" aria-label="Technologies used">
+                                    <span class="tech-tag">PowerShell</span>
+                                    <span class="tech-tag">Microsoft Graph</span>
+                                    <span class="tech-tag">Entra ID</span>
+                                    <span class="tech-tag">Active Directory</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/blog/identity-automation</div>
+                            </div>
+                        </a>
+
+                        <!-- PROJECT: IAM LAB -->
+                        <a href="https://blog.slytech.us/blog/iam-lab/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Identity and Access Management Lab — read blog post">
+                            <div class="card-thumb">
+                                <img src="assets/images/iam-lab-preview.png" alt="OU placement and group assignment in Active Directory" loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">🔐</div>
                                 <span class="card-thumb-badge">BLOG POST</span>
                             </div>
@@ -920,82 +863,54 @@
                                     <span class="tech-tag">GPO</span>
                                     <span class="tech-tag">Identity Lifecycle</span>
                                 </div>
-                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/iam-lab</div>
+                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/blog/iam-lab</div>
                             </div>
                         </a>
 
                         <!-- PROJECT: AI TRIAGE -->
-                        <a href="https://blog.slytech.us/splunk-ai-triage/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="AI-Assisted SOC Triage Tool — read blog post">
+                        <a href="https://blog.slytech.us/blog/splunk-ai-triage/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="AI-Assisted SOC Triage Tool — read blog post">
                             <div class="card-thumb">
-                                <img src="assets/images/ai-triage-preview.png"
-                                     alt="Terminal output showing AI triage report with CRITICAL brute force finding and MITRE ATT&CK T1110.001 mapping"
-                                     loading="lazy">
+                                <img src="assets/images/ai-triage-preview.png" alt="Terminal output showing AI triage report with CRITICAL brute force finding and MITRE ATT&amp;CK T1110.001 mapping" loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">🤖</div>
                                 <span class="card-thumb-badge">GITHUB + BLOG</span>
                             </div>
                             <div class="card-body">
                                 <h3 class="card-title">AI-Assisted SOC Triage Tool</h3>
-                                <p class="card-desc">Python tool combining Splunk REST API and Anthropic API. Detected four attack patterns including T1110.001 brute force and T1087 account enumeration from real lab data.</p>
+                                <p class="card-desc">Python tool combining Splunk REST API and Anthropic API. Detected four attack patterns including T1110.001 brute force and T1087 account enumeration automatically from real lab data.</p>
                                 <div class="card-tags">
                                     <span class="tech-tag">Python</span>
                                     <span class="tech-tag">Splunk API</span>
                                     <span class="tech-tag">Anthropic API</span>
-                                    <span class="tech-tag">MITRE ATT&CK</span>
+                                    <span class="tech-tag">MITRE ATT&amp;CK</span>
                                 </div>
                                 <div class="card-footer" aria-hidden="true">↗ github.com/SlyCyberLab/slytech-ai-labs</div>
                             </div>
                         </a>
 
-                        <!-- PROJECT: AZURE SOC -->
-                        <a href="https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Azure SOC Operations Center — view on GitHub">
-                            <div class="card-thumb">
-                                <img src="assets/images/azure-soc-preview.png"
-                                     alt="Microsoft Sentinel dashboard showing incident map with attack origins and KQL detection query results"
-                                     loading="lazy">
-                                <div class="card-thumb-placeholder" aria-hidden="true">🛡️</div>
-                                <span class="card-thumb-badge">GITHUB</span>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title">Azure SOC Operations Center</h3>
-                                <p class="card-desc">Microsoft Sentinel with custom KQL detection queries and automated incident response. Honeypot captured 6,000+ live attack attempts mapped to MITRE ATT&CK.</p>
-                                <div class="card-tags">
-                                    <span class="tech-tag">Azure Sentinel</span>
-                                    <span class="tech-tag">KQL</span>
-                                    <span class="tech-tag">Log Analytics</span>
-                                    <span class="tech-tag">SIEM</span>
-                                </div>
-                                <div class="card-footer" aria-hidden="true">↗ github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab</div>
-                            </div>
-                        </a>
-
                         <!-- PROJECT: SPLUNK SIEM -->
-                        <a href="https://blog.slytech.us/splunk-lab-1/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Splunk SIEM Engineering Lab — read blog post">
+                        <a href="https://blog.slytech.us/blog/splunk-lab-1/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Splunk SIEM Engineering Lab — read blog post">
                             <div class="card-thumb">
-                                <img src="assets/images/splunk-lab-preview.png"
-                                     alt="Splunk web UI showing correlation search results with Windows Security events from dc01"
-                                     loading="lazy">
+                                <img src="assets/images/splunk-lab-preview.png" alt="Splunk web UI showing correlation search results with Windows Security events from dc01" loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">📊</div>
                                 <span class="card-thumb-badge">BLOG POST</span>
                             </div>
                             <div class="card-body">
                                 <h3 class="card-title">Splunk SIEM Engineering Lab</h3>
-                                <p class="card-desc">3-part series: Universal Forwarder deployment, SPL correlation searches, CIM normalization, and MITRE ATT&CK detection rules with Security Essentials.</p>
+                                <p class="card-desc">3-part series: Universal Forwarder deployment, SPL correlation searches, CIM normalization, and MITRE ATT&amp;CK detection rules with Security Essentials.</p>
                                 <div class="card-tags">
                                     <span class="tech-tag">Splunk</span>
                                     <span class="tech-tag">SPL</span>
                                     <span class="tech-tag">Detection Engineering</span>
                                     <span class="tech-tag">Proxmox</span>
                                 </div>
-                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/splunk-lab-1</div>
+                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/blog/splunk-lab-1</div>
                             </div>
                         </a>
 
                         <!-- PROJECT: NIST CSF -->
-                        <a href="https://blog.slytech.us/compliance-lab-1/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="NIST CSF 2.0 Compliance Lab — read blog post">
+                        <a href="https://blog.slytech.us/blog/compliance-lab-1/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="NIST CSF 2.0 Compliance Lab — read blog post">
                             <div class="card-thumb">
-                                <img src="assets/images/nist-lab-preview.png"
-                                     alt="OpenSCAP compliance scan results showing remediation progress from 70.9% to 78.12% on RHEL baseline"
-                                     loading="lazy">
+                                <img src="assets/images/nist-lab-preview.png" alt="OpenSCAP compliance scan results showing remediation progress from 70.9% to 78.12% on RHEL baseline" loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">📋</div>
                                 <span class="card-thumb-badge">BLOG POST</span>
                             </div>
@@ -1008,16 +923,54 @@
                                     <span class="tech-tag">OpenSCAP</span>
                                     <span class="tech-tag">pfSense</span>
                                 </div>
-                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/compliance-lab-1</div>
+                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/blog/compliance-lab-1</div>
+                            </div>
+                        </a>
+
+                        <!-- PROJECT: AZURE SOC / SENTINEL HONEYPOT -->
+                        <a href="https://blog.slytech.us/blog/sentinel-honeypot/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Azure Sentinel Honeypot SOC Lab — read blog post">
+                            <div class="card-thumb">
+                                <img src="assets/images/azure-soc-preview.png" alt="Microsoft Sentinel dashboard showing incident map with attack origins and KQL detection query results" loading="lazy">
+                                <div class="card-thumb-placeholder" aria-hidden="true">🛡️</div>
+                                <span class="card-thumb-badge">GITHUB + BLOG</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Azure SOC Operations Center</h3>
+                                <p class="card-desc">Microsoft Sentinel with custom KQL detection queries and automated incident response. Honeypot captured 6,000+ live attack attempts mapped to MITRE ATT&amp;CK.</p>
+                                <div class="card-tags">
+                                    <span class="tech-tag">Azure Sentinel</span>
+                                    <span class="tech-tag">KQL</span>
+                                    <span class="tech-tag">Log Analytics</span>
+                                    <span class="tech-tag">SIEM</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/blog/sentinel-honeypot</div>
+                            </div>
+                        </a>
+
+                        <!-- PROJECT: WAZUH -->
+                        <a href="https://blog.slytech.us/blog/wazuh-siem-setup/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Wazuh SIEM Homelab — read blog post">
+                            <div class="card-thumb">
+                                <img src="assets/images/wazuh-lab-preview.png" alt="Wazuh Dashboard showing agent alerts and active response events" loading="lazy">
+                                <div class="card-thumb-placeholder" aria-hidden="true">🔎</div>
+                                <span class="card-thumb-badge">BLOG POST</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Wazuh SIEM Homelab</h3>
+                                <p class="card-desc">Deployed Wazuh on Ubuntu with agents on Windows and Linux endpoints. Configured custom detection rules, active response, and GPO hardening on the slytech.us domain.</p>
+                                <div class="card-tags">
+                                    <span class="tech-tag">Wazuh</span>
+                                    <span class="tech-tag">Proxmox</span>
+                                    <span class="tech-tag">Active Directory</span>
+                                    <span class="tech-tag">SIEM</span>
+                                </div>
+                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/blog/wazuh-siem-setup</div>
                             </div>
                         </a>
 
                         <!-- PROJECT: VULN MGMT -->
                         <a href="https://github.com/SlyCyberLab/Vulnerability-Management-Lab" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Vulnerability Management Platform — view on GitHub">
                             <div class="card-thumb">
-                                <img src="assets/images/vuln-lab-preview.png"
-                                     alt="Tenable Nessus Professional dashboard showing vulnerability scan results with CVSS risk scoring"
-                                     loading="lazy">
+                                <img src="assets/images/vuln-lab-preview.png" alt="Tenable Nessus Professional dashboard showing vulnerability scan results with CVSS risk scoring" loading="lazy">
                                 <div class="card-thumb-placeholder" aria-hidden="true">🔍</div>
                                 <span class="card-thumb-badge">GITHUB</span>
                             </div>
@@ -1031,49 +984,6 @@
                                     <span class="tech-tag">NIST / CIS</span>
                                 </div>
                                 <div class="card-footer" aria-hidden="true">↗ github.com/SlyCyberLab/Vulnerability-Management-Lab</div>
-                            </div>
-                        </a>
-
-                        <!-- PROJECT: WAZUH -->
-                        <a href="https://blog.slytech.us/wazuh-siem-setup/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Wazuh SIEM Homelab — read blog post">
-                            <div class="card-thumb">
-                                <img src="assets/images/wazuh-lab-preview.png"
-                                     alt="Wazuh Dashboard showing agent alerts and active response events"
-                                     loading="lazy">
-                                <div class="card-thumb-placeholder" aria-hidden="true">🔎</div>
-                                <span class="card-thumb-badge">BLOG POST</span>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title">Wazuh SIEM Homelab</h3>
-                                <p class="card-desc">Deployed Wazuh on Ubuntu with agents on Windows and Linux endpoints. Configured custom detection rules, active response, and GPO hardening on the slytech.us domain.</p>
-                                <div class="card-tags">
-                                    <span class="tech-tag">Wazuh</span>
-                                    <span class="tech-tag">Proxmox</span>
-                                    <span class="tech-tag">Active Directory</span>
-                                    <span class="tech-tag">SIEM</span>
-                                </div>
-                                <div class="card-footer" aria-hidden="true">↗ blog.slytech.us/wazuh-siem-setup</div>
-                            </div>
-                        </a>
-
-                        <!-- PROJECT: PFSENSE -->
-                        <a href="https://github.com/SlyCyberLab/pfSense-Firewall-Config" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="pfSense Firewall Configuration Lab — view on GitHub">
-                            <div class="card-thumb">
-                                <img src="assets/images/pfsense-lab-preview.png"
-                                     alt="pfSense firewall rules dashboard showing VLAN segmentation policies"
-                                     loading="lazy">
-                                <div class="card-thumb-placeholder" aria-hidden="true">🔥</div>
-                                <span class="card-thumb-badge">GITHUB</span>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title">pfSense Firewall Configuration Lab</h3>
-                                <p class="card-desc">Multi-VLAN network segmentation with enforced firewall policies, traffic filtering, and access control rules across management, server, workstation, and DMZ zones.</p>
-                                <div class="card-tags">
-                                    <span class="tech-tag">pfSense 2.7.2</span>
-                                    <span class="tech-tag">VLAN Segmentation</span>
-                                    <span class="tech-tag">Firewall Rules</span>
-                                </div>
-                                <div class="card-footer" aria-hidden="true">↗ github.com/SlyCyberLab/pfSense-Firewall-Config</div>
                             </div>
                         </a>
 
@@ -1149,7 +1059,7 @@
                         <div class="tech-item" role="listitem">pfSense</div>
                         <div class="tech-item" role="listitem">Docker</div>
                         <div class="tech-item" role="listitem">Kali Linux</div>
-                        <div class="tech-item" role="listitem">MITRE ATT&CK</div>
+                        <div class="tech-item" role="listitem">MITRE ATT&amp;CK</div>
                         <div class="tech-item" role="listitem">Nessus</div>
                         <div class="tech-item" role="listitem">KQL</div>
                         <div class="tech-item" role="listitem">SIEM</div>
@@ -1216,7 +1126,7 @@
 
     <script>
         // Loader — reduced to 300ms
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             setTimeout(() => {
                 const loader = document.getElementById('loader');
                 loader.classList.add('hidden');
@@ -1245,24 +1155,36 @@
         // Modal Functions
         function openModal(id) {
             const m = document.getElementById(id);
-            if (m) { m.style.display = 'block'; document.body.style.overflow = 'hidden'; }
+            if (m) {
+                m.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
         }
 
         function closeModal(id) {
             const m = document.getElementById(id);
-            if (m) { m.style.display = 'none'; document.body.style.overflow = 'auto'; }
+            if (m) {
+                m.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         }
 
         window.addEventListener('click', (e) => {
             document.querySelectorAll('.modal').forEach(modal => {
-                if (e.target === modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
             });
         });
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 document.querySelectorAll('.modal').forEach(modal => {
-                    if (modal.style.display === 'block') { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
+                    if (modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
                 });
             }
         });
@@ -1273,7 +1195,7 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        const matrixChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}".split("");
+        const matrixChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}'.split('');
         const fontSize = 10;
         const drops = Array(Math.floor(canvas.width / fontSize)).fill(1);
         let matrixInterval;
@@ -1302,7 +1224,9 @@
 
         // Scroll Animations
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible');
+            });
         }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
@@ -1318,6 +1242,7 @@
         const subtitle = document.querySelector('.typing-effect');
         const subtitleText = 'IT & Security Professional';
         let si = 0;
+
         function typeWriter() {
             if (si < subtitleText.length) {
                 subtitle.textContent = subtitleText.substring(0, si + 1);
@@ -1325,6 +1250,7 @@
                 setTimeout(typeWriter, 95);
             }
         }
+
         setTimeout(typeWriter, 800);
 
         // Resize matrix canvas on window resize
