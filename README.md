@@ -69,6 +69,20 @@ HR-driven onboarding and offboarding automation across Active Directory and Micr
 </td>
 <td width="50%">
 
+### 🔍 [**Identity Governance Portal**](https://github.com/SlyCyberLab/IdentityGovernancePortal)
+Read-only identity governance and drift monitoring portal built on Microsoft Graph API. Weekly PowerShell snapshots feed a Microsoft Fluent-styled dashboard with an AI Copilot powered by Claude. Surfaces disabled accounts with active licenses, privileged access changes, compliance control status mapped to CIS, NIST CSF, and ISO 27001, and week-over-week drift with governance scoring.
+
+![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE)
+![Microsoft Graph](https://img.shields.io/badge/Microsoft-Graph%20API-0078D4)
+![Azure Functions](https://img.shields.io/badge/Azure-Functions-0078D4)
+![Anthropic](https://img.shields.io/badge/Anthropic-Claude-D97757)
+![Blog](https://img.shields.io/badge/Blog-Published-orange)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
 ### 🤖 [**Splunk AI Triage Lab**](https://github.com/SlyCyberLab/slytech-ai-labs)
 AI-assisted SOC triage tool combining the Splunk REST API and Anthropic API to analyze Windows Security events and generate MITRE ATT&CK mapped reports. Detected T1110.001 brute force, T1110.003 password spraying, and T1087 account enumeration automatically from real lab data.
 
@@ -78,8 +92,6 @@ AI-assisted SOC triage tool combining the Splunk REST API and Anthropic API to a
 ![Blog](https://img.shields.io/badge/Blog-Published-orange)
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
 ### 🛡️ [**NIST CSF 2.0 / FISMA-Aligned SOC Lab**](https://blog.slytech.us/blog/compliance-lab-1/)
@@ -91,6 +103,8 @@ Full compliance lifecycle implementation across a multi-VLAN segmented enterpris
 ![Blog](https://img.shields.io/badge/Blog-Published-orange)
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### 🛡️ [**Azure SOC Lab - Cloud Security Operations Center**](https://github.com/SlyCyberLab/Azure-SOC-Honeypot-Lab)
@@ -101,8 +115,6 @@ Cloud-based SOC environment with Microsoft Sentinel, custom KQL threat detection
 ![KQL](https://img.shields.io/badge/KQL-Threat%20Detection-EE0000)
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
 ### 🔐 [**Identity and Access Management Lab**](https://blog.slytech.us/blog/iam-lab/)
@@ -111,17 +123,6 @@ End-to-end IAM implementation on Active Directory covering structured provisioni
 ![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE)
 ![Active Directory](https://img.shields.io/badge/Active%20Directory-IAM-0078D4)
 ![GPO](https://img.shields.io/badge/GPO-Access%20Control-darkgreen)
-![Blog](https://img.shields.io/badge/Blog-Published-orange)
-
-</td>
-<td width="50%">
-
-### ☁️ [**Cloud Governance with Terraform & Azure Policy**](https://blog.slytech.us/blog/cloud-governance-terraform-policy-workbooks)
-Infrastructure-as-code provisioning of Azure resources with Terraform, governance enforcement via Azure Policy, and a live security dashboard built in Log Analytics Workbooks on top of the hybrid slytech.us environment.
-
-![Terraform](https://img.shields.io/badge/Terraform-IaC-7B42BC)
-![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4)
-![Azure Policy](https://img.shields.io/badge/Azure-Policy-0078D4)
 ![Blog](https://img.shields.io/badge/Blog-Published-orange)
 
 </td>
