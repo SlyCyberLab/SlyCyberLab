@@ -2,7 +2,7 @@
   
 # 👋 Welcome!
 
-<p><strong>🛡️ IT Administrator | ☁️ Cloud & Identity | ⚙️ Automation | 🔵 Security Operations | 🐧 Linux</strong></p>
+<p><strong>🛡️ Systems Administrator | ☁️ Cloud & Identity | ⚙️ Automation | 🔵 Security Operations | 🐧 Linux</strong></p>
 
 [![Email](https://img.shields.io/badge/Email-slycyber7@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:slycyber7@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emsly-s-482794196/)
@@ -13,9 +13,12 @@
 ---
 
 ## 🚀 About Me
-
-> **Hi, I'm Emsly, an IT professional with 3+ years of experience across infrastructure administration, security operations, and cloud environments.**  
-> I build hands-on labs, automate workflows, and document everything publicly. I enjoy solving real technical problems and building systems that are reliable, secure, and well-documented.
+> > Hi, I'm Emsly, an IT and Security professional focused on Identity, Automation, and Cloud Security.
+>
+> I build enterprise-style solutions that automate identity lifecycle management, monitor security posture, and improve operational visibility across hybrid environments.
+>
+> My projects simulate real-world environments using Active Directory, Microsoft Graph, Azure, Splunk, Wazuh, Terraform, and Python — with every implementation documented through technical write-ups.
+> 
 
 ### At a Glance
 🎯 **Open To:** Infrastructure, Security, Cloud, and Identity roles  
@@ -159,6 +162,14 @@ All posts documented at **[blog.slytech.us](https://blog.slytech.us)**
 - 🤖 [AI-Assisted SOC Triage on Top of Splunk Using the Anthropic API](https://blog.slytech.us/splunk-ai-triage/)
 - 📊 Splunk SIEM Engineering Lab Series (3 parts)
 - 🛡️ NIST CSF 2.0 & FISMA-Aligned Compliance Lab Series (3 parts)
+
+---
+
+## 📊 GitHub Activity
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SlyCyberLab&show_icons=true&theme=transparent)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=SlyCyberLab&layout=compact)
 
 ---
 
