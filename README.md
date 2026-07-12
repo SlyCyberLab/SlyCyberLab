@@ -13,25 +13,30 @@
 ---
 
 ## 🚀 About Me
-> > Hi, I'm Emsly, an IT and Security professional focused on Identity, Automation, and Cloud Security.
+
+> Hi, I'm Emsly, an IT and Security professional specializing in Identity, Automation, and Cloud Security.
 >
-> I build enterprise-style solutions that automate identity lifecycle management, monitor security posture, and improve operational visibility across hybrid environments.
+> I build enterprise-style solutions focused on identity lifecycle management, security operations, and infrastructure automation across hybrid environments.
 >
-> My projects simulate real-world environments using Active Directory, Microsoft Graph, Azure, Splunk, Wazuh, Terraform, and Python — with every implementation documented through technical write-ups.
-> 
+> My work combines Active Directory, Microsoft Graph, Azure, Splunk, Wazuh, Terraform, and Python to solve real operational challenges — with every implementation documented through technical write-ups.
 
 ### At a Glance
-🎯 **Open To:** Infrastructure, Security, Cloud, and Identity roles  
-⚡ **Core Strengths:** Windows/AD Administration, Security Operations, Cloud Infrastructure, Automation
+
+🎯 **Open To:** Identity, Cloud Security, Infrastructure, and Security Operations roles  
+⚡ **Focus Areas:** IAM Automation, Security Operations, Cloud Infrastructure, and Systems Engineering  
+📈 **Career Path:** Help Desk → Systems Administration → Identity & Security Engineering
 
 ### 💪 What Sets Me Apart
-- 🏗️ **Production Infrastructure:** 3+ years administering Windows Server, Active Directory, Entra ID, Microsoft 365, and enterprise network infrastructure, including identity lifecycle management and endpoint deployment at scale
-- 🛡️ **Security Operations:** Built custom SIEM detection rules in Splunk and Wazuh mapped to MITRE ATT&CK, with published lab documentation at **[blog.slytech.us](https://blog.slytech.us)**
-- 🤖 **AI Integration:** Built a Python tool combining the Splunk REST API and Anthropic API for automated security event triage with MITRE ATT&CK mapping
-- 🌐 **Global Communicator:** Multilingual (English, Spanish, French, Haitian Creole) supporting diverse teams and clients
-- 📝 **Public Proof of Work:** Technical blog with 10+ published posts documenting real lab implementations, not just screenshots
 
-  ---
+- 🏗️ **Infrastructure Foundation:** Built a strong systems administration background supporting Windows environments, Active Directory, Microsoft 365, Entra ID, networking, and endpoints.
+
+- 🛡️ **Security Engineering:** Developed SIEM detections in Splunk and Wazuh mapped to MITRE ATT&CK, with documented security labs and investigations.
+
+- 🤖 **Security Automation:** Built automation tools combining Python, APIs, and AI to improve security triage and operational workflows.
+
+- 🌐 **Global Communication:** Multilingual (English, Spanish, French, Haitian Creole) with experience supporting diverse users and teams.
+
+- 📝 **Public Proof of Work:** Maintain a technical blog with 15+ published implementations covering identity, security, cloud, and automation projects.
 
 ## 🛠️ Technology Stack
 
@@ -162,14 +167,6 @@ All posts documented at **[blog.slytech.us](https://blog.slytech.us)**
 - 🤖 [AI-Assisted SOC Triage on Top of Splunk Using the Anthropic API](https://blog.slytech.us/splunk-ai-triage/)
 - 📊 Splunk SIEM Engineering Lab Series (3 parts)
 - 🛡️ NIST CSF 2.0 & FISMA-Aligned Compliance Lab Series (3 parts)
-
----
-
-## 📊 GitHub Activity
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SlyCyberLab&show_icons=true&theme=transparent)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=SlyCyberLab&layout=compact)
 
 ---
 
