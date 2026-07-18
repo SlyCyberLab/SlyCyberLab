@@ -2,7 +2,7 @@
   
 # 👋 Welcome!
 
-<p><strong>🛡️ Systems Administrator | ☁️ Cloud & Identity | ⚙️ Automation | 🔵 Security Operations | 🐧 Linux</strong></p>
+<p><strong>🖥️ Systems Administrator | 🏗️ Infrastructure | ⚙️ Automation | ☁️ Cloud & Security | 🐧 Linux</strong></p>
 
 [![Email](https://img.shields.io/badge/Email-slycyber7@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:slycyber7@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emsly-s-482794196/)
@@ -14,29 +14,31 @@
 
 ## 🚀 About Me
 
-> Hi, I'm Emsly, an IT and Security professional specializing in Identity, Automation, and Cloud Security.
+> Hi, I'm Emsly, a Systems Administrator with 3+ years of experience supporting enterprise infrastructure, Microsoft technologies, and cloud environments.
 >
-> I build enterprise-style solutions focused on identity lifecycle management, security operations, and infrastructure automation across hybrid environments.
+> I build enterprise-style projects focused on infrastructure automation, identity management, cloud services, and security operations to solve real operational challenges.
 >
-> My work combines Active Directory, Microsoft Graph, Azure, Splunk, Wazuh, Terraform, and Python to solve real operational challenges — with every implementation documented through technical write-ups.
+> My work combines Windows Server, Active Directory, Microsoft Graph, Azure, Terraform, PowerShell, Python, Splunk, and Wazuh, with every implementation documented through technical write-ups.
 
 ### At a Glance
 
-🎯 **Open To:** Identity, Cloud Security, Infrastructure, and Security Operations roles  
-⚡ **Focus Areas:** IAM Automation, Security Operations, Cloud Infrastructure, and Systems Engineering  
-📈 **Career Path:** Help Desk → Systems Administration → Identity & Security Engineering
+🎯 **Open To:** Infrastructure, Cloud, Automation, and Security roles
+
+⚡ **Core Strengths:** Systems Administration, Infrastructure Automation, Cloud Technologies, Security Operations
+
+📈 **Career Path:** Help Desk → Systems Administrator → Infrastructure & Automation
 
 ### 💪 What Sets Me Apart
 
-- 🏗️ **Infrastructure Foundation:** Built a strong systems administration background supporting Windows environments, Active Directory, Microsoft 365, Entra ID, networking, and endpoints.
+- 🏗️ **Infrastructure Administration:** Progressed from help desk into systems administration, supporting Windows Server, Active Directory, Microsoft 365, Microsoft Entra ID, networking, and endpoint environments while building a strong foundation in enterprise infrastructure.
 
-- 🛡️ **Security Engineering:** Developed SIEM detections in Splunk and Wazuh mapped to MITRE ATT&CK, with documented security labs and investigations.
+- 🛡️ **Security Operations:** Developed custom SIEM detections in Splunk and Wazuh mapped to the MITRE ATT&CK framework, with documented threat detection, investigations, and defensive engineering through hands-on enterprise lab environments.
 
-- 🤖 **Security Automation:** Built automation tools combining Python, APIs, and AI to improve security triage and operational workflows.
+- ⚙️ **Automation:** Build PowerShell, Python, and Microsoft Graph API solutions that automate identity management, infrastructure administration, and operational workflows, improving efficiency and reducing manual effort.
 
-- 🌐 **Global Communication:** Multilingual (English, Spanish, French, Haitian Creole) with experience supporting diverse users and teams.
+- 🌐 **Global Communication:** Multilingual (English, Spanish, French, and Haitian Creole) with experience supporting diverse users, teams, and technical stakeholders across enterprise environments.
 
-- 📝 **Public Proof of Work:** Maintain a technical blog with 15+ published implementations covering identity, security, cloud, and automation projects.
+- 📝 **Public Proof of Work:** Maintain a technical blog with 15+ published implementations covering infrastructure, automation, cloud, identity, and security, documenting architecture, implementation, and lessons learned through real-world projects.
 
 ## 🛠️ Technology Stack
 
